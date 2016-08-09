@@ -1,0 +1,479 @@
+html, body {
+	height:100%;
+	width:100%;
+}
+
+a:hover {
+	color:orange !important;
+}
+
+.container {
+	height:100%;
+}
+
+.clear{
+	clear:both;
+}
+
+.panel .panel-body a{
+	margin-top:15px;
+}
+
+.navigation-wrapper{
+	width:100%;
+	margin:0;
+}
+
+.navigation-wrapper div{
+	display:inline-block;
+}
+
+.navigation-list ul{
+	margin:0;
+	padding-left:0px;
+	list-style:none;
+	text-align:right;
+}
+
+.navigation-list ul li a{
+	color:black;
+	text-decoration:none;
+}
+
+.navigation-title h1{
+	font-size:7em;
+}
+ 
+/********* Content **********/
+ 
+.content-container{
+	width:100%;
+}
+
+/********** Home ***********/
+
+.home-panel{
+	margin:0 auto;
+	padding:20px;
+	width:70%;
+	height:100%;
+}
+
+/********* Toolbar ***********/
+
+.toolbar {
+	background-color:#333333;
+	height:51px;
+	text-align:center;
+}
+
+.toolbar div {
+	height:inherit;
+	padding:0;
+	text-align:center;
+}
+
+.toolbar div div{
+	height:inherit;
+	float:left;
+}
+
+.toolbar div button {
+	color: white;
+	padding: 4px 10px 4px 10px;
+}
+
+.toolbar-button:hover{
+	color:orange !important;
+	background-color:black;
+	text-decoration:none;
+}
+
+.toolbar div a {
+	color:white;
+}
+
+.toolbar div a:hover {
+	background-color:black;
+	text-decoration:none;
+}
+
+.toolbar div button:focus{
+	color:white !important;
+	text-decoration:none;
+	border:none;
+}
+
+.toolbar-glyph {
+	margin-right:8px;
+}
+
+.toolbar-search {
+	display:block;
+	width:390px;
+	margin:0 auto;
+	height:inherit;
+}
+
+button.toolbar-search-submit {
+	height:34px;
+	margin-top:8px !important;
+}
+
+button.toolbar-search-submit:hover {
+	margin-top:8px !important;
+}
+
+input.toolbar-search-input {
+	width:300px !important;
+}
+
+.toolbar-form input{
+	float:left;
+	margin-top:8px;
+}
+
+.toolbar-form button{
+	color:black !important;
+	float:left;
+	margin:10px 0px 0px 5px;
+}
+
+/****** Carousel ********/
+/**  TODO: carousel is too fast **/
+
+.carousel-inner {
+	background-color: #000000;
+}
+
+.carousel-inner div img{
+	margin: 0 auto;
+}
+
+.carousel-control.left {
+    background-image: none !important;
+}
+
+.carousel-control.right {
+    background-image: none !important;
+    height: 90%;
+}
+
+.carousel-control {
+	font-size: 6em;
+}
+
+.carousel-control.delete {
+    bottom: 16px;
+    color: red;
+    font-size: 2.1em;
+    left: auto;
+    right: -4px;
+    top: auto;
+}
+
+.carousel-edit-caption {
+	background-color:#333333;
+	height:51px;
+	width:100%;
+}
+
+.carousel-edit-caption div {
+	color:white;
+	float:left;
+}
+
+.carousel-edit-caption div p {
+	font-size:1.5em;
+	font-weight:300;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.carousel-edit-caption button {
+	float:right;
+	margin-top:10px;
+}
+
+.deletePhotoThumb:hover {
+	background-color:red;
+}
+
+/****** Profile Status ********/
+
+.status {
+	margin-bottom:0px;
+}
+
+.availableCheck {
+	margin-right:14px;
+}
+
+.tagContainer {
+	margin-top:10px;
+}
+
+.tag-label {
+	padding:0 !important;
+	margin:0 !important;
+}
+
+.tag-label li{
+	float:left;
+	list-style:none;
+	height:30px;
+	margin:0px 5px 10px 0px;
+}
+
+.tag-label li button {
+	padding: 2px 12px !important;
+	font-size:0.8em;
+}
+
+div.addTag{
+	color: white;
+    font-size: 0.9em;
+    padding: 0;
+}
+
+.addTag input{
+	padding:0 8px;
+	background-color:inherit;
+	border-style:none;
+	font-size:0.8em !important;
+	height:inherit !important;
+}
+
+div.tags h2{
+	margin-top:0;
+}
+
+/****** Page Navigation *******/
+
+.pages-navigation {	
+	text-align:center;
+	width:100%;
+}
+
+.pages-navigation ul{
+	list-style:none;
+	margin:30px 0;
+}
+
+.pages-navigation ul li{	
+	display:inline;
+	font-size:2em;
+	font-style:italic;
+	margin:0 30px;
+}
+
+.pages-navigation a {
+	text-decoration:none;
+	color:#333333;
+}
+
+.pages-navigation a:hover {
+	text-decoration:none;
+}
+
+/******* Glyph Links **********/
+
+.glyph-align {
+	margin-top:2px;
+	margin-right:5px;
+}
+
+.glyphicon-ok {
+	color:green;
+}
+
+.availableCheck {
+	margin-right:14px;
+}
+
+.glyphLink {
+	color:black;
+}
+
+.glyphLink {
+	margin-top:-5px;
+}
+
+button.glyphLink:hover {
+	color:orange;
+}
+
+/****** Index ******/
+/*** REPLACE WITH THE PROJECT INDEX. THERE WILL ONLY BE ONE INDEX TYPE ***/
+
+.index-panel {
+	margin:0px 0;
+	float:none;
+	height:150px;
+	padding:0 !important;
+	color:white;
+	border:none;
+}
+
+.panel_1{
+	background-image:url("../img/panel_1.jpg");
+}
+
+.panel_2{
+	background-image:url("../img/panel_2.jpg");
+}
+
+.panel_3{
+	background-image:url("../img/panel_3.jpg");
+}
+
+.index-name-panel h2{
+	margin-top:0 !important;
+}
+
+.index-name-panel a{
+	color:inherit;
+}
+
+.index-description-panel {
+	height:inherit;
+}	
+
+.index-avatar-panel {
+	height:inherit;
+	width: 157px;
+	padding:inherit;
+}
+
+.index-list-panel h3{
+	margin:0;
+	margin-bottom:10px;
+}
+
+.index-list-panel ul li a:hover{
+	text-decoration: none;
+}
+
+.index-img {
+	height:inherit;
+}
+
+/****** Item Name / Nick Name *******/
+
+h2.item-name {
+	margin-bottom:0 !important;
+}
+
+h3.item-nick {
+	font-size:1.1em;
+
+	font-style:italic;
+	margin-top:0px;
+}
+
+.item-avatar {
+	margin-bottom:5px;
+}
+
+/****** Profile Content *******/
+
+.info {
+	margin:15px 0;
+}
+
+div.infoRight h1:first-of-type, .h1:first-of-type, h2:first-of-type, .h2:first-of-type {
+	margin-top:0 !important;
+}
+
+/******* Forum **********/
+
+.forum-heading {
+	color:white !important;
+	background-color:#333333 !important;
+	height:51px;
+	padding: 10px 15px;
+	border:none !important;
+}
+
+.forum-heading div h4 {
+	position:relative;
+	top:50%;
+	transform: translateY(-50%);
+}
+
+.forum-panel {
+	border:none;
+}
+
+.forum-body {
+	border-style:solid;
+	border-color:#e3e3e3;
+	border-width:1px;
+	border-bottom:none;
+	padding:0;
+}
+
+.forum-body div a img {
+	margin-bottom:15px;
+}
+
+.forum-user-author a{
+	margin-top: 10px;
+	color:black;
+}
+
+.forum-user-author {
+	border-right: 1px solid #e3e3e3;
+	padding-top:15px;
+}
+
+.forum-user-name {
+	margin-bottom:0px;
+}
+
+.forum-user-nick {
+	font-style:italic;
+	margin-top:0px;
+}
+
+.forum-post-title {
+
+}
+
+.forum-post-date {
+	font-style:italic;
+}
+
+.forum-content {
+	padding:15px;
+}
+
+.forum-footer {
+	color:white !important;
+	background-color:#ededed !important;
+	border:none !important;
+}
+
+.forum-edit-links {
+	margin-top:5px;
+}
+
+/********* Footer **********/
+
+.footer {
+	text-align:center;
+	width:100%;
+}
+
+.footer ul {
+	padding-left:0;
+	list-style:none;
+	margin-bottom:30px;
+}
+
+.footer ul li {
+	display:inline;
+	text-align:center;
+	margin: 0 35px;
+}
