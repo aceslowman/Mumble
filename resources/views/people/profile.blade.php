@@ -57,17 +57,12 @@
             <a class="carousel-control right" href="#carousel" data-slide="next">&rsaquo;</a>
         </div>
     </div>
-    <div class="row col-md-12 center-block toolbar carousel-edit-caption">
-        <div>
+    <div class="row col-md-12 center-block toolbar carousel-edit-bottom">
+
+        <div class="carousel-edit-caption">
             <p><em>Massive</em>, 2015</p>    
         </div>
-        <button type="button" class="btn btn-sm btn-success dropdown-toggle" data-toggle="dropdown">
-        Add/Delete Photos <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu" role="menu">
-            <li><a class="addPhotoLink" type="button" data-toggle="modal" data-target="#addPhotoCarousel" href="#">Add photo</a></li>
-            <li><a class="deletePhotoLink" type="button" data-toggle="modal" data-target="#deletePhotoCarousel" href="#">Delete Photos</a></li>
-        </ul>
+
     </div>
     <div class="clear"></div>
 @stop

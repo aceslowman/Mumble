@@ -172,28 +172,23 @@ input.toolbar-search-input {
     top: auto;
 }
 
-.carousel-edit-caption {
+.carousel-edit-bottom {
 	background-color:#333333;
 	height:51px;
 	width:100%;
 }
 
-.carousel-edit-caption div {
+.carousel-edit-caption{
 	color:white;
 	float:left;
 }
 
-.carousel-edit-caption div p {
+.carousel-edit-caption p {
 	font-size:1.5em;
 	font-weight:300;
 	position: relative;
 	top: 50%;
 	transform: translateY(-50%);
-}
-
-.carousel-edit-caption button {
-	float:right;
-	margin-top:10px;
 }
 
 .deletePhotoThumb:hover {
