@@ -21,4 +21,16 @@ class ForumController extends Controller
 
 		return view('forum.bulletin', $data);
 	}
+
+	public function create_post(){
+
+	}
+
+	public function update_post(){
+
+	}
+
+	public function delete_post(){
+		
+	}
 }

@@ -1,9 +1,13 @@
 @extends('layouts.forum')
 
+@section('modalWindows')
+    @include('forum.modals.createPost')
+@stop
+
 @section('toolbar')
     <div class="row col-md-12 center-block toolbar">
       <div class="center-block">
-            <button class="btn btn-link toolbar-button" data-toggle="modal" data-target="#newBulletin">
+            <button class="btn btn-link toolbar-button" data-toggle="modal" data-target="#createPost_modal">
                 <h4><span class="glyphicon glyphicon-plus"></span><span class="hidden-xs">&nbsp;&nbsp;&nbsp;New Bulletin Post</span></h4>
             </button>
         </div>
