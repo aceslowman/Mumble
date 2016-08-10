@@ -23,7 +23,7 @@
           </div>
           <div class="form-group">
             <label for="email">Re-enter Email</label>
-            <input name="2-email" type="2-email" id="update-email-valid" class="form-control" placeholder="Re-enter email">
+            <input name="2-email" type="email" id="update-email-valid" class="form-control" placeholder="Re-enter email">
           </div>
       </div>
       <div class="modal-footer">

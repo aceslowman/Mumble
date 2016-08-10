@@ -386,6 +386,18 @@ div.infoRight h1:first-of-type, .h1:first-of-type, h2:first-of-type, .h2:first-o
 	margin-top:0 !important;
 }
 
+/****** Profile Tags *******/
+
+.modal-edit-tags ul li button span{
+	position:relative;
+	right:7px;
+	bottom:;
+}
+
+.tag-large li button{
+	font-size:0.9em;
+}
+
 /******* Forum **********/
 
 .forum-heading {
