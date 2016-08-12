@@ -1,6 +1,7 @@
 /********* Footer **********/
 
 .footer {
+	@extend .row, .center-block;
 	text-align:center;
 	width:100%;
 	ul {

@@ -29,26 +29,29 @@
 
 /********** MAIN NAVIGATION ***********/
 .navigation-wrapper{
+	@extend .row, .text-center; 
 	width:100%;
 	margin:0;
-}
-
-.navigation-wrapper div{
-	display:inline-block;
-}
-
-.navigation-list ul{
-	margin:0;
-	padding-left:0px;
-	list-style:none;
-	text-align:right;
-}
-
-.navigation-list ul li a{
-	color:black;
-	text-decoration:none;
-}
-
-.navigation-title h1{
-	font-size:7em;
+	div{
+		display:inline-block;
+	}
+	.navigation-list{
+		ul{
+			margin:0;
+			padding-left:0px;
+			list-style:none;
+			text-align:right;
+			li{
+				a{
+					color:black;
+					text-decoration:none;
+				}
+			}
+		}
+	}
+	.navigation-title{
+		h1{
+			font-size:7em;
+		}
+	}
 }

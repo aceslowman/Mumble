@@ -1,11 +1,15 @@
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
 @import "global";
-@import "index";
+
 @import "toolbar";
 @import "navigation";
 @import "tags";
+@import "carousel";
+
+@import "index";
 @import "profile";
 @import "forum";
 @import "home";
+
 @import "footer";

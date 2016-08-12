@@ -1,12 +1,51 @@
 /****** Index ******/
+.index{
+	.index-item{
+		@extend .col-md-12;
+		margin:0px 0;
+		float:none;
+		height:150px;
+		padding:0 !important;
+		color:white;
+		border:none;
+		.index-name {
+			@extend .panel-body, .pull-left, .col-md-6;
+			h2{
+				margin-top:0 !important;
+			}
+			a{
+				color:inherit;
+			}
+		}
+		.index-avatar {
+			@extend .panel-body, .pull-left, .col-md-2;
+			height:inherit;
+			width: 157px;
+			padding:inherit;
+			img {
+				@extend .img-responsive;
+				height:inherit;
+			}
+		}
+		.index-description {
+			height:inherit;
+		}	
+		.index-list{
+			@extend .panel-body, .pull-left, .col-md-4;
+			h3{
+				margin:0;
+				margin-bottom:10px;
+			}
+			ul{
+				li{
+					a:hover{
+						text-decoration: none;
+					}
+				}
+			}
+		}
+	}
 
-.index-panel {
-	margin:0px 0;
-	float:none;
-	height:150px;
-	padding:0 !important;
-	color:white;
-	border:none;
 }
 
 /***** ONLY USED AS PLACEHOLDER ******/
@@ -24,33 +63,7 @@
 /***************** *******************/
 
 
-.index-name-panel h2{
-	margin-top:0 !important;
-}
 
-.index-name-panel a{
-	color:inherit;
-}
 
-.index-description-panel {
-	height:inherit;
-}	
 
-.index-avatar-panel {
-	height:inherit;
-	width: 157px;
-	padding:inherit;
-}
 
-.index-list-panel h3{
-	margin:0;
-	margin-bottom:10px;
-}
-
-.index-list-panel ul li a:hover{
-	text-decoration: none;
-}
-
-.index-img {
-	height:inherit;
-}

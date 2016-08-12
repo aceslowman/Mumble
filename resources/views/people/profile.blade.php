@@ -7,24 +7,21 @@
 @stop
 
 @section('toolbar')
-    <div class="row col-md-12 center-block toolbar">
-        <div class="center-block">
-            <button class="btn btn-link toolbar-button" data-toggle="modal" data-target="#editCarousel_modal">
+    <div class="toolbar">
+        <div>
+            <button data-toggle="modal" data-target="#editCarousel_modal">
                 <h4>
-                    <span class="toolbar-glyph glyphicon glyphicon-picture"></span>
-                    <span>Edit Carousel</span>
+                    <span class="toolbar-glyph glyphicon-picture"></span><span>Edit Carousel</span>
                 </h4>
             </button>
-            <button class="btn btn-link toolbar-button" data-toggle="modal" data-target="#editTags_modal">
+            <button data-toggle="modal" data-target="#editTags_modal">
                 <h4>
-                    <span class="toolbar-glyph glyphicon glyphicon-star"></span>
-                    <span>Edit Tags</span>
+                    <span class="toolbar-glyph glyphicon-star"></span><span>Edit Tags</span>
                 </h4>
             </button>
-            <button class="btn btn-link toolbar-button" data-toggle="modal" data-target="#editAvailable_modal">
+            <button data-toggle="modal" data-target="#editAvailable_modal">
                 <h4>
-                    <span class="toolbar-glyph glyphicon glyphicon-ok-circle"></span>
-                    <span>Edit Availability</span>
+                    <span class="toolbar-glyph glyphicon-ok-circle"></span><span>Edit Availability</span>
                 </h4>
             </button>
         </div>

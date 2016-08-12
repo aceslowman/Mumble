@@ -1,5 +1,5 @@
 @section('top-navigation')
-	<div class="row text-center navigation-wrapper">
+	<div class="navigation-wrapper">
 		<div class="navigation-list">	
 			<ul>
 			@if(Auth::check())
