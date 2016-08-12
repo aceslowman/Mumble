@@ -5,12 +5,12 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
-
-use Auth;
-use Validate;
 use App\User;
 use App\Profile;
 use App\Carousel;
+
+use Auth;
+use Validate;
 
 class PeopleController extends Controller
 {
@@ -31,10 +31,9 @@ class PeopleController extends Controller
 	}
 
 	public function update(Request $request, $user_id){
-		//also include validation here
 		$this->validate($request,[
 			'email'=>'email',
-		]);
+		]); 
 
 		$user = User::find($user_id);
 		if($request->has('name')){

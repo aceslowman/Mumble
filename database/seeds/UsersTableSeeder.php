@@ -72,6 +72,17 @@ class UsersTableSeeder extends Seeder
         $user = User::find(3);    //Sarah
         $user->tags()->attach(3);
         $user->tags()->attach(1);
-        $user->tags()->attach(2);                                 
+        $user->tags()->attach(2);     
+
+        $user = User::find(4);    //Bobby
+        $user->tags()->attach(4);
+        $user->tags()->attach(1);
+        $user->tags()->attach(5);                              
+
+        $user = User::find(5);    //Bart
+        $user->tags()->attach(2);
+        $user->tags()->attach(3);
+        $user->tags()->attach(1);
+        $user->tags()->attach(5);          
     }
 }

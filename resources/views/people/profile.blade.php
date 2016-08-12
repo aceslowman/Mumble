@@ -32,7 +32,6 @@
     <div class="clear"></div>
 @stop
 
-
 @section('carousel')
     <div class="row center-block jumboImage">
         <div id="carousel" class="carousel slide">
@@ -69,7 +68,11 @@
 
 @section('status')
     <div class="status row center-block panel panel-default">
-        <div class="panel-body tags">
+
+
+
+
+        <div class="panel-body">
             <div class="col-md-6 col-sm-6">
                 <div class="pull-left"><h2>What I do</h2></div> 
                 <div class="pull-right" style="margin-top:7px; margin-left:30px;">
@@ -78,19 +81,20 @@
                     </button>
                 </div>
                 <div class="clear"></div>
-                <div class="tagContainer">
-                <ul class="tag-label">
-                @foreach($user->tags as $tag)
-                    <li>    
-                        <button class="btn btn-primary btn-label tagMain">{{$tag->name}}</button>
-                    </li>
-                @endforeach
-                </ul>
+
+
+                <div class="tag-container">
+                    <ul>
+                    @foreach($user->tags as $tag)
+                        <li>    
+                            <button>{{$tag->name}}</button>
+                        </li>
+                    @endforeach
+                    </ul>
                 </div>
+
+
                 <div class="clear"></div>
-            </div>
-            <div class="visible-xs">
-                <hr>
             </div>
             <div class="col-md-6 col-sm-6">
                 <div class="pull-left"><h2>Availability</h2></div>

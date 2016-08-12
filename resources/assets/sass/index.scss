@@ -1,0 +1,56 @@
+/****** Index ******/
+
+.index-panel {
+	margin:0px 0;
+	float:none;
+	height:150px;
+	padding:0 !important;
+	color:white;
+	border:none;
+}
+
+/***** ONLY USED AS PLACEHOLDER ******/
+.panel_1{
+	background-image:url("../img/panel_1.jpg");
+}
+
+.panel_2{
+	background-image:url("../img/panel_2.jpg");
+}
+
+.panel_3{
+	background-image:url("../img/panel_3.jpg");
+}
+/***************** *******************/
+
+
+.index-name-panel h2{
+	margin-top:0 !important;
+}
+
+.index-name-panel a{
+	color:inherit;
+}
+
+.index-description-panel {
+	height:inherit;
+}	
+
+.index-avatar-panel {
+	height:inherit;
+	width: 157px;
+	padding:inherit;
+}
+
+.index-list-panel h3{
+	margin:0;
+	margin-bottom:10px;
+}
+
+.index-list-panel ul li a:hover{
+	text-decoration: none;
+}
+
+.index-img {
+	height:inherit;
+}

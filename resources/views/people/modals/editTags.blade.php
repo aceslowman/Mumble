@@ -8,23 +8,19 @@
       <div class="modal-body">
 
 
-        <div class="modal-edit-tags modal-delete-tags">
+        <div class="tag-container">
+            <ul>
             @foreach($user->tags as $tag)
-                <ul class="tag-label tag-large">
-                    <li>    
-                        <button class="btn btn-primary btn-label"><span>x</span>{{$tag->name}}</button>
-                    </li>        
-                </ul>
+                <li>    
+                    <button><span>x</span>{{$tag->name}}</button>
+                </li>
             @endforeach
+                <li>    
+                    <button><span>+</span>Add tag</button>
+                </li>
+            </ul>
         </div>
 
-        <div class="modal-edit-tags modal-add-tag">
-          <ul class="tag-label tag-large">
-              <li>    
-                  <button class="btn btn-success btn-label"><span>+</span>Add tag</button>
-              </li>
-          </ul>
-        </div>
 
         <div class="clearfix"></div>
         <p><small>Note: New tags won't appear until page refresh. Under development.</small></p>

@@ -1,0 +1,23 @@
+/********* Tags **********/
+.tag-container {
+	margin-top:10px;
+	ul {
+		padding:0 !important;
+		margin:0 !important;
+		li{
+			float:left;
+			list-style:none;
+			height:30px;
+			margin:0px 5px 10px 0px;
+			button{
+				@extend .btn, .btn-primary;
+				padding: 2px 12px !important;
+				font-size:0.8em;
+				span{
+					position:relative;
+					right:7px;
+				}
+			}
+		}
+	}
+}

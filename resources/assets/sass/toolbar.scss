@@ -1,0 +1,79 @@
+/********* Toolbar ***********/
+
+.toolbar {
+	background-color:#333333;
+	height:51px;
+	text-align:center;
+}
+
+.toolbar div {
+	height:inherit;
+	padding:0;
+	text-align:center;
+}
+
+.toolbar div div{
+	height:inherit;
+	float:left;
+}
+
+.toolbar div button {
+	color: white;
+	padding: 4px 10px 4px 10px;
+}
+
+.toolbar-button:hover{
+	color:orange !important;
+	background-color:black;
+	text-decoration:none;
+}
+
+.toolbar div a {
+	color:white;
+}
+
+.toolbar div a:hover {
+	background-color:black;
+	text-decoration:none;
+}
+
+.toolbar div button:focus{
+	color:white !important;
+	text-decoration:none;
+	border:none;
+}
+
+.toolbar-glyph {
+	margin-right:8px;
+}
+
+.toolbar-search {
+	display:block;
+	width:390px;
+	margin:0 auto;
+	height:inherit;
+}
+
+button.toolbar-search-submit {
+	height:34px;
+	margin-top:8px !important;
+}
+
+button.toolbar-search-submit:hover {
+	margin-top:8px !important;
+}
+
+input.toolbar-search-input {
+	width:300px !important;
+}
+
+.toolbar-form input{
+	float:left;
+	margin-top:8px;
+}
+
+.toolbar-form button{
+	color:black !important;
+	float:left;
+	margin:10px 0px 0px 5px;
+}
