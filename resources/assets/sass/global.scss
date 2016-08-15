@@ -1,7 +1,3 @@
-//@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
-
-$hover_color: orange;
-
 html, body {
 	height:100%;
 	width:100%;
@@ -25,4 +21,26 @@ a:hover {
 
 .content-container{
 	width:100%;
+}
+
+.glyph-link{
+	@extend .btn, .btn-link;
+	color:black;
+	margin-top:-5px;
+	&:hover{
+		color:$hover_color;
+	}
+}
+
+.glyph-align {
+	margin-top:2px;
+	margin-right:5px;
+}
+
+.glyphicon-ok {
+	color:green;
+}
+
+.availableCheck {
+	margin-right:14px;
 }

@@ -24,7 +24,7 @@
 		<div class="index-avatar"> 
            <img src="{{ asset($user->avatar_filename) }}">
 		</div>	
-	
+    
     	<div class="index-name"> 
 			<h2 class="item-name"><a href="people/{{ $user->nick }}">{{$user->name}}</a></h2>
 			<h3 class="item-nick">{{'@'.$user->nick}} </h3>
@@ -39,25 +39,20 @@
                 </h5>
 			</a>
 		</div>
-	
+    
     	<div class="index-list">
 			<h3>Tags:</h3>
-
-
             <div class="tagContainer">
-                <ul class="tag-label">
+                <ul>
                 @foreach($user->tags as $tag)
                     <li>    
-                        <button class="btn btn-primary btn-label tagMain">{{$tag->name}}</button>
+                        <button>{{$tag->name}}</button>
                     </li>
                 @endforeach
                 </ul>
             </div>
-
-
             <div class="clear"></div>
 		</div>
-	
     	<div class="clear"></div>
 	</div>	
     @endforeach 

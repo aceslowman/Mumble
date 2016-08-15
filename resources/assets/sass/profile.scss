@@ -1,7 +1,21 @@
-.info {
+.content {
 	margin:15px 0;
 }
 
 div.infoRight h1:first-of-type, .h1:first-of-type, h2:first-of-type, .h2:first-of-type {
 	margin-top:0 !important;
+}
+
+.status {
+	@extend .row, .center-block, .panel, .panel-default;
+	margin-bottom:0px;
+	div{
+		@extend .panel-body;
+		.status-left{
+			@extend .col-md-6, .col-sm-6;
+		}
+		.status-right{
+			@extend .col-md-6, .col-sm-6;
+		}
+	}
 }

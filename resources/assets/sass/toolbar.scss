@@ -1,8 +1,6 @@
-/********* Toolbar ***********/
-
 .toolbar {
 	@extend .row, .col-md-12, .center-block; 
-	background-color:#333333;
+	background-color: $toolbar_color;
 	height:51px;
 	text-align:center;
 	div{
@@ -37,42 +35,36 @@
 			float:left;
 		}
 	}
+	
 	.toolbar-search {
 		display:block;
 		width:390px;
 		margin:0 auto;
 		height:inherit;
 		color:white;
+
+		form{
+			@extend .form-inline;
+			div{
+				@extend .form-group;
+				input{
+					@extend .form-control;
+					float:left;
+					margin-top:8px;
+					width:300px !important;
+				}
+			}
+			button{
+				@extend .btn, .btn-default;
+				color:black !important;
+				float:left;
+				margin:10px 0px 0px 5px;
+			}
+		}
 	}
 }
 
 .toolbar-glyph {
 	@extend .glyphicon;
 	margin-right:8px;
-}
-
-button.toolbar-search-submit {
-	height:34px;
-	margin-top:8px !important;
-}
-
-button.toolbar-search-submit:hover {
-	margin-top:8px !important;
-}
-
-input.toolbar-search-input {
-	width:300px !important;
-}
-
-.toolbar-form{
-	@extend .form-inline;
-	input{
-		float:left;
-		margin-top:8px;
-	}
-	button{
-		color:black !important;
-		float:left;
-		margin:10px 0px 0px 5px;	
-	}
 }

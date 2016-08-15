@@ -30,7 +30,7 @@
 @stop
 
 @section('carousel')
-    <div class="row center-block jumboImage">
+    <div class="carousel-container">
         <div id="carousel" class="carousel slide">
             <div class="carousel-inner">
             @foreach($carousel->photos as $key=>$photo)
@@ -53,9 +53,9 @@
             <a class="carousel-control right" href="#carousel" data-slide="next">&rsaquo;</a>
         </div>
     </div>
-    <div class="row col-md-12 center-block toolbar carousel-edit-bottom">
+    <div class="carousel-toolbar">
 
-        <div class="carousel-edit-caption">
+        <div>
             <p><em>Massive</em>, 2015</p>    
         </div>
 
@@ -64,22 +64,18 @@
 @stop
 
 @section('status')
-    <div class="status row center-block panel panel-default">
+    <div class="status">
+        <div>
+            
 
-
-
-
-        <div class="panel-body">
-            <div class="col-md-6 col-sm-6">
+            <div class="status-left">
                 <div class="pull-left"><h2>What I do</h2></div> 
                 <div class="pull-right" style="margin-top:7px; margin-left:30px;">
-                    <button class="btn btn-link glyphLink" data-toggle="modal" data-target="#editTags_modal">
+                    <button class="glyph-link" data-toggle="modal" data-target="#editTags_modal">
                         <span class="glyphicon glyphicon-pencil"></span>
                     </button>
                 </div>
                 <div class="clear"></div>
-
-
                 <div class="tag-container">
                     <ul>
                     @foreach($user->tags as $tag)
@@ -89,17 +85,19 @@
                     @endforeach
                     </ul>
                 </div>
-
-
                 <div class="clear"></div>
             </div>
-            <div class="col-md-6 col-sm-6">
+
+
+            <div class="status-right">
+            
                 <div class="pull-left"><h2>Availability</h2></div>
                 <div class="pull-right" style="margin-top:7px; margin-left:30px;">
-                    <button class="btn btn-link glyphLink" data-toggle="modal" data-target="#editAvailable_modal">
+                    <button class="glyph-link" data-toggle="modal" data-target="#editAvailable_modal">
                         <span class="glyphicon glyphicon-pencil"></span>
                     </button>
                 </div>
+            
                 <div class="clear"></div>
                 <h4>
                 @if($user->available)
@@ -110,6 +108,8 @@
                     {{$user->status}}            
                 </h4>
             </div>
+
+
         </div>
     </div>
 @stop
@@ -125,7 +125,7 @@
 @stop
 
 @section('content')
-<div class="row info center-block">
+<div class="row content center-block">
     <div class="row center-block">
         <div class="pull-left col-md-4 col-sm-3">
             <img class="img-responsive" src="{{ asset('img/avatars/slominski_avatar.jpg') }}">

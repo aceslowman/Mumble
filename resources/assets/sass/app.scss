@@ -1,15 +1,18 @@
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
-@import "global";
+//GLOBAL VARIABLES
+	$hover_color: orange;
+	$toolbar_color: #333333;
+	$toolbar_hovercolor: orange;
+//----------------
 
+@import "global";
 @import "toolbar";
 @import "navigation";
 @import "tags";
 @import "carousel";
-
 @import "index";
 @import "profile";
 @import "forum";
 @import "home";
-
 @import "footer";

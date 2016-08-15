@@ -1,55 +1,36 @@
-/****** Carousel ********/
-/**  TODO: carousel is too fast **/
+.carousel-container {
+	@extend .row, .center-block;
+	.carousel{
+		.carousel-inner{
+			background-color: #000000;
+			.carousel-control{
+				font-size: 6em;
+			}
+			a.left{
+				background-image: none !important;
+			}
+			a.right{
+				background-image: none !important;
+			}
 
-.carousel-inner {
-	background-color: #000000;
+		}
+	}
 }
 
-.carousel-inner div img{
-	margin: 0 auto;
-}
-
-.carousel-control.left {
-    background-image: none !important;
-}
-
-.carousel-control.right {
-    background-image: none !important;
-    height: 90%;
-}
-
-.carousel-control {
-	font-size: 6em;
-}
-
-.carousel-control.delete {
-    bottom: 16px;
-    color: red;
-    font-size: 2.1em;
-    left: auto;
-    right: -4px;
-    top: auto;
-}
-
-.carousel-edit-bottom {
-	background-color:#333333;
+.carousel-toolbar{
+	@extend .toolbar;
+	background-color:$toolbar_color;
 	height:51px;
 	width:100%;
-}
-
-.carousel-edit-caption{
-	color:white;
-	float:left;
-}
-
-.carousel-edit-caption p {
-	font-size:1.5em;
-	font-weight:300;
-	position: relative;
-	top: 50%;
-	transform: translateY(-50%);
-}
-
-.deletePhotoThumb:hover {
-	background-color:red;
+	div {
+		color:white;
+		float:left;
+		p{
+			font-size:1.5em;
+			font-weight:300;
+			position: relative;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
 }
