@@ -6118,7 +6118,6 @@ a:hover {
 .availableCheck {
   margin-right: 14px; }
 
-/********* Toolbar ***********/
 .toolbar, .carousel-toolbar {
   background-color: #333333;
   height: 51px;
@@ -6164,29 +6163,23 @@ a:hover {
 .toolbar-glyph {
   margin-right: 8px; }
 
-/****** Page Navigation *******/
 .pages-navigation {
   text-align: center;
   width: 100%; }
+  .pages-navigation ul {
+    list-style: none;
+    margin: 30px 0; }
+    .pages-navigation ul li {
+      display: inline;
+      font-size: 2em;
+      font-style: italic;
+      margin: 0 30px; }
+  .pages-navigation a {
+    text-decoration: none;
+    color: #333333; }
+    .pages-navigation a:hover {
+      text-decoration: none; }
 
-.pages-navigation ul {
-  list-style: none;
-  margin: 30px 0; }
-
-.pages-navigation ul li {
-  display: inline;
-  font-size: 2em;
-  font-style: italic;
-  margin: 0 30px; }
-
-.pages-navigation a {
-  text-decoration: none;
-  color: #333333; }
-
-.pages-navigation a:hover {
-  text-decoration: none; }
-
-/********** MAIN NAVIGATION ***********/
 .navigation-wrapper {
   width: 100%;
   margin: 0; }
@@ -6203,7 +6196,6 @@ a:hover {
   .navigation-wrapper .navigation-title h1 {
     font-size: 7em; }
 
-/********* Tags **********/
 .tag-container {
   margin-top: 10px; }
   .tag-container ul {
@@ -6221,8 +6213,6 @@ a:hover {
           position: relative;
           right: 7px; }
 
-/****** Carousel ********/
-/**  TODO: carousel is too fast **/
 .carousel-container .carousel .carousel-inner {
   background-color: #000000; }
   .carousel-container .carousel .carousel-inner .carousel-control {
@@ -6246,7 +6236,6 @@ a:hover {
       top: 50%;
       transform: translateY(-50%); }
 
-/****** Index ******/
 .index .index-item {
   margin: 0px 0;
   float: none;
@@ -6292,7 +6281,6 @@ div.infoRight h1:first-of-type, .h1:first-of-type, h2:first-of-type, .h2:first-o
 .status {
   margin-bottom: 0px; }
 
-/******* Forum **********/
 .forum-heading {
   color: white !important;
   background-color: #333333 !important;
@@ -6347,14 +6335,12 @@ div.infoRight h1:first-of-type, .h1:first-of-type, h2:first-of-type, .h2:first-o
 .forum-edit-links {
   margin-top: 5px; }
 
-/********** Home ***********/
 .home-panel {
   margin: 0 auto;
   padding: 20px;
   width: 70%;
   height: 100%; }
 
-/********* Footer **********/
 .footer {
   text-align: center;
   width: 100%; }
