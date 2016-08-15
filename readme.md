@@ -4,7 +4,7 @@ Mumble is a space where artists can share and collaborate with others that they 
 
 ## Collectives
 
-Artists on Mumble are organized into collectives. These are groups of artists that you trust, the people you are work with and share with. This helps make sure you feel comfortable sharing unfinished work, and it helps you ask for help and get responses from people you know can help you.
+Artists on Mumble are organized into collectives. These are groups of artists that you trust, the people you work and share with. This helps make sure you feel comfortable sharing unfinished work, and it helps you ask for help and get responses from people you know can help you.
 
 ## Projects
 
