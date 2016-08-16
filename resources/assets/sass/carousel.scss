@@ -6,24 +6,16 @@
 			.carousel-control{
 				font-size: 6em;
 			}
-			a.left{
+			a{
 				background-image: none !important;
 			}
-			a.right{
-				background-image: none !important;
-			}
-
 		}
 	}
 }
 
 .carousel-toolbar{
 	@extend .toolbar;
-	background-color:$toolbar_color;
-	height:51px;
-	width:100%;
 	div {
-		color:white;
 		float:left;
 		p{
 			font-size:1.5em;

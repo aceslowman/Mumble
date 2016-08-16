@@ -1,70 +1,86 @@
-.forum-heading {
-	color:white !important;
-	background-color:#333333 !important;
-	height:51px;
-	padding: 10px 15px;
-	border:none !important;
+.forum-container {
+	@extend .center-block;
+
+	.forum-post {
+		@extend .panel, .panel-info;
+		border:none;
+
+		.forum-heading {
+			color:white !important;
+			background-color:#333333 !important;
+			height:51px;
+			padding: 10px 15px;
+			border:none !important;
+			.forum-post-title{
+				@extend .pull-left;
+				h4{	
+					position:relative;
+					top:50%;
+					transform: translateY(-50%);
+				}
+			}
+			.forum-post-date{
+				@extend .pull-right;
+				p{	
+					position:relative;
+					top:50%;
+					transform: translateY(-50%);
+				}
+			}
+		}
+
+		.forum-post {
+			border-style:solid;
+			border-color:#e3e3e3;
+			border-width:1px;
+			border-bottom:none;
+			padding:0;
+
+			.forum-user{
+				@extend .col-md-3;
+				border-right: 1px solid #e3e3e3;
+				padding-top:15px;
+				
+				img{
+					@extend .img-responsive;
+				}
+				.item-name{
+					margin-bottom:0px;
+				}
+				.item-nick{
+					font-style:italic;
+					margin-top:0px;
+				}
+				a{
+					margin-top: 10px;
+					color:black;
+				}
+			}
+
+			.forum-content{
+				@extend .col-md-9;
+				padding:15px;
+			}
+
+			.forum-footer {
+				@extend .panel-footer;
+				color:white !important;
+				background-color:#ededed !important;
+				border:none !important;
+				.forum-expand-comments{
+					@extend .pull-left;
+					button{
+						@extend .btn, .btn-link;
+					}
+				}
+				.forum-edit-links {
+					@extend .pull-right;
+					margin-top:5px;
+				}
+			}
+		}
+	}
 }
 
-.forum-heading div h4 {
-	position:relative;
-	top:50%;
-	transform: translateY(-50%);
-}
 
-.forum-panel {
-	border:none;
-}
 
-.forum-body {
-	border-style:solid;
-	border-color:#e3e3e3;
-	border-width:1px;
-	border-bottom:none;
-	padding:0;
-}
-
-.forum-body div a img {
-	margin-bottom:15px;
-}
-
-.forum-user-author a{
-	margin-top: 10px;
-	color:black;
-}
-
-.forum-user-author {
-	border-right: 1px solid #e3e3e3;
-	padding-top:15px;
-}
-
-.forum-user-name {
-	margin-bottom:0px;
-}
-
-.forum-user-nick {
-	font-style:italic;
-	margin-top:0px;
-}
-
-.forum-post-title {
-
-}
-
-.forum-post-date {
-	font-style:italic;
-}
-
-.forum-content {
-	padding:15px;
-}
-
-.forum-footer {
-	color:white !important;
-	background-color:#ededed !important;
-	border:none !important;
-}
-
-.forum-edit-links {
-	margin-top:5px;
-}
