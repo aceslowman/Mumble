@@ -13,7 +13,7 @@
                 </h4>
             </button>
         </div>
-    </div>
+    </div> 
     <div class="clear"></div>
 @stop
 
@@ -53,6 +53,7 @@
                     </div>
                     <div class="clear"></div>
                 </div>
+
             </div>
         @endforeach
 
