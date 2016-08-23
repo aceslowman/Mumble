@@ -6,17 +6,26 @@
         <h4 class="modal-title">Edit Availability</h4>
       </div>
       <div class="modal-body">
-          <form id="update-availability" class="" method="POST" action="update/user/{{ $user->id }}">
+          <form id="update-availability" class="form-inline" method="POST" action="/update/user/{{ $user->id }}">
             {{ csrf_field() }}
-            <div class="form-group">
-              <label for="availability">Availability</label>
-              <input name="availability" type="text" id="update-availability" class="form-control" placeholder="What is your availability?">
-            </div>
+            
+              <label for="status">Availability</label>
+              <div class="checkbox">            
+                  <input name="available" type="hidden" value="0">
+                  <input name="available" type="checkbox" value="1" id="update-availability" class="form-control"
+                    @if($user->available == 1)
+                      checked
+                    @endif
+                  >                
+              </div>
+              <div class="form-group">
+                <input name="status" type="text" id="update-status" class="form-control" placeholder="{{$user->status}}">
+              </div>
       </div>
       <div class="modal-footer">
         <button id="update-availability-submit" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </form>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="submit" form="update-availability" class="btn btn-primary">Save changes</button>
       </div>
     </div>
   </div>

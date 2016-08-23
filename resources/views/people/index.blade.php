@@ -18,6 +18,12 @@
 @section('index')
 <div class="index">
 
+    <div class="toolbar-divider">
+        <div>
+            <h3>Alphabetical (A-Z)</h3>    
+        </div>
+    </div>
+
     @foreach ($users as $user)
 	<div class="index-item">
 
@@ -28,7 +34,7 @@
     	<div class="index-name"> 
 			<h2 class="item-name"><a href="people/{{ $user->nick }}">{{$user->name}}</a></h2>
 			<h3 class="item-nick">{{'@'.$user->nick}} </h3>
-			<a class="peopleLink" href="people/empty">
+			<a href="people/empty">
 				<h5>
                     {{$user->status}}
                     @if($user->available)
@@ -42,7 +48,7 @@
     
     	<div class="index-list">
 			<h3>Tags:</h3>
-            <div class="tagContainer">
+            <div class="tag-container">
                 <ul>
                 @foreach($user->tags as $tag)
                     <li>    
@@ -57,5 +63,10 @@
 	</div>	
     @endforeach 
 
+    <div class="toolbar-divider">
+        <div>
+            <h3>Tag Name</h3>    
+        </div>
+    </div>
 </div>
 @stop

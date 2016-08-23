@@ -11,9 +11,14 @@ use App\Carousel;
 
 use Auth;
 use Validate;
+use Schema;
 
 class PeopleController extends Controller
 {
+	function __construct(){
+		
+	}
+
 	public function showIndex(){
 		$data['users'] = User::with('tags')->get();	
 		$data['title'] = 'People Index';
@@ -30,26 +35,32 @@ class PeopleController extends Controller
 		return view('people.profile', $data);     
 	}
 
+	public function create(Request $request, $user_id){
+		$this->validate($request,[
+			'email'=>'email',
+		]); 
+
+		$user = User::create($request->all());
+
+		if($user->save()){
+			return back()->with('status','Welcome to Mumble, '.$user->name);
+		}else{
+			return back()->with('error','Something went wrong.');
+		}
+	}
+
 	public function update(Request $request, $user_id){
 		$this->validate($request,[
 			'email'=>'email',
 		]); 
 
 		$user = User::find($user_id);
-		if($request->has('name')){
-			$user->name  = $request->input('name');
-		}
-		if($request->has('nick')){
-			$user->nick  = $request->input('nick');
-		}
-		if($request->has('email')){
-			$user->email = $request->input('email');
-		}
-		
+		$user->update($request->all());
+
 		if($user->save()){
-			return redirect()->intended('/')->with('status','User information has been updated!');
+			return back()->with('status','User information has been updated!');
 		}else{
-			return redirect()->intended('/')->with('error','Something went wrong.');
+			return back()->with('error','Something went wrong.');
 		}
 	}
 }

@@ -18,7 +18,6 @@ class ForumController extends Controller
 		$data['title']    = 'Bulletin';
 		$data['navTitle'] = 'Bulletin';
 
-
 		return view('forum.bulletin', $data);
 	}
 

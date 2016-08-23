@@ -33,7 +33,7 @@
                     <div class="clear"></div>
                 </div>
 
-                <div class="forum-post">
+                <div class="forum-body">
                     <div class="forum-user">
                         <img src="{{ asset('img/avatars/slominski_avatar.jpg') }}" alt="Profile Picture">
                         <h2 class="item-name"><a href="people/{{$post->user->nick}}">{{$post->user->name}}</a></h2>
@@ -42,6 +42,7 @@
                     <div class="forum-content"> 
                         {!! $post->body !!}
                     </div>
+                    <div class="clear"></div>
                 </div>
 
                 <div class="forum-footer">

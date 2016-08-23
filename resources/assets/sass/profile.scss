@@ -11,10 +11,13 @@ div.infoRight h1:first-of-type, .h1:first-of-type, h2:first-of-type, .h2:first-o
 	margin-bottom:0px;
 	div{
 		@extend .panel-body;
+		padding:0px !important;
 		.status-left{
+			padding:15px !important;
 			@extend .col-md-6, .col-sm-6;
 		}
 		.status-right{
+			padding:15px !important;
 			@extend .col-md-6, .col-sm-6;
 		}
 	}

@@ -5,6 +5,9 @@
 	height:51px;
 	width:100%;
 	text-align:center;
+	h3{
+
+	}
 	div{
 		@extend .center-block;
 			height:inherit;
@@ -64,6 +67,23 @@
 			}
 		}
 	}
+}
+
+.toolbar-divider{
+		@extend .toolbar;
+		//margin-top:15px;
+		background-color: #ebebeb;
+		color:black;
+		div {
+			float:left;
+			h3{
+				margin:0px;
+				font-weight:300;
+				position: relative;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+		}
 }
 
 .toolbar-glyph {

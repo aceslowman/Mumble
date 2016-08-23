@@ -65,8 +65,7 @@
 
 @section('status')
     <div class="status">
-        <div>
-            
+        <div>        
 
             <div class="status-left">
                 <div class="pull-left"><h2>What I do</h2></div> 
@@ -87,7 +86,6 @@
                 </div>
                 <div class="clear"></div>
             </div>
-
 
             <div class="status-right">
             

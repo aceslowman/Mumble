@@ -1,16 +1,37 @@
+/***** ONLY USED AS PLACEHOLDER ******/
+.panel_1{
+	background-image:url("../img/panel_1.jpg");
+}
+
+.panel_2{
+	background-image:url("../img/panel_2.jpg");
+}
+
+.panel_3{
+	background-image:url("../img/panel_3.jpg");
+}
+/***************** *******************/
+
 .index{
 	.index-item{
-		@extend .col-md-12;
+		@extend .col-md-12, .panel_1;
 		margin:0px 0;
-		float:none;
 		height:150px;
+		position:static;
 		padding:0 !important;
 		color:white;
 		border:none;
+
 		.index-name {
 			@extend .panel-body, .pull-left, .col-md-6;
-			h2{
+			margin-top:0 !important;
+			.item-name{
+				margin-bottom:0px !important;
+			}
+			.item-nick{
+				font-style:italic;
 				margin-top:0 !important;
+				font-size:0.9em;
 			}
 			a{
 				color:inherit;
@@ -44,19 +65,5 @@
 			}
 		}
 	}
-
 }
 
-/***** ONLY USED AS PLACEHOLDER ******/
-.panel_1{
-	background-image:url("../img/panel_1.jpg");
-}
-
-.panel_2{
-	background-image:url("../img/panel_2.jpg");
-}
-
-.panel_3{
-	background-image:url("../img/panel_3.jpg");
-}
-/***************** *******************/
