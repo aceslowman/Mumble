@@ -21,15 +21,15 @@ class AuthController extends Controller
 		]);
 		
 		if(Auth::attempt(['email'=>$request->input('email'),'password'=>$request->input('password')],$request->input('remember'))){
-			return redirect()->intended('/');
+			return redirect()->route('welcome');
 		}else{
-			return redirect()->intended('/')->with('error','Incorrect email or password.');
+			return redirect()->route('show_login')->with('error','Incorrect email or password.');
 		}
 	}
 
 	public function logout(){
 		Auth::logout();
 
-		return redirect()->intended('/')->with('status','You have been succesfully logged out. You are a stranger.');
+		return redirect()->intended('welcome')->with('status','You have been succesfully logged out. You are a stranger.');
 	}
 }

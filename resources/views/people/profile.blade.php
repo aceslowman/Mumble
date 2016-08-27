@@ -123,17 +123,15 @@
 @stop
 
 @section('content')
-<div class="row content center-block">
-    <div class="row center-block">
-        <div class="pull-left col-md-4 col-sm-3">
-            <img class="img-responsive" src="/img/avatars/{{'medium_'.$user->avatar_filename}}">
-        </div>
-        <div class="pull-right col-md-8 col-sm-9 info-right">    
-
-            {!! $user->profile->info !!}
-
-        </div>
-        <hr>
+<div class="profile-content">
+    <div class="profile-avatar">
+        <img class="img-responsive" src="/img/avatars/{{'medium_'.$user->avatar_filename}}">
     </div>
+    <div class="profile-info">    
+
+        {!! $user->profile->info !!}
+
+    </div>
+    <hr>
 </div>
 @stop

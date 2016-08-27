@@ -11,16 +11,17 @@
 |
 */
 
-Route::get('/','HomeController@showWelcome');
-Route::post('/','AuthController@login');
-Route::get('logout','AuthController@logout');
+Route::get( '/'     ,'HomeController@showWelcome')->name('welcome');
+Route::get( 'login' ,'HomeController@login'      )->name('show_login');
+Route::post('login' ,'AuthController@login'      )->name('login');
+Route::get( 'logout','AuthController@logout'     )->name('logout');
 
-Route::get('/people',['middleware' => 'auth','uses' =>'PeopleController@showIndex']);
-Route::get('/people/{user_id}',['middleware' => 'auth','uses' =>'PeopleController@showProfile']);
-Route::get('/projects',['middleware' => 'auth','uses' =>'ProjectController@showIndex']);
-Route::get('/projects/{project}',['middleware' => 'auth','uses' =>'ProjectController@showProject']);
-
-Route::get('/bulletin',['middleware' => 'auth','uses' =>'ForumController@showBulletin']);
-Route::get('/library',['middleware' => 'auth','uses' =>'LibraryController@showIndex']);
-
-Route::post('/update/user/{user_id}',['middleware' => 'auth','uses' =>'PeopleController@update']);
+Route::group(['middleware' => 'auth'], function () {
+	Route::get('/people'                ,'PeopleController@showIndex'   );
+	Route::get('/people/{user_id}'      ,'PeopleController@showProfile' );
+	Route::get('/projects'              ,'ProjectController@showIndex'  );
+	Route::get('/projects/{project}'    ,'ProjectController@showProject');
+	Route::get('/bulletin'              ,'ForumController@showBulletin' );
+	Route::get('/library'               ,'LibraryController@showIndex'  );
+	Route::post('/update/user/{user_id}','PeopleController@update'      );
+});

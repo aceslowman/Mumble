@@ -35,7 +35,7 @@
 
                 <div class="forum-body">
                     <div class="forum-user">
-                        <img src="{{ asset('img/avatars/slominski_avatar.jpg') }}" alt="Profile Picture">
+                        <img src="/img/avatars/{{'medium_'.$post->user->avatar_filename}}" alt="Profile Picture for {{$post->user->name}}">
                         <h2 class="item-name"><a href="people/{{$post->user->nick}}">{{$post->user->name}}</a></h2>
                         <h3 class="item-nick">{{'@'.$post->user->nick}}</h3>
                     </div>

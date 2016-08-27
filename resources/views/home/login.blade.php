@@ -22,7 +22,7 @@
 	@endif
 
 	<h2>Login</h2>
-	<form class="" method="POST" action="">
+	<form action="login" method="post">
 		{{ csrf_field() }}
 		<div class="form-group">
 			<label for="email">Email Address</label>

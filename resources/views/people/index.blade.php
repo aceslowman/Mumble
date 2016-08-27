@@ -29,7 +29,7 @@
 	<div class="index-item">
 
 		<div class="index-avatar"> 
-           <img src="{{ asset($user->avatar_filename) }}">
+           <img src="/img/avatars/{{'small_'.$user->avatar_filename}}">
 		</div>	
     
     	<div class="index-name"> 

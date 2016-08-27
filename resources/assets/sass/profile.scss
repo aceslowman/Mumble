@@ -22,3 +22,13 @@ div.infoRight h1:first-of-type, .h1:first-of-type, h2:first-of-type, .h2:first-o
 		}
 	}
 }
+
+.profile-content {
+	@extend .row, .center-block;
+	.profile-avatar {
+		@extend .pull-left, .col-md-4;
+	}
+	.profile-info {
+		@extend .pull-right, .col-md-8;
+	}
+}

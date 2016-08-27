@@ -11,15 +11,18 @@ use Auth;
 class HomeController extends Controller
 {
 	public function showWelcome(){
-		$data['title'] = "Mumble";
+		$data['title']     = "Mumble";
 		$data['navTitle']  = "Mumble";
-		
-		if(Auth::check()){
-			$user = Auth::user();
-			$data['user'] = $user;
-			return view('home.welcome',$data);
-		}else{
-			return view('home.login',$data);
-		}
+
+		$user = Auth::user();
+		$data['user'] = $user;
+		return view('home.welcome',$data);
 	}
+
+   public function login(){
+		$data['title']     = "Mumble";
+		$data['navTitle']  = "Mumble";   		
+
+   		return view('home.login',$data);
+   }
 }
