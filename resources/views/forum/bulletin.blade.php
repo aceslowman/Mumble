@@ -28,7 +28,7 @@
                         <h4>{{$post->title}}</h4>
                     </div>
                     <div class="forum-post-date">
-                        <p>{{$post->date}}</p>
+                        <p>{{$post->updated_at}}</p>
                     </div>
                     <div class="clear"></div>
                 </div>

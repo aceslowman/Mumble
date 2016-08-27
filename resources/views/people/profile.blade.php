@@ -126,7 +126,7 @@
 <div class="row content center-block">
     <div class="row center-block">
         <div class="pull-left col-md-4 col-sm-3">
-            <img class="img-responsive" src="{{ asset('img/avatars/slominski_avatar.jpg') }}">
+            <img class="img-responsive" src="/img/avatars/{{'medium_'.$user->avatar_filename}}">
         </div>
         <div class="pull-right col-md-8 col-sm-9 info-right">    
 

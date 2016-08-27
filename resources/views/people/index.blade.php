@@ -2,6 +2,18 @@
 
 @section('toolbar')
     <div class="toolbar">
+
+    </div>
+    <div class="clear"></div>
+@stop
+
+@section('index')
+<div class="index">
+
+    <div class="toolbar-secondary">
+        <div>
+            <h3>Sort By: Alphabetical (A-Z) <span class="glyphicon glyphicon-chevron-down"></span></h3>
+        </div>
         <div class="toolbar-search">
             <form action="" class="toolbar-form">
                 <div class="form-group">
@@ -11,17 +23,6 @@
             </form>
         </div>
         <div class="clear"></div>
-    </div>
-    <div class="clear"></div>
-@stop
-
-@section('index')
-<div class="index">
-
-    <div class="toolbar-divider">
-        <div>
-            <h3>Alphabetical (A-Z)</h3>    
-        </div>
     </div>
 
     @foreach ($users as $user)
@@ -63,10 +64,11 @@
 	</div>	
     @endforeach 
 
-    <div class="toolbar-divider">
+    <div class="toolbar-secondary">
         <div>
-            <h3>Tag Name</h3>    
+            <h3>Writing</h3>
         </div>
+        <div class="clear"></div>
     </div>
 </div>
 @stop

@@ -12,20 +12,20 @@
 			height:51px;
 			padding: 10px 15px;
 			border:none !important;
+			div{
+				margin:0px;
+				position:relative;
+				top:50%;
+				transform: translateY(-50%);
+			}
 			.forum-post-title{
 				@extend .pull-left;
-				h4{	
-					position:relative;
-					top:50%;
-					transform: translateY(-50%);
-				}
 			}
 			.forum-post-date{
 				@extend .pull-right;
-				p{	
-					position:relative;
-					top:50%;
-					transform: translateY(-50%);
+				font-style:italic;
+				p{
+					margin:0 !important;
 				}
 			}
 		}
@@ -48,11 +48,13 @@
 				}
 				.item-name{
 					margin-bottom:0px;
+					margin-top:5px !important;
 				}
 				.item-nick{
 					font-style:italic;
 					color:gray;
 					margin-top:0px;
+					font-size: 0.9em;
 				}
 				a{
 					margin-top: 10px;
@@ -63,6 +65,9 @@
 			.forum-content{
 				@extend .col-md-9;
 				padding:15px;
+				h2{
+					margin-top:10px	!important;
+				}
 			}
 		}
 

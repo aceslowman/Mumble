@@ -21,11 +21,11 @@ class ForumController extends Controller
 		return view('forum.bulletin', $data);
 	}
 
-	public function create_post(){
+	public function create_post(Request $request){
 
 	}
 
-	public function update_post(){
+	public function update_post(Request $request, $post_id){
 
 	}
 

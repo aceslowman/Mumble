@@ -37,6 +37,10 @@
 				<input type="checkbox" name="remember">Remember Me
 			</label>
 		</div>
-		<button type="submit" class="btn btn-default">Submit</button>
+		<button type="submit" class="btn btn-default">Log In</button>
+		<div class="pull-right">
+			<button type="button" class="btn btn-warning">Forgot Password</button>
+			<button type="button" class="btn btn-success">Sign Up</button>
+		</div>
 	</form>	
 @stop

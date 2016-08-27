@@ -41,7 +41,7 @@ class UsersTableSeeder extends Seeder
          ]);
          User::create([
              'name' => 'Bobby Tables',
-             'avatar_filename' => 'img/avatars/bobby_avatar.jpg',
+             'avatar_filename' => 'img/avatars/avatar-placeholder.png',
              'email' => 'bobbytables@gmail.com',
              'nick' => 'sqlinjector',
              'status' => 'Available to destroy your db',
@@ -50,7 +50,7 @@ class UsersTableSeeder extends Seeder
          ]);
          User::create([
              'name' => 'Bart Noname',
-             'avatar_filename' => 'img/avatars/bart_avatar.jpg',
+             'avatar_filename' => 'img/avatars/avatar-placeholder.png',
              'email' => 'bartnoname@gmail.com',
              'nick' => 'nameless',
              'status' => 'My parents never named me',

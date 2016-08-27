@@ -40,13 +40,29 @@
 			float:left;
 		}
 	}
-	
+}
+
+.toolbar-secondary{
+	@extend .toolbar;
+	//margin-top:15px;
+	background-color: #ebebeb;
+	color:black;
+	div {
+		float:left;
+		h3{
+			margin:0px;
+			font-weight:300;
+			position: relative;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
 	.toolbar-search {
+		@extend .pull-right;
 		display:block;
 		width:390px;
-		margin:0 auto;
 		height:inherit;
-		color:white;
+		color:white;		
 
 		form{
 			@extend .form-inline;
@@ -63,27 +79,10 @@
 				@extend .btn, .btn-default;
 				color:black !important;
 				float:left;
-				margin:10px 0px 0px 5px;
+				margin:8px 0px 0px 5px;
 			}
 		}
 	}
-}
-
-.toolbar-divider{
-		@extend .toolbar;
-		//margin-top:15px;
-		background-color: #ebebeb;
-		color:black;
-		div {
-			float:left;
-			h3{
-				margin:0px;
-				font-weight:300;
-				position: relative;
-				top: 50%;
-				transform: translateY(-50%);
-			}
-		}
 }
 
 .toolbar-glyph {

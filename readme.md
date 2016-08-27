@@ -18,3 +18,7 @@ Describe what you do, showcase some of your favorite work. This is where you can
 ## Bulletin
 
 Here you can make posts alerting your collective to upcoming events, or let them know that you really need a trumpet player. 
+
+### Dependencies
+
+Images on Mumble utilize the intervention image library for resizing and formatting. More about it can be found here: http://image.intervention.io
