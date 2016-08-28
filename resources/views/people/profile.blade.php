@@ -75,7 +75,25 @@
                     </button>
                 </div>
                 <div class="clear"></div>
+                
+                <!-- if this is the profile of the active user... -->
+
                 <div class="tag-container">
+                    <ul>
+                    @foreach($user->tags as $tag)
+                        <li>    
+                            <button class="edit-tag" data-id="{{ $tag->id }}"><span class="remove-tag">x</span>{{$tag->name}}</button>
+                        </li>
+                    @endforeach
+                        <li>    
+                            <button class="add-tag"><span>+</span>Add tag</button>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- else -->
+
+<!--                 <div class="tag-container">
                     <ul>
                     @foreach($user->tags as $tag)
                         <li>    
@@ -83,7 +101,8 @@
                         </li>
                     @endforeach
                     </ul>
-                </div>
+                </div> -->
+
                 <div class="clear"></div>
             </div>
 

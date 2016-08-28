@@ -7,8 +7,7 @@
       </div>
       <div class="modal-body">
 
-
-        <div class="tag-container">
+        <div class="clearfix"></div>        <div class="tag-container">
             <ul>
             @foreach($user->tags as $tag)
                 <li>    
@@ -20,12 +19,6 @@
                 </li>
             </ul>
         </div>
-
-
-        <div class="clearfix"></div>
-        <p><small>Note: New tags won't appear until page refresh. Under development.</small></p>
-
-
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

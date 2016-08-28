@@ -17,11 +17,13 @@ Route::post('login' ,'AuthController@login'      )->name('login');
 Route::get( 'logout','AuthController@logout'     )->name('logout');
 
 Route::group(['middleware' => 'auth'], function () {
-	Route::get('/people'                ,'PeopleController@showIndex'   );
-	Route::get('/people/{user_id}'      ,'PeopleController@showProfile' );
-	Route::get('/projects'              ,'ProjectController@showIndex'  );
-	Route::get('/projects/{project}'    ,'ProjectController@showProject');
-	Route::get('/bulletin'              ,'ForumController@showBulletin' );
-	Route::get('/library'               ,'LibraryController@showIndex'  );
-	Route::post('/update/user/{user_id}','PeopleController@update'      );
+	Route::get('/people'                ,'PeopleController@showIndex'   )->name('people_index');
+	Route::get('/people/{user_id}'      ,'PeopleController@showProfile' )->name('profile');
+	Route::get('/projects'              ,'ProjectController@showIndex'  )->name('project_index');
+	Route::get('/projects/{project}'    ,'ProjectController@showProject')->name('project');
+	Route::get('/bulletin'              ,'ForumController@showBulletin' )->name('bulletin');
+	Route::get('/library'               ,'LibraryController@showIndex'  )->name('library');
+	Route::post('/update/user/{user_id}','PeopleController@update'      )->name('update_user');
+	Route::post('/detach/tag'           ,'TagController@detach'         )->name('detach_tag');
+	Route::resource('photos','PhotoController'  );
 });

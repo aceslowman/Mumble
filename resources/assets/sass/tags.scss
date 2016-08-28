@@ -8,13 +8,19 @@
 			list-style:none;
 			margin:0px 5px 0px 0px;
 			button{
-				@extend .btn, .btn-primary;
+				@extend .btn;
 				padding: 2px 12px !important;
 				font-size:0.8em;
 				span{
 					position:relative;
 					right:7px;
 				}
+			}
+			.edit-tag{
+				@extend .btn-primary;
+			}
+			.add-tag{
+				@extend .btn-success;
 			}
 		}
 	}

@@ -53,9 +53,9 @@ class PeopleController extends Controller
 			$extension = $avatar->getClientOriginalExtension();
 			$filename = md5($avatar).".".$extension;
 
-			Image::make($avatar)->resize(50 ,50 )->save(public_path('img/avatars/'.$filename.'_thumb'));
-			Image::make($avatar)->resize(150,150)->save(public_path('img/avatars/'.$filename.'_small'));
-			Image::make($avatar)->resize(400,400)->save(public_path('img/avatars/'.$filename.'_medium'));
+			Image::make($avatar)->resize(50 ,50 )->save(public_path('img/avatars/thumb_'.$filename));
+			Image::make($avatar)->resize(150,150)->save(public_path('img/avatars/small_'.$filename));
+			Image::make($avatar)->resize(400,400)->save(public_path('img/avatars/medium_'.$filename));
 
 			$avatar->move('img/avatars/',$filename);
 			$user->avatar_filename = $filename;
@@ -92,9 +92,9 @@ class PeopleController extends Controller
 			$extension = $avatar->getClientOriginalExtension();
 			$filename = md5($avatar).".".$extension;
 
-			Image::make($avatar)->resize(50 ,50 )->save(public_path('img/avatars/'.$filename.'_thumb'));
-			Image::make($avatar)->resize(150,150)->save(public_path('img/avatars/'.$filename.'_small'));
-			Image::make($avatar)->resize(400,400)->save(public_path('img/avatars/'.$filename.'_medium'));
+			Image::make($avatar)->resize(50 ,50 )->save(public_path('img/avatars/thumb_'.$filename));
+			Image::make($avatar)->resize(150,150)->save(public_path('img/avatars/small_'.$filename));
+			Image::make($avatar)->resize(400,400)->save(public_path('img/avatars/medium_'.$filename));
 
 			$avatar->move('img/avatars/',$filename);
 			$user->avatar_filename = $filename;

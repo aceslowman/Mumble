@@ -16,6 +16,7 @@ class HomeController extends Controller
 
 		$user = Auth::user();
 		$data['user'] = $user;
+		
 		return view('home.welcome',$data);
 	}
 

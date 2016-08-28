@@ -2954,88 +2954,99 @@ fieldset[disabled] a.glyph-link {
     color: #fff;
     background-color: #333; }
 
-.btn-primary, .tag-container ul li button {
+.btn-primary, .tag-container ul li .edit-tag {
   color: #fff;
   background-color: #337ab7;
   border-color: #2e6da4; }
-  .btn-primary:focus, .tag-container ul li button:focus, .btn-primary.focus, .tag-container ul li button.focus {
+  .btn-primary:focus, .tag-container ul li .edit-tag:focus, .btn-primary.focus, .tag-container ul li .focus.edit-tag {
     color: #fff;
     background-color: #286090;
     border-color: #122b40; }
-  .btn-primary:hover, .tag-container ul li button:hover {
+  .btn-primary:hover, .tag-container ul li .edit-tag:hover {
     color: #fff;
     background-color: #286090;
     border-color: #204d74; }
-  .btn-primary:active, .tag-container ul li button:active, .btn-primary.active, .tag-container ul li button.active,
+  .btn-primary:active, .tag-container ul li .edit-tag:active, .btn-primary.active, .tag-container ul li .active.edit-tag,
   .open > .btn-primary.dropdown-toggle, .tag-container ul li
-  .open > button.dropdown-toggle {
+  .open > .dropdown-toggle.edit-tag {
     color: #fff;
     background-color: #286090;
     border-color: #204d74; }
-    .btn-primary:active:hover, .tag-container ul li button:active:hover, .btn-primary:active:focus, .tag-container ul li button:active:focus, .btn-primary:active.focus, .tag-container ul li button:active.focus, .btn-primary.active:hover, .tag-container ul li button.active:hover, .btn-primary.active:focus, .tag-container ul li button.active:focus, .btn-primary.active.focus, .tag-container ul li button.active.focus,
+    .btn-primary:active:hover, .tag-container ul li .edit-tag:active:hover, .btn-primary:active:focus, .tag-container ul li .edit-tag:active:focus, .btn-primary:active.focus, .tag-container ul li .edit-tag:active.focus, .btn-primary.active:hover, .tag-container ul li .active.edit-tag:hover, .btn-primary.active:focus, .tag-container ul li .active.edit-tag:focus, .btn-primary.active.focus, .tag-container ul li .active.focus.edit-tag,
     .open > .btn-primary.dropdown-toggle:hover, .tag-container ul li
-    .open > button.dropdown-toggle:hover,
+    .open > .dropdown-toggle.edit-tag:hover,
     .open > .btn-primary.dropdown-toggle:focus, .tag-container ul li
-    .open > button.dropdown-toggle:focus,
+    .open > .dropdown-toggle.edit-tag:focus,
     .open > .btn-primary.dropdown-toggle.focus, .tag-container ul li
-    .open > button.dropdown-toggle.focus {
+    .open > .dropdown-toggle.focus.edit-tag {
       color: #fff;
       background-color: #204d74;
       border-color: #122b40; }
-  .btn-primary:active, .tag-container ul li button:active, .btn-primary.active, .tag-container ul li button.active,
+  .btn-primary:active, .tag-container ul li .edit-tag:active, .btn-primary.active, .tag-container ul li .active.edit-tag,
   .open > .btn-primary.dropdown-toggle, .tag-container ul li
-  .open > button.dropdown-toggle {
+  .open > .dropdown-toggle.edit-tag {
     background-image: none; }
-  .btn-primary.disabled:hover, .tag-container ul li button.disabled:hover, .btn-primary.disabled:focus, .tag-container ul li button.disabled:focus, .btn-primary.disabled.focus, .tag-container ul li button.disabled.focus, .btn-primary[disabled]:hover, .tag-container ul li button[disabled]:hover, .btn-primary[disabled]:focus, .tag-container ul li button[disabled]:focus, .btn-primary[disabled].focus, .tag-container ul li button[disabled].focus,
+  .btn-primary.disabled:hover, .tag-container ul li .disabled.edit-tag:hover, .btn-primary.disabled:focus, .tag-container ul li .disabled.edit-tag:focus, .btn-primary.disabled.focus, .tag-container ul li .disabled.focus.edit-tag, .btn-primary[disabled]:hover, .tag-container ul li [disabled].edit-tag:hover, .btn-primary[disabled]:focus, .tag-container ul li [disabled].edit-tag:focus, .btn-primary[disabled].focus, .tag-container ul li [disabled].focus.edit-tag,
   fieldset[disabled] .btn-primary:hover,
-  fieldset[disabled] .tag-container ul li button:hover, .tag-container ul li
-  fieldset[disabled] button:hover,
+  fieldset[disabled] .tag-container ul li .edit-tag:hover, .tag-container ul li
+  fieldset[disabled] .edit-tag:hover,
   fieldset[disabled] .btn-primary:focus,
-  fieldset[disabled] .tag-container ul li button:focus, .tag-container ul li
-  fieldset[disabled] button:focus,
+  fieldset[disabled] .tag-container ul li .edit-tag:focus, .tag-container ul li
+  fieldset[disabled] .edit-tag:focus,
   fieldset[disabled] .btn-primary.focus,
-  fieldset[disabled] .tag-container ul li button.focus, .tag-container ul li
-  fieldset[disabled] button.focus {
+  fieldset[disabled] .tag-container ul li .focus.edit-tag, .tag-container ul li
+  fieldset[disabled] .focus.edit-tag {
     background-color: #337ab7;
     border-color: #2e6da4; }
-  .btn-primary .badge, .tag-container ul li button .badge {
+  .btn-primary .badge, .tag-container ul li .edit-tag .badge {
     color: #337ab7;
     background-color: #fff; }
 
-.btn-success {
+.btn-success, .tag-container ul li .add-tag {
   color: #fff;
   background-color: #5cb85c;
   border-color: #4cae4c; }
-  .btn-success:focus, .btn-success.focus {
+  .btn-success:focus, .tag-container ul li .add-tag:focus, .btn-success.focus, .tag-container ul li .focus.add-tag {
     color: #fff;
     background-color: #449d44;
     border-color: #255625; }
-  .btn-success:hover {
+  .btn-success:hover, .tag-container ul li .add-tag:hover {
     color: #fff;
     background-color: #449d44;
     border-color: #398439; }
-  .btn-success:active, .btn-success.active,
-  .open > .btn-success.dropdown-toggle {
+  .btn-success:active, .tag-container ul li .add-tag:active, .btn-success.active, .tag-container ul li .active.add-tag,
+  .open > .btn-success.dropdown-toggle, .tag-container ul li
+  .open > .dropdown-toggle.add-tag {
     color: #fff;
     background-color: #449d44;
     border-color: #398439; }
-    .btn-success:active:hover, .btn-success:active:focus, .btn-success:active.focus, .btn-success.active:hover, .btn-success.active:focus, .btn-success.active.focus,
-    .open > .btn-success.dropdown-toggle:hover,
-    .open > .btn-success.dropdown-toggle:focus,
-    .open > .btn-success.dropdown-toggle.focus {
+    .btn-success:active:hover, .tag-container ul li .add-tag:active:hover, .btn-success:active:focus, .tag-container ul li .add-tag:active:focus, .btn-success:active.focus, .tag-container ul li .add-tag:active.focus, .btn-success.active:hover, .tag-container ul li .active.add-tag:hover, .btn-success.active:focus, .tag-container ul li .active.add-tag:focus, .btn-success.active.focus, .tag-container ul li .active.focus.add-tag,
+    .open > .btn-success.dropdown-toggle:hover, .tag-container ul li
+    .open > .dropdown-toggle.add-tag:hover,
+    .open > .btn-success.dropdown-toggle:focus, .tag-container ul li
+    .open > .dropdown-toggle.add-tag:focus,
+    .open > .btn-success.dropdown-toggle.focus, .tag-container ul li
+    .open > .dropdown-toggle.focus.add-tag {
       color: #fff;
       background-color: #398439;
       border-color: #255625; }
-  .btn-success:active, .btn-success.active,
-  .open > .btn-success.dropdown-toggle {
+  .btn-success:active, .tag-container ul li .add-tag:active, .btn-success.active, .tag-container ul li .active.add-tag,
+  .open > .btn-success.dropdown-toggle, .tag-container ul li
+  .open > .dropdown-toggle.add-tag {
     background-image: none; }
-  .btn-success.disabled:hover, .btn-success.disabled:focus, .btn-success.disabled.focus, .btn-success[disabled]:hover, .btn-success[disabled]:focus, .btn-success[disabled].focus,
+  .btn-success.disabled:hover, .tag-container ul li .disabled.add-tag:hover, .btn-success.disabled:focus, .tag-container ul li .disabled.add-tag:focus, .btn-success.disabled.focus, .tag-container ul li .disabled.focus.add-tag, .btn-success[disabled]:hover, .tag-container ul li [disabled].add-tag:hover, .btn-success[disabled]:focus, .tag-container ul li [disabled].add-tag:focus, .btn-success[disabled].focus, .tag-container ul li [disabled].focus.add-tag,
   fieldset[disabled] .btn-success:hover,
+  fieldset[disabled] .tag-container ul li .add-tag:hover, .tag-container ul li
+  fieldset[disabled] .add-tag:hover,
   fieldset[disabled] .btn-success:focus,
-  fieldset[disabled] .btn-success.focus {
+  fieldset[disabled] .tag-container ul li .add-tag:focus, .tag-container ul li
+  fieldset[disabled] .add-tag:focus,
+  fieldset[disabled] .btn-success.focus,
+  fieldset[disabled] .tag-container ul li .focus.add-tag, .tag-container ul li
+  fieldset[disabled] .focus.add-tag {
     background-color: #5cb85c;
     border-color: #4cae4c; }
-  .btn-success .badge {
+  .btn-success .badge, .tag-container ul li .add-tag .badge {
     color: #5cb85c;
     background-color: #fff; }
 
