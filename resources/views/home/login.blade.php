@@ -1,4 +1,4 @@
-@extends('layouts.home')
+@extends('home.layout')
 
 @section('content')
 	@if(count($errors)>0)

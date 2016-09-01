@@ -18,7 +18,7 @@ class ForumController extends Controller
 		$data['title']    = 'Bulletin';
 		$data['navTitle'] = 'Bulletin';
 
-		return view('forum.bulletin', $data);
+		return view('forum.forum', $data);
 	}
 
 	public function create_post(Request $request){

@@ -1,4 +1,4 @@
-@extends('layouts.forum')
+@extends('forum.layout')
 
 @section('modalWindows')
     @include('forum.modals.createPost')

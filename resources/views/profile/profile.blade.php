@@ -1,4 +1,4 @@
-@extends('layouts.profile')
+@extends('profile.layout')
 
 @section('modalWindows')
     @include('people.modals.editCarousel')

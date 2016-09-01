@@ -1,4 +1,4 @@
-@extends('layouts.index')
+@extends('index.layout')
 
 @section('toolbar')
     <div class="toolbar">

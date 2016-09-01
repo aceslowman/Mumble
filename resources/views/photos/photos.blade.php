@@ -1,4 +1,4 @@
-@extends('layouts.photos')
+@extends('photos.layout')
 
 @section('modalWindows')
 @stop

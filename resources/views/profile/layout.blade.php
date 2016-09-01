@@ -1,14 +1,4 @@
-@extends('layouts.master')
-
-@section('title')
-@parent
-	::{{$title}}
-@stop
-
-@section('navTitle')
-@parent
-	{{$navTitle}}
-@stop
+@extends('master.layout')
 
 @section('content-container')
 	@yield('toolbar')

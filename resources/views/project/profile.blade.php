@@ -1,3 +1,0 @@
-@extends('layouts.profile')
-
-Profile

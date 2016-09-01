@@ -28,7 +28,7 @@ class PeopleController extends Controller
 		$data['title'] = 'People Index';
 		$data['navTitle'] = 'People Index';
 
-		return view('people.index', $data);
+		return view('index.index', $data);
 	}
 
 	public function showProfile($user_nick){
@@ -36,7 +36,7 @@ class PeopleController extends Controller
 		$data['carousel'] = Carousel::with('photos')->where('profile_id',$data['user']->profile->id)->first();   
 		$data['title']    = $data['user']->name;
 		$data['navTitle'] = $data['user']->name;
-		return view('people.profile', $data);     
+		return view('profile.profile', $data);     
 	}
 
 	public function create(Request $request, $user_id){

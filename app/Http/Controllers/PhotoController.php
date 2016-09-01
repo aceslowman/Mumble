@@ -23,7 +23,7 @@ class PhotoController extends Controller
         $data['title']    = $data['user']->name;
         $data['navTitle'] = $data['user']->name;
 
-        return view('people.photos', $data);
+        return view('photos.photos', $data);
     }
 
     /**

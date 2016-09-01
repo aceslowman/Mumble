@@ -1,8 +1,8 @@
-@extends('layouts.home')
+@extends('home.layout')
 
 @section('modalWindows')
-	@include('home.modals.editAccount')
-	@include('home.modals.manageProjects')
+	@include('home._modals.editAccount')
+	@include('home._modals.manageProjects')
 @stop
 
 @section('content')
