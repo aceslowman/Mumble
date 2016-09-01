@@ -222,14 +222,15 @@ th {
     page-break-after: avoid; }
   .navbar {
     display: none; }
-  .btn > .caret, .glyph-link > .caret, .toolbar div button > .caret, .toolbar-secondary div button > .caret, .carousel-toolbar div button > .caret, .toolbar-secondary .toolbar-search form button > .caret, .tag-container ul li button > .caret, .forum-container .forum-post .forum-footer .forum-expand-comments button > .caret,
+  .btn > .caret, .glyph-link > .caret, .toolbar div button > .caret, .toolbar-secondary div button > .caret, .carousel-toolbar div button > .caret, .toolbar-secondary .toolbar-search form button > .caret, .tag-container ul li button > .caret, .tag-container ul li .tag-form > .caret, .forum-container .forum-post .forum-footer .forum-expand-comments button > .caret,
   .dropup > .btn > .caret,
   .dropup > .glyph-link > .caret, .toolbar div
   .dropup > button > .caret, .toolbar-secondary div
   .dropup > button > .caret, .carousel-toolbar div
   .dropup > button > .caret, .toolbar-secondary .toolbar-search form
   .dropup > button > .caret, .tag-container ul li
-  .dropup > button > .caret, .forum-container .forum-post .forum-footer .forum-expand-comments
+  .dropup > button > .caret, .tag-container ul li
+  .dropup > .tag-form > .caret, .forum-container .forum-post .forum-footer .forum-expand-comments
   .dropup > button > .caret {
     border-top-color: #000 !important; }
   .label {
@@ -2362,7 +2363,8 @@ input[type="search"] {
   input[type="date"].input-sm, .input-group-sm > input[type="date"].form-control, .toolbar-secondary .toolbar-search form div .input-group-sm > input[type="date"],
   .input-group-sm > input[type="date"].input-group-addon,
   .input-group-sm > .input-group-btn > input[type="date"].btn,
-  .input-group-sm > .input-group-btn > input[type="date"].glyph-link,
+  .input-group-sm > .input-group-btn > input[type="date"].glyph-link, .tag-container ul li
+  .input-group-sm > .input-group-btn > input[type="date"].tag-form,
   .input-group-sm input[type="date"],
   input[type="time"].input-sm,
   .input-group-sm > input[type="time"].form-control,
@@ -2370,6 +2372,8 @@ input[type="search"] {
   .input-group-sm > input[type="time"].input-group-addon,
   .input-group-sm > .input-group-btn > input[type="time"].btn,
   .input-group-sm > .input-group-btn > input[type="time"].glyph-link,
+  .tag-container ul li
+  .input-group-sm > .input-group-btn > input[type="time"].tag-form,
   .input-group-sm
   input[type="time"],
   input[type="datetime-local"].input-sm,
@@ -2378,6 +2382,8 @@ input[type="search"] {
   .input-group-sm > input[type="datetime-local"].input-group-addon,
   .input-group-sm > .input-group-btn > input[type="datetime-local"].btn,
   .input-group-sm > .input-group-btn > input[type="datetime-local"].glyph-link,
+  .tag-container ul li
+  .input-group-sm > .input-group-btn > input[type="datetime-local"].tag-form,
   .input-group-sm
   input[type="datetime-local"],
   input[type="month"].input-sm,
@@ -2386,13 +2392,16 @@ input[type="search"] {
   .input-group-sm > input[type="month"].input-group-addon,
   .input-group-sm > .input-group-btn > input[type="month"].btn,
   .input-group-sm > .input-group-btn > input[type="month"].glyph-link,
+  .tag-container ul li
+  .input-group-sm > .input-group-btn > input[type="month"].tag-form,
   .input-group-sm
   input[type="month"] {
     line-height: 30px; }
   input[type="date"].input-lg, .input-group-lg > input[type="date"].form-control, .toolbar-secondary .toolbar-search form div .input-group-lg > input[type="date"],
   .input-group-lg > input[type="date"].input-group-addon,
   .input-group-lg > .input-group-btn > input[type="date"].btn,
-  .input-group-lg > .input-group-btn > input[type="date"].glyph-link,
+  .input-group-lg > .input-group-btn > input[type="date"].glyph-link, .tag-container ul li
+  .input-group-lg > .input-group-btn > input[type="date"].tag-form,
   .input-group-lg input[type="date"],
   input[type="time"].input-lg,
   .input-group-lg > input[type="time"].form-control,
@@ -2400,6 +2409,8 @@ input[type="search"] {
   .input-group-lg > input[type="time"].input-group-addon,
   .input-group-lg > .input-group-btn > input[type="time"].btn,
   .input-group-lg > .input-group-btn > input[type="time"].glyph-link,
+  .tag-container ul li
+  .input-group-lg > .input-group-btn > input[type="time"].tag-form,
   .input-group-lg
   input[type="time"],
   input[type="datetime-local"].input-lg,
@@ -2408,6 +2419,8 @@ input[type="search"] {
   .input-group-lg > input[type="datetime-local"].input-group-addon,
   .input-group-lg > .input-group-btn > input[type="datetime-local"].btn,
   .input-group-lg > .input-group-btn > input[type="datetime-local"].glyph-link,
+  .tag-container ul li
+  .input-group-lg > .input-group-btn > input[type="datetime-local"].tag-form,
   .input-group-lg
   input[type="datetime-local"],
   input[type="month"].input-lg,
@@ -2416,6 +2429,8 @@ input[type="search"] {
   .input-group-lg > input[type="month"].input-group-addon,
   .input-group-lg > .input-group-btn > input[type="month"].btn,
   .input-group-lg > .input-group-btn > input[type="month"].glyph-link,
+  .tag-container ul li
+  .input-group-lg > .input-group-btn > input[type="month"].tag-form,
   .input-group-lg
   input[type="month"] {
     line-height: 46px; } }
@@ -2499,7 +2514,8 @@ fieldset[disabled]
   .input-group-lg > .input-group-btn > button.form-control-static, .carousel-toolbar div
   .input-group-lg > .input-group-btn > button.form-control-static, .toolbar-secondary .toolbar-search form
   .input-group-lg > .input-group-btn > button.form-control-static, .tag-container ul li
-  .input-group-lg > .input-group-btn > button.form-control-static, .forum-container .forum-post .forum-footer .forum-expand-comments
+  .input-group-lg > .input-group-btn > button.form-control-static, .tag-container ul li
+  .input-group-lg > .input-group-btn > .form-control-static.tag-form, .forum-container .forum-post .forum-footer .forum-expand-comments
   .input-group-lg > .input-group-btn > button.form-control-static, .form-control-static.input-sm, .input-group-sm > .form-control-static.form-control, .toolbar-secondary .toolbar-search form div .input-group-sm > input.form-control-static,
   .input-group-sm > .form-control-static.input-group-addon,
   .input-group-sm > .input-group-btn > .form-control-static.btn,
@@ -2508,7 +2524,8 @@ fieldset[disabled]
   .input-group-sm > .input-group-btn > button.form-control-static, .carousel-toolbar div
   .input-group-sm > .input-group-btn > button.form-control-static, .toolbar-secondary .toolbar-search form
   .input-group-sm > .input-group-btn > button.form-control-static, .tag-container ul li
-  .input-group-sm > .input-group-btn > button.form-control-static, .forum-container .forum-post .forum-footer .forum-expand-comments
+  .input-group-sm > .input-group-btn > button.form-control-static, .tag-container ul li
+  .input-group-sm > .input-group-btn > .form-control-static.tag-form, .forum-container .forum-post .forum-footer .forum-expand-comments
   .input-group-sm > .input-group-btn > button.form-control-static {
     padding-left: 0;
     padding-right: 0; }
@@ -2521,7 +2538,8 @@ fieldset[disabled]
 .input-group-sm > .input-group-btn > button, .carousel-toolbar div
 .input-group-sm > .input-group-btn > button, .toolbar-secondary .toolbar-search form
 .input-group-sm > .input-group-btn > button, .tag-container ul li
-.input-group-sm > .input-group-btn > button, .forum-container .forum-post .forum-footer .forum-expand-comments
+.input-group-sm > .input-group-btn > button, .tag-container ul li
+.input-group-sm > .input-group-btn > .tag-form, .forum-container .forum-post .forum-footer .forum-expand-comments
 .input-group-sm > .input-group-btn > button {
   height: 30px;
   padding: 5px 10px;
@@ -2532,19 +2550,23 @@ fieldset[disabled]
 select.input-sm, .input-group-sm > select.form-control,
 .input-group-sm > select.input-group-addon,
 .input-group-sm > .input-group-btn > select.btn,
-.input-group-sm > .input-group-btn > select.glyph-link {
+.input-group-sm > .input-group-btn > select.glyph-link, .tag-container ul li
+.input-group-sm > .input-group-btn > select.tag-form {
   height: 30px;
   line-height: 30px; }
 
 textarea.input-sm, .input-group-sm > textarea.form-control,
 .input-group-sm > textarea.input-group-addon,
 .input-group-sm > .input-group-btn > textarea.btn,
-.input-group-sm > .input-group-btn > textarea.glyph-link,
+.input-group-sm > .input-group-btn > textarea.glyph-link, .tag-container ul li
+.input-group-sm > .input-group-btn > textarea.tag-form,
 select[multiple].input-sm,
 .input-group-sm > select[multiple].form-control,
 .input-group-sm > select[multiple].input-group-addon,
 .input-group-sm > .input-group-btn > select[multiple].btn,
-.input-group-sm > .input-group-btn > select[multiple].glyph-link {
+.input-group-sm > .input-group-btn > select[multiple].glyph-link,
+.tag-container ul li
+.input-group-sm > .input-group-btn > select[multiple].tag-form {
   height: auto; }
 
 .form-group-sm .form-control, .form-group-sm .toolbar-secondary .toolbar-search form div input, .toolbar-secondary .toolbar-search form div .form-group-sm input {
@@ -2577,7 +2599,8 @@ select[multiple].input-sm,
 .input-group-lg > .input-group-btn > button, .carousel-toolbar div
 .input-group-lg > .input-group-btn > button, .toolbar-secondary .toolbar-search form
 .input-group-lg > .input-group-btn > button, .tag-container ul li
-.input-group-lg > .input-group-btn > button, .forum-container .forum-post .forum-footer .forum-expand-comments
+.input-group-lg > .input-group-btn > button, .tag-container ul li
+.input-group-lg > .input-group-btn > .tag-form, .forum-container .forum-post .forum-footer .forum-expand-comments
 .input-group-lg > .input-group-btn > button {
   height: 46px;
   padding: 10px 16px;
@@ -2588,19 +2611,23 @@ select[multiple].input-sm,
 select.input-lg, .input-group-lg > select.form-control,
 .input-group-lg > select.input-group-addon,
 .input-group-lg > .input-group-btn > select.btn,
-.input-group-lg > .input-group-btn > select.glyph-link {
+.input-group-lg > .input-group-btn > select.glyph-link, .tag-container ul li
+.input-group-lg > .input-group-btn > select.tag-form {
   height: 46px;
   line-height: 46px; }
 
 textarea.input-lg, .input-group-lg > textarea.form-control,
 .input-group-lg > textarea.input-group-addon,
 .input-group-lg > .input-group-btn > textarea.btn,
-.input-group-lg > .input-group-btn > textarea.glyph-link,
+.input-group-lg > .input-group-btn > textarea.glyph-link, .tag-container ul li
+.input-group-lg > .input-group-btn > textarea.tag-form,
 select[multiple].input-lg,
 .input-group-lg > select[multiple].form-control,
 .input-group-lg > select[multiple].input-group-addon,
 .input-group-lg > .input-group-btn > select[multiple].btn,
-.input-group-lg > .input-group-btn > select[multiple].glyph-link {
+.input-group-lg > .input-group-btn > select[multiple].glyph-link,
+.tag-container ul li
+.input-group-lg > .input-group-btn > select[multiple].tag-form {
   height: auto; }
 
 .form-group-lg .form-control, .form-group-lg .toolbar-secondary .toolbar-search form div input, .toolbar-secondary .toolbar-search form div .form-group-lg input {
@@ -2650,7 +2677,8 @@ select[multiple].input-lg,
 .input-group-lg > .input-group-btn > button + .form-control-feedback, .carousel-toolbar div
 .input-group-lg > .input-group-btn > button + .form-control-feedback, .toolbar-secondary .toolbar-search form
 .input-group-lg > .input-group-btn > button + .form-control-feedback, .tag-container ul li
-.input-group-lg > .input-group-btn > button + .form-control-feedback, .forum-container .forum-post .forum-footer .forum-expand-comments
+.input-group-lg > .input-group-btn > button + .form-control-feedback, .tag-container ul li
+.input-group-lg > .input-group-btn > .tag-form + .form-control-feedback, .forum-container .forum-post .forum-footer .forum-expand-comments
 .input-group-lg > .input-group-btn > button + .form-control-feedback,
 .input-group-lg + .form-control-feedback,
 .form-group-lg .form-control + .form-control-feedback,
@@ -2668,7 +2696,8 @@ select[multiple].input-lg,
 .input-group-sm > .input-group-btn > button + .form-control-feedback, .carousel-toolbar div
 .input-group-sm > .input-group-btn > button + .form-control-feedback, .toolbar-secondary .toolbar-search form
 .input-group-sm > .input-group-btn > button + .form-control-feedback, .tag-container ul li
-.input-group-sm > .input-group-btn > button + .form-control-feedback, .forum-container .forum-post .forum-footer .forum-expand-comments
+.input-group-sm > .input-group-btn > button + .form-control-feedback, .tag-container ul li
+.input-group-sm > .input-group-btn > .tag-form + .form-control-feedback, .forum-container .forum-post .forum-footer .forum-expand-comments
 .input-group-sm > .input-group-btn > button + .form-control-feedback,
 .input-group-sm + .form-control-feedback,
 .form-group-sm .form-control + .form-control-feedback,
@@ -2851,7 +2880,7 @@ select[multiple].input-lg,
     padding-top: 6px;
     font-size: 12px; } }
 
-.btn, .glyph-link, .toolbar div button, .toolbar-secondary div button, .carousel-toolbar div button, .toolbar-secondary .toolbar-search form button, .tag-container ul li button, .forum-container .forum-post .forum-footer .forum-expand-comments button {
+.btn, .glyph-link, .toolbar div button, .toolbar-secondary div button, .carousel-toolbar div button, .toolbar-secondary .toolbar-search form button, .tag-container ul li button, .tag-container ul li .tag-form, .forum-container .forum-post .forum-footer .forum-expand-comments button {
   display: inline-block;
   margin-bottom: 0;
   font-weight: normal;
@@ -2871,17 +2900,17 @@ select[multiple].input-lg,
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none; }
-  .btn:focus, .glyph-link:focus, .toolbar div button:focus, .toolbar-secondary div button:focus, .carousel-toolbar div button:focus, .toolbar-secondary .toolbar-search form button:focus, .tag-container ul li button:focus, .forum-container .forum-post .forum-footer .forum-expand-comments button:focus, .btn.focus, .focus.glyph-link, .toolbar div button.focus, .toolbar-secondary div button.focus, .carousel-toolbar div button.focus, .toolbar-secondary .toolbar-search form button.focus, .tag-container ul li button.focus, .forum-container .forum-post .forum-footer .forum-expand-comments button.focus, .btn:active:focus, .glyph-link:active:focus, .toolbar div button:active:focus, .toolbar-secondary div button:active:focus, .carousel-toolbar div button:active:focus, .toolbar-secondary .toolbar-search form button:active:focus, .tag-container ul li button:active:focus, .forum-container .forum-post .forum-footer .forum-expand-comments button:active:focus, .btn:active.focus, .glyph-link:active.focus, .toolbar div button:active.focus, .toolbar-secondary div button:active.focus, .carousel-toolbar div button:active.focus, .toolbar-secondary .toolbar-search form button:active.focus, .tag-container ul li button:active.focus, .forum-container .forum-post .forum-footer .forum-expand-comments button:active.focus, .btn.active:focus, .active.glyph-link:focus, .toolbar div button.active:focus, .toolbar-secondary div button.active:focus, .carousel-toolbar div button.active:focus, .toolbar-secondary .toolbar-search form button.active:focus, .tag-container ul li button.active:focus, .forum-container .forum-post .forum-footer .forum-expand-comments button.active:focus, .btn.active.focus, .active.focus.glyph-link, .toolbar div button.active.focus, .toolbar-secondary div button.active.focus, .carousel-toolbar div button.active.focus, .toolbar-secondary .toolbar-search form button.active.focus, .tag-container ul li button.active.focus, .forum-container .forum-post .forum-footer .forum-expand-comments button.active.focus {
+  .btn:focus, .glyph-link:focus, .toolbar div button:focus, .toolbar-secondary div button:focus, .carousel-toolbar div button:focus, .toolbar-secondary .toolbar-search form button:focus, .tag-container ul li button:focus, .tag-container ul li .tag-form:focus, .forum-container .forum-post .forum-footer .forum-expand-comments button:focus, .btn.focus, .focus.glyph-link, .toolbar div button.focus, .toolbar-secondary div button.focus, .carousel-toolbar div button.focus, .toolbar-secondary .toolbar-search form button.focus, .tag-container ul li button.focus, .tag-container ul li .focus.tag-form, .forum-container .forum-post .forum-footer .forum-expand-comments button.focus, .btn:active:focus, .glyph-link:active:focus, .toolbar div button:active:focus, .toolbar-secondary div button:active:focus, .carousel-toolbar div button:active:focus, .toolbar-secondary .toolbar-search form button:active:focus, .tag-container ul li button:active:focus, .tag-container ul li .tag-form:active:focus, .forum-container .forum-post .forum-footer .forum-expand-comments button:active:focus, .btn:active.focus, .glyph-link:active.focus, .toolbar div button:active.focus, .toolbar-secondary div button:active.focus, .carousel-toolbar div button:active.focus, .toolbar-secondary .toolbar-search form button:active.focus, .tag-container ul li button:active.focus, .tag-container ul li .tag-form:active.focus, .forum-container .forum-post .forum-footer .forum-expand-comments button:active.focus, .btn.active:focus, .active.glyph-link:focus, .toolbar div button.active:focus, .toolbar-secondary div button.active:focus, .carousel-toolbar div button.active:focus, .toolbar-secondary .toolbar-search form button.active:focus, .tag-container ul li button.active:focus, .tag-container ul li .active.tag-form:focus, .forum-container .forum-post .forum-footer .forum-expand-comments button.active:focus, .btn.active.focus, .active.focus.glyph-link, .toolbar div button.active.focus, .toolbar-secondary div button.active.focus, .carousel-toolbar div button.active.focus, .toolbar-secondary .toolbar-search form button.active.focus, .tag-container ul li button.active.focus, .tag-container ul li .active.focus.tag-form, .forum-container .forum-post .forum-footer .forum-expand-comments button.active.focus {
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px; }
-  .btn:hover, .glyph-link:hover, .toolbar div button:hover, .toolbar-secondary div button:hover, .carousel-toolbar div button:hover, .toolbar-secondary .toolbar-search form button:hover, .tag-container ul li button:hover, .forum-container .forum-post .forum-footer .forum-expand-comments button:hover, .btn:focus, .glyph-link:focus, .toolbar div button:focus, .toolbar-secondary div button:focus, .carousel-toolbar div button:focus, .toolbar-secondary .toolbar-search form button:focus, .tag-container ul li button:focus, .forum-container .forum-post .forum-footer .forum-expand-comments button:focus, .btn.focus, .focus.glyph-link, .toolbar div button.focus, .toolbar-secondary div button.focus, .carousel-toolbar div button.focus, .toolbar-secondary .toolbar-search form button.focus, .tag-container ul li button.focus, .forum-container .forum-post .forum-footer .forum-expand-comments button.focus {
+  .btn:hover, .glyph-link:hover, .toolbar div button:hover, .toolbar-secondary div button:hover, .carousel-toolbar div button:hover, .toolbar-secondary .toolbar-search form button:hover, .tag-container ul li button:hover, .tag-container ul li .tag-form:hover, .forum-container .forum-post .forum-footer .forum-expand-comments button:hover, .btn:focus, .glyph-link:focus, .toolbar div button:focus, .toolbar-secondary div button:focus, .carousel-toolbar div button:focus, .toolbar-secondary .toolbar-search form button:focus, .tag-container ul li button:focus, .tag-container ul li .tag-form:focus, .forum-container .forum-post .forum-footer .forum-expand-comments button:focus, .btn.focus, .focus.glyph-link, .toolbar div button.focus, .toolbar-secondary div button.focus, .carousel-toolbar div button.focus, .toolbar-secondary .toolbar-search form button.focus, .tag-container ul li button.focus, .tag-container ul li .focus.tag-form, .forum-container .forum-post .forum-footer .forum-expand-comments button.focus {
     color: #333;
     text-decoration: none; }
-  .btn:active, .glyph-link:active, .toolbar div button:active, .toolbar-secondary div button:active, .carousel-toolbar div button:active, .toolbar-secondary .toolbar-search form button:active, .tag-container ul li button:active, .forum-container .forum-post .forum-footer .forum-expand-comments button:active, .btn.active, .active.glyph-link, .toolbar div button.active, .toolbar-secondary div button.active, .carousel-toolbar div button.active, .toolbar-secondary .toolbar-search form button.active, .tag-container ul li button.active, .forum-container .forum-post .forum-footer .forum-expand-comments button.active {
+  .btn:active, .glyph-link:active, .toolbar div button:active, .toolbar-secondary div button:active, .carousel-toolbar div button:active, .toolbar-secondary .toolbar-search form button:active, .tag-container ul li button:active, .tag-container ul li .tag-form:active, .forum-container .forum-post .forum-footer .forum-expand-comments button:active, .btn.active, .active.glyph-link, .toolbar div button.active, .toolbar-secondary div button.active, .carousel-toolbar div button.active, .toolbar-secondary .toolbar-search form button.active, .tag-container ul li button.active, .tag-container ul li .active.tag-form, .forum-container .forum-post .forum-footer .forum-expand-comments button.active {
     outline: 0;
     background-image: none;
     box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); }
-  .btn.disabled, .disabled.glyph-link, .toolbar div button.disabled, .toolbar-secondary div button.disabled, .carousel-toolbar div button.disabled, .toolbar-secondary .toolbar-search form button.disabled, .tag-container ul li button.disabled, .forum-container .forum-post .forum-footer .forum-expand-comments button.disabled, .btn[disabled], [disabled].glyph-link, .toolbar div button[disabled], .toolbar-secondary div button[disabled], .carousel-toolbar div button[disabled], .toolbar-secondary .toolbar-search form button[disabled], .tag-container ul li button[disabled], .forum-container .forum-post .forum-footer .forum-expand-comments button[disabled],
+  .btn.disabled, .disabled.glyph-link, .toolbar div button.disabled, .toolbar-secondary div button.disabled, .carousel-toolbar div button.disabled, .toolbar-secondary .toolbar-search form button.disabled, .tag-container ul li button.disabled, .tag-container ul li .disabled.tag-form, .forum-container .forum-post .forum-footer .forum-expand-comments button.disabled, .btn[disabled], [disabled].glyph-link, .toolbar div button[disabled], .toolbar-secondary div button[disabled], .carousel-toolbar div button[disabled], .toolbar-secondary .toolbar-search form button[disabled], .tag-container ul li button[disabled], .tag-container ul li [disabled].tag-form, .forum-container .forum-post .forum-footer .forum-expand-comments button[disabled],
   fieldset[disabled] .btn,
   fieldset[disabled] .glyph-link,
   fieldset[disabled] .toolbar div button, .toolbar div
@@ -2894,6 +2923,8 @@ select[multiple].input-lg,
   fieldset[disabled] button,
   fieldset[disabled] .tag-container ul li button, .tag-container ul li
   fieldset[disabled] button,
+  fieldset[disabled] .tag-container ul li .tag-form, .tag-container ul li
+  fieldset[disabled] .tag-form,
   fieldset[disabled] .forum-container .forum-post .forum-footer .forum-expand-comments button, .forum-container .forum-post .forum-footer .forum-expand-comments
   fieldset[disabled] button {
     cursor: not-allowed;
@@ -2901,9 +2932,11 @@ select[multiple].input-lg,
     filter: alpha(opacity=65);
     box-shadow: none; }
 
-a.btn.disabled, a.disabled.glyph-link,
+a.btn.disabled, a.disabled.glyph-link, .tag-container ul li a.disabled.tag-form,
 fieldset[disabled] a.btn,
-fieldset[disabled] a.glyph-link {
+fieldset[disabled] a.glyph-link,
+fieldset[disabled] .tag-container ul li a.tag-form, .tag-container ul li
+fieldset[disabled] a.tag-form {
   pointer-events: none; }
 
 .btn-default, .toolbar-secondary .toolbar-search form button {
@@ -2954,99 +2987,132 @@ fieldset[disabled] a.glyph-link {
     color: #fff;
     background-color: #333; }
 
-.btn-primary, .tag-container ul li .edit-tag {
+.btn-primary, .tag-container ul li button, .tag-container ul li .edit-tag {
   color: #fff;
   background-color: #337ab7;
   border-color: #2e6da4; }
-  .btn-primary:focus, .tag-container ul li .edit-tag:focus, .btn-primary.focus, .tag-container ul li .focus.edit-tag {
+  .btn-primary:focus, .tag-container ul li button:focus, .tag-container ul li .edit-tag:focus, .btn-primary.focus, .tag-container ul li button.focus, .tag-container ul li .focus.edit-tag {
     color: #fff;
     background-color: #286090;
     border-color: #122b40; }
-  .btn-primary:hover, .tag-container ul li .edit-tag:hover {
+  .btn-primary:hover, .tag-container ul li button:hover, .tag-container ul li .edit-tag:hover {
     color: #fff;
     background-color: #286090;
     border-color: #204d74; }
-  .btn-primary:active, .tag-container ul li .edit-tag:active, .btn-primary.active, .tag-container ul li .active.edit-tag,
+  .btn-primary:active, .tag-container ul li button:active, .tag-container ul li .edit-tag:active, .btn-primary.active, .tag-container ul li button.active, .tag-container ul li .active.edit-tag,
   .open > .btn-primary.dropdown-toggle, .tag-container ul li
+  .open > button.dropdown-toggle, .tag-container ul li
   .open > .dropdown-toggle.edit-tag {
     color: #fff;
     background-color: #286090;
     border-color: #204d74; }
-    .btn-primary:active:hover, .tag-container ul li .edit-tag:active:hover, .btn-primary:active:focus, .tag-container ul li .edit-tag:active:focus, .btn-primary:active.focus, .tag-container ul li .edit-tag:active.focus, .btn-primary.active:hover, .tag-container ul li .active.edit-tag:hover, .btn-primary.active:focus, .tag-container ul li .active.edit-tag:focus, .btn-primary.active.focus, .tag-container ul li .active.focus.edit-tag,
+    .btn-primary:active:hover, .tag-container ul li button:active:hover, .tag-container ul li .edit-tag:active:hover, .btn-primary:active:focus, .tag-container ul li button:active:focus, .tag-container ul li .edit-tag:active:focus, .btn-primary:active.focus, .tag-container ul li button:active.focus, .tag-container ul li .edit-tag:active.focus, .btn-primary.active:hover, .tag-container ul li button.active:hover, .tag-container ul li .active.edit-tag:hover, .btn-primary.active:focus, .tag-container ul li button.active:focus, .tag-container ul li .active.edit-tag:focus, .btn-primary.active.focus, .tag-container ul li button.active.focus, .tag-container ul li .active.focus.edit-tag,
     .open > .btn-primary.dropdown-toggle:hover, .tag-container ul li
+    .open > button.dropdown-toggle:hover, .tag-container ul li
     .open > .dropdown-toggle.edit-tag:hover,
     .open > .btn-primary.dropdown-toggle:focus, .tag-container ul li
+    .open > button.dropdown-toggle:focus, .tag-container ul li
     .open > .dropdown-toggle.edit-tag:focus,
     .open > .btn-primary.dropdown-toggle.focus, .tag-container ul li
+    .open > button.dropdown-toggle.focus, .tag-container ul li
     .open > .dropdown-toggle.focus.edit-tag {
       color: #fff;
       background-color: #204d74;
       border-color: #122b40; }
-  .btn-primary:active, .tag-container ul li .edit-tag:active, .btn-primary.active, .tag-container ul li .active.edit-tag,
+  .btn-primary:active, .tag-container ul li button:active, .tag-container ul li .edit-tag:active, .btn-primary.active, .tag-container ul li button.active, .tag-container ul li .active.edit-tag,
   .open > .btn-primary.dropdown-toggle, .tag-container ul li
+  .open > button.dropdown-toggle, .tag-container ul li
   .open > .dropdown-toggle.edit-tag {
     background-image: none; }
-  .btn-primary.disabled:hover, .tag-container ul li .disabled.edit-tag:hover, .btn-primary.disabled:focus, .tag-container ul li .disabled.edit-tag:focus, .btn-primary.disabled.focus, .tag-container ul li .disabled.focus.edit-tag, .btn-primary[disabled]:hover, .tag-container ul li [disabled].edit-tag:hover, .btn-primary[disabled]:focus, .tag-container ul li [disabled].edit-tag:focus, .btn-primary[disabled].focus, .tag-container ul li [disabled].focus.edit-tag,
+  .btn-primary.disabled:hover, .tag-container ul li button.disabled:hover, .tag-container ul li .disabled.edit-tag:hover, .btn-primary.disabled:focus, .tag-container ul li button.disabled:focus, .tag-container ul li .disabled.edit-tag:focus, .btn-primary.disabled.focus, .tag-container ul li button.disabled.focus, .tag-container ul li .disabled.focus.edit-tag, .btn-primary[disabled]:hover, .tag-container ul li button[disabled]:hover, .tag-container ul li [disabled].edit-tag:hover, .btn-primary[disabled]:focus, .tag-container ul li button[disabled]:focus, .tag-container ul li [disabled].edit-tag:focus, .btn-primary[disabled].focus, .tag-container ul li button[disabled].focus, .tag-container ul li [disabled].focus.edit-tag,
   fieldset[disabled] .btn-primary:hover,
+  fieldset[disabled] .tag-container ul li button:hover, .tag-container ul li
+  fieldset[disabled] button:hover,
   fieldset[disabled] .tag-container ul li .edit-tag:hover, .tag-container ul li
   fieldset[disabled] .edit-tag:hover,
   fieldset[disabled] .btn-primary:focus,
+  fieldset[disabled] .tag-container ul li button:focus, .tag-container ul li
+  fieldset[disabled] button:focus,
   fieldset[disabled] .tag-container ul li .edit-tag:focus, .tag-container ul li
   fieldset[disabled] .edit-tag:focus,
   fieldset[disabled] .btn-primary.focus,
+  fieldset[disabled] .tag-container ul li button.focus, .tag-container ul li
+  fieldset[disabled] button.focus,
   fieldset[disabled] .tag-container ul li .focus.edit-tag, .tag-container ul li
   fieldset[disabled] .focus.edit-tag {
     background-color: #337ab7;
     border-color: #2e6da4; }
-  .btn-primary .badge, .tag-container ul li .edit-tag .badge {
+  .btn-primary .badge, .tag-container ul li button .badge, .tag-container ul li .edit-tag .badge {
     color: #337ab7;
     background-color: #fff; }
 
-.btn-success, .tag-container ul li .add-tag {
+.btn-success, .tag-container ul li .add-tag, .tag-container ul li .tag-form, .tag-container ul li .tag-form input {
   color: #fff;
   background-color: #5cb85c;
   border-color: #4cae4c; }
-  .btn-success:focus, .tag-container ul li .add-tag:focus, .btn-success.focus, .tag-container ul li .focus.add-tag {
+  .btn-success:focus, .tag-container ul li .add-tag:focus, .tag-container ul li .tag-form:focus, .tag-container ul li .tag-form input:focus, .btn-success.focus, .tag-container ul li .focus.add-tag, .tag-container ul li .focus.tag-form, .tag-container ul li .tag-form input.focus {
     color: #fff;
     background-color: #449d44;
     border-color: #255625; }
-  .btn-success:hover, .tag-container ul li .add-tag:hover {
+  .btn-success:hover, .tag-container ul li .add-tag:hover, .tag-container ul li .tag-form:hover, .tag-container ul li .tag-form input:hover {
     color: #fff;
     background-color: #449d44;
     border-color: #398439; }
-  .btn-success:active, .tag-container ul li .add-tag:active, .btn-success.active, .tag-container ul li .active.add-tag,
+  .btn-success:active, .tag-container ul li .add-tag:active, .tag-container ul li .tag-form:active, .tag-container ul li .tag-form input:active, .btn-success.active, .tag-container ul li .active.add-tag, .tag-container ul li .active.tag-form, .tag-container ul li .tag-form input.active,
   .open > .btn-success.dropdown-toggle, .tag-container ul li
-  .open > .dropdown-toggle.add-tag {
+  .open > .dropdown-toggle.add-tag, .tag-container ul li
+  .open > .dropdown-toggle.tag-form, .tag-container ul li .tag-form
+  .open > input.dropdown-toggle {
     color: #fff;
     background-color: #449d44;
     border-color: #398439; }
-    .btn-success:active:hover, .tag-container ul li .add-tag:active:hover, .btn-success:active:focus, .tag-container ul li .add-tag:active:focus, .btn-success:active.focus, .tag-container ul li .add-tag:active.focus, .btn-success.active:hover, .tag-container ul li .active.add-tag:hover, .btn-success.active:focus, .tag-container ul li .active.add-tag:focus, .btn-success.active.focus, .tag-container ul li .active.focus.add-tag,
+    .btn-success:active:hover, .tag-container ul li .add-tag:active:hover, .tag-container ul li .tag-form:active:hover, .tag-container ul li .tag-form input:active:hover, .btn-success:active:focus, .tag-container ul li .add-tag:active:focus, .tag-container ul li .tag-form:active:focus, .tag-container ul li .tag-form input:active:focus, .btn-success:active.focus, .tag-container ul li .add-tag:active.focus, .tag-container ul li .tag-form:active.focus, .tag-container ul li .tag-form input:active.focus, .btn-success.active:hover, .tag-container ul li .active.add-tag:hover, .tag-container ul li .active.tag-form:hover, .tag-container ul li .tag-form input.active:hover, .btn-success.active:focus, .tag-container ul li .active.add-tag:focus, .tag-container ul li .active.tag-form:focus, .tag-container ul li .tag-form input.active:focus, .btn-success.active.focus, .tag-container ul li .active.focus.add-tag, .tag-container ul li .active.focus.tag-form, .tag-container ul li .tag-form input.active.focus,
     .open > .btn-success.dropdown-toggle:hover, .tag-container ul li
-    .open > .dropdown-toggle.add-tag:hover,
+    .open > .dropdown-toggle.add-tag:hover, .tag-container ul li
+    .open > .dropdown-toggle.tag-form:hover, .tag-container ul li .tag-form
+    .open > input.dropdown-toggle:hover,
     .open > .btn-success.dropdown-toggle:focus, .tag-container ul li
-    .open > .dropdown-toggle.add-tag:focus,
+    .open > .dropdown-toggle.add-tag:focus, .tag-container ul li
+    .open > .dropdown-toggle.tag-form:focus, .tag-container ul li .tag-form
+    .open > input.dropdown-toggle:focus,
     .open > .btn-success.dropdown-toggle.focus, .tag-container ul li
-    .open > .dropdown-toggle.focus.add-tag {
+    .open > .dropdown-toggle.focus.add-tag, .tag-container ul li
+    .open > .dropdown-toggle.focus.tag-form, .tag-container ul li .tag-form
+    .open > input.dropdown-toggle.focus {
       color: #fff;
       background-color: #398439;
       border-color: #255625; }
-  .btn-success:active, .tag-container ul li .add-tag:active, .btn-success.active, .tag-container ul li .active.add-tag,
+  .btn-success:active, .tag-container ul li .add-tag:active, .tag-container ul li .tag-form:active, .tag-container ul li .tag-form input:active, .btn-success.active, .tag-container ul li .active.add-tag, .tag-container ul li .active.tag-form, .tag-container ul li .tag-form input.active,
   .open > .btn-success.dropdown-toggle, .tag-container ul li
-  .open > .dropdown-toggle.add-tag {
+  .open > .dropdown-toggle.add-tag, .tag-container ul li
+  .open > .dropdown-toggle.tag-form, .tag-container ul li .tag-form
+  .open > input.dropdown-toggle {
     background-image: none; }
-  .btn-success.disabled:hover, .tag-container ul li .disabled.add-tag:hover, .btn-success.disabled:focus, .tag-container ul li .disabled.add-tag:focus, .btn-success.disabled.focus, .tag-container ul li .disabled.focus.add-tag, .btn-success[disabled]:hover, .tag-container ul li [disabled].add-tag:hover, .btn-success[disabled]:focus, .tag-container ul li [disabled].add-tag:focus, .btn-success[disabled].focus, .tag-container ul li [disabled].focus.add-tag,
+  .btn-success.disabled:hover, .tag-container ul li .disabled.add-tag:hover, .tag-container ul li .disabled.tag-form:hover, .tag-container ul li .tag-form input.disabled:hover, .btn-success.disabled:focus, .tag-container ul li .disabled.add-tag:focus, .tag-container ul li .disabled.tag-form:focus, .tag-container ul li .tag-form input.disabled:focus, .btn-success.disabled.focus, .tag-container ul li .disabled.focus.add-tag, .tag-container ul li .disabled.focus.tag-form, .tag-container ul li .tag-form input.disabled.focus, .btn-success[disabled]:hover, .tag-container ul li [disabled].add-tag:hover, .tag-container ul li [disabled].tag-form:hover, .tag-container ul li .tag-form input[disabled]:hover, .btn-success[disabled]:focus, .tag-container ul li [disabled].add-tag:focus, .tag-container ul li [disabled].tag-form:focus, .tag-container ul li .tag-form input[disabled]:focus, .btn-success[disabled].focus, .tag-container ul li [disabled].focus.add-tag, .tag-container ul li [disabled].focus.tag-form, .tag-container ul li .tag-form input[disabled].focus,
   fieldset[disabled] .btn-success:hover,
   fieldset[disabled] .tag-container ul li .add-tag:hover, .tag-container ul li
   fieldset[disabled] .add-tag:hover,
+  fieldset[disabled] .tag-container ul li .tag-form:hover, .tag-container ul li
+  fieldset[disabled] .tag-form:hover,
+  fieldset[disabled] .tag-container ul li .tag-form input:hover, .tag-container ul li .tag-form
+  fieldset[disabled] input:hover,
   fieldset[disabled] .btn-success:focus,
   fieldset[disabled] .tag-container ul li .add-tag:focus, .tag-container ul li
   fieldset[disabled] .add-tag:focus,
+  fieldset[disabled] .tag-container ul li .tag-form:focus, .tag-container ul li
+  fieldset[disabled] .tag-form:focus,
+  fieldset[disabled] .tag-container ul li .tag-form input:focus, .tag-container ul li .tag-form
+  fieldset[disabled] input:focus,
   fieldset[disabled] .btn-success.focus,
   fieldset[disabled] .tag-container ul li .focus.add-tag, .tag-container ul li
-  fieldset[disabled] .focus.add-tag {
+  fieldset[disabled] .focus.add-tag,
+  fieldset[disabled] .tag-container ul li .focus.tag-form, .tag-container ul li
+  fieldset[disabled] .focus.tag-form,
+  fieldset[disabled] .tag-container ul li .tag-form input.focus, .tag-container ul li .tag-form
+  fieldset[disabled] input.focus {
     background-color: #5cb85c;
     border-color: #4cae4c; }
-  .btn-success .badge, .tag-container ul li .add-tag .badge {
+  .btn-success .badge, .tag-container ul li .add-tag .badge, .tag-container ul li .tag-form .badge {
     color: #5cb85c;
     background-color: #fff; }
 
@@ -3208,19 +3274,19 @@ fieldset[disabled] a.glyph-link {
     color: #777777;
     text-decoration: none; }
 
-.btn-lg, .btn-group-lg > .btn, .btn-group-lg > .glyph-link, .toolbar div .btn-group-lg > button, .toolbar-secondary div .btn-group-lg > button, .carousel-toolbar div .btn-group-lg > button, .toolbar-secondary .toolbar-search form .btn-group-lg > button, .tag-container ul li .btn-group-lg > button, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group-lg > button {
+.btn-lg, .btn-group-lg > .btn, .btn-group-lg > .glyph-link, .toolbar div .btn-group-lg > button, .toolbar-secondary div .btn-group-lg > button, .carousel-toolbar div .btn-group-lg > button, .toolbar-secondary .toolbar-search form .btn-group-lg > button, .tag-container ul li .btn-group-lg > button, .tag-container ul li .btn-group-lg > .tag-form, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group-lg > button {
   padding: 10px 16px;
   font-size: 18px;
   line-height: 1.3333333;
   border-radius: 6px; }
 
-.btn-sm, .btn-group-sm > .btn, .btn-group-sm > .glyph-link, .toolbar div .btn-group-sm > button, .toolbar-secondary div .btn-group-sm > button, .carousel-toolbar div .btn-group-sm > button, .toolbar-secondary .toolbar-search form .btn-group-sm > button, .tag-container ul li .btn-group-sm > button, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group-sm > button {
+.btn-sm, .btn-group-sm > .btn, .btn-group-sm > .glyph-link, .toolbar div .btn-group-sm > button, .toolbar-secondary div .btn-group-sm > button, .carousel-toolbar div .btn-group-sm > button, .toolbar-secondary .toolbar-search form .btn-group-sm > button, .tag-container ul li .btn-group-sm > button, .tag-container ul li .btn-group-sm > .tag-form, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group-sm > button {
   padding: 5px 10px;
   font-size: 12px;
   line-height: 1.5;
   border-radius: 3px; }
 
-.btn-xs, .btn-group-xs > .btn, .btn-group-xs > .glyph-link, .toolbar div .btn-group-xs > button, .toolbar-secondary div .btn-group-xs > button, .carousel-toolbar div .btn-group-xs > button, .toolbar-secondary .toolbar-search form .btn-group-xs > button, .tag-container ul li .btn-group-xs > button, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group-xs > button {
+.btn-xs, .btn-group-xs > .btn, .btn-group-xs > .glyph-link, .toolbar div .btn-group-xs > button, .toolbar-secondary div .btn-group-xs > button, .carousel-toolbar div .btn-group-xs > button, .toolbar-secondary .toolbar-search form .btn-group-xs > button, .tag-container ul li .btn-group-xs > button, .tag-container ul li .btn-group-xs > .tag-form, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group-xs > button {
   padding: 1px 5px;
   font-size: 12px;
   line-height: 1.5;
@@ -3398,25 +3464,27 @@ tbody.collapse.in {
   position: relative;
   display: inline-block;
   vertical-align: middle; }
-  .btn-group > .btn, .btn-group > .glyph-link, .toolbar div .btn-group > button, .toolbar-secondary div .btn-group > button, .carousel-toolbar div .btn-group > button, .toolbar-secondary .toolbar-search form .btn-group > button, .tag-container ul li .btn-group > button, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group > button,
+  .btn-group > .btn, .btn-group > .glyph-link, .toolbar div .btn-group > button, .toolbar-secondary div .btn-group > button, .carousel-toolbar div .btn-group > button, .toolbar-secondary .toolbar-search form .btn-group > button, .tag-container ul li .btn-group > button, .tag-container ul li .btn-group > .tag-form, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group > button,
   .btn-group-vertical > .btn,
   .btn-group-vertical > .glyph-link, .toolbar div
   .btn-group-vertical > button, .toolbar-secondary div
   .btn-group-vertical > button, .carousel-toolbar div
   .btn-group-vertical > button, .toolbar-secondary .toolbar-search form
   .btn-group-vertical > button, .tag-container ul li
-  .btn-group-vertical > button, .forum-container .forum-post .forum-footer .forum-expand-comments
+  .btn-group-vertical > button, .tag-container ul li
+  .btn-group-vertical > .tag-form, .forum-container .forum-post .forum-footer .forum-expand-comments
   .btn-group-vertical > button {
     position: relative;
     float: left; }
-    .btn-group > .btn:hover, .btn-group > .glyph-link:hover, .toolbar div .btn-group > button:hover, .toolbar-secondary div .btn-group > button:hover, .carousel-toolbar div .btn-group > button:hover, .toolbar-secondary .toolbar-search form .btn-group > button:hover, .tag-container ul li .btn-group > button:hover, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group > button:hover, .btn-group > .btn:focus, .btn-group > .glyph-link:focus, .toolbar div .btn-group > button:focus, .toolbar-secondary div .btn-group > button:focus, .carousel-toolbar div .btn-group > button:focus, .toolbar-secondary .toolbar-search form .btn-group > button:focus, .tag-container ul li .btn-group > button:focus, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group > button:focus, .btn-group > .btn:active, .btn-group > .glyph-link:active, .toolbar div .btn-group > button:active, .toolbar-secondary div .btn-group > button:active, .carousel-toolbar div .btn-group > button:active, .toolbar-secondary .toolbar-search form .btn-group > button:active, .tag-container ul li .btn-group > button:active, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group > button:active, .btn-group > .btn.active, .btn-group > .active.glyph-link, .toolbar div .btn-group > button.active, .toolbar-secondary div .btn-group > button.active, .carousel-toolbar div .btn-group > button.active, .toolbar-secondary .toolbar-search form .btn-group > button.active, .tag-container ul li .btn-group > button.active, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group > button.active,
+    .btn-group > .btn:hover, .btn-group > .glyph-link:hover, .toolbar div .btn-group > button:hover, .toolbar-secondary div .btn-group > button:hover, .carousel-toolbar div .btn-group > button:hover, .toolbar-secondary .toolbar-search form .btn-group > button:hover, .tag-container ul li .btn-group > button:hover, .tag-container ul li .btn-group > .tag-form:hover, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group > button:hover, .btn-group > .btn:focus, .btn-group > .glyph-link:focus, .toolbar div .btn-group > button:focus, .toolbar-secondary div .btn-group > button:focus, .carousel-toolbar div .btn-group > button:focus, .toolbar-secondary .toolbar-search form .btn-group > button:focus, .tag-container ul li .btn-group > button:focus, .tag-container ul li .btn-group > .tag-form:focus, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group > button:focus, .btn-group > .btn:active, .btn-group > .glyph-link:active, .toolbar div .btn-group > button:active, .toolbar-secondary div .btn-group > button:active, .carousel-toolbar div .btn-group > button:active, .toolbar-secondary .toolbar-search form .btn-group > button:active, .tag-container ul li .btn-group > button:active, .tag-container ul li .btn-group > .tag-form:active, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group > button:active, .btn-group > .btn.active, .btn-group > .active.glyph-link, .toolbar div .btn-group > button.active, .toolbar-secondary div .btn-group > button.active, .carousel-toolbar div .btn-group > button.active, .toolbar-secondary .toolbar-search form .btn-group > button.active, .tag-container ul li .btn-group > button.active, .tag-container ul li .btn-group > .active.tag-form, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group > button.active,
     .btn-group-vertical > .btn:hover,
     .btn-group-vertical > .glyph-link:hover, .toolbar div
     .btn-group-vertical > button:hover, .toolbar-secondary div
     .btn-group-vertical > button:hover, .carousel-toolbar div
     .btn-group-vertical > button:hover, .toolbar-secondary .toolbar-search form
     .btn-group-vertical > button:hover, .tag-container ul li
-    .btn-group-vertical > button:hover, .forum-container .forum-post .forum-footer .forum-expand-comments
+    .btn-group-vertical > button:hover, .tag-container ul li
+    .btn-group-vertical > .tag-form:hover, .forum-container .forum-post .forum-footer .forum-expand-comments
     .btn-group-vertical > button:hover,
     .btn-group-vertical > .btn:focus,
     .btn-group-vertical > .glyph-link:focus, .toolbar div
@@ -3424,7 +3492,8 @@ tbody.collapse.in {
     .btn-group-vertical > button:focus, .carousel-toolbar div
     .btn-group-vertical > button:focus, .toolbar-secondary .toolbar-search form
     .btn-group-vertical > button:focus, .tag-container ul li
-    .btn-group-vertical > button:focus, .forum-container .forum-post .forum-footer .forum-expand-comments
+    .btn-group-vertical > button:focus, .tag-container ul li
+    .btn-group-vertical > .tag-form:focus, .forum-container .forum-post .forum-footer .forum-expand-comments
     .btn-group-vertical > button:focus,
     .btn-group-vertical > .btn:active,
     .btn-group-vertical > .glyph-link:active, .toolbar div
@@ -3432,7 +3501,8 @@ tbody.collapse.in {
     .btn-group-vertical > button:active, .carousel-toolbar div
     .btn-group-vertical > button:active, .toolbar-secondary .toolbar-search form
     .btn-group-vertical > button:active, .tag-container ul li
-    .btn-group-vertical > button:active, .forum-container .forum-post .forum-footer .forum-expand-comments
+    .btn-group-vertical > button:active, .tag-container ul li
+    .btn-group-vertical > .tag-form:active, .forum-container .forum-post .forum-footer .forum-expand-comments
     .btn-group-vertical > button:active,
     .btn-group-vertical > .btn.active,
     .btn-group-vertical > .active.glyph-link, .toolbar div
@@ -3440,11 +3510,12 @@ tbody.collapse.in {
     .btn-group-vertical > button.active, .carousel-toolbar div
     .btn-group-vertical > button.active, .toolbar-secondary .toolbar-search form
     .btn-group-vertical > button.active, .tag-container ul li
-    .btn-group-vertical > button.active, .forum-container .forum-post .forum-footer .forum-expand-comments
+    .btn-group-vertical > button.active, .tag-container ul li
+    .btn-group-vertical > .active.tag-form, .forum-container .forum-post .forum-footer .forum-expand-comments
     .btn-group-vertical > button.active {
       z-index: 2; }
 
-.btn-group .btn + .btn, .btn-group .glyph-link + .btn, .btn-group .toolbar div button + .btn, .toolbar div .btn-group button + .btn, .btn-group .toolbar-secondary div button + .btn, .toolbar-secondary div .btn-group button + .btn, .btn-group .carousel-toolbar div button + .btn, .carousel-toolbar div .btn-group button + .btn, .btn-group .toolbar-secondary .toolbar-search form button + .btn, .toolbar-secondary .toolbar-search form .btn-group button + .btn, .btn-group .tag-container ul li button + .btn, .tag-container ul li .btn-group button + .btn, .btn-group .forum-container .forum-post .forum-footer .forum-expand-comments button + .btn, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group button + .btn, .btn-group .btn + .glyph-link, .btn-group .glyph-link + .glyph-link, .btn-group .toolbar div button + .glyph-link, .toolbar div .btn-group button + .glyph-link, .btn-group .toolbar-secondary div button + .glyph-link, .toolbar-secondary div .btn-group button + .glyph-link, .btn-group .carousel-toolbar div button + .glyph-link, .carousel-toolbar div .btn-group button + .glyph-link, .btn-group .toolbar-secondary .toolbar-search form button + .glyph-link, .toolbar-secondary .toolbar-search form .btn-group button + .glyph-link, .btn-group .tag-container ul li button + .glyph-link, .tag-container ul li .btn-group button + .glyph-link, .btn-group .forum-container .forum-post .forum-footer .forum-expand-comments button + .glyph-link, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group button + .glyph-link, .btn-group .toolbar div .btn + button, .toolbar div .btn-group .btn + button, .btn-group .toolbar div .glyph-link + button, .toolbar div .btn-group .glyph-link + button, .btn-group .toolbar div button + button, .toolbar div .btn-group button + button, .btn-group .toolbar-secondary .toolbar div button + button, .toolbar .btn-group .toolbar-secondary div button + button, .btn-group .carousel-toolbar .toolbar div button + button, .toolbar .btn-group .carousel-toolbar div button + button, .btn-group .tag-container ul li .toolbar div button + button, .toolbar div .tag-container ul li .btn-group button + button, .btn-group .forum-container .forum-post .forum-footer .forum-expand-comments .toolbar div button + button, .btn-group .toolbar-secondary div .btn + button, .toolbar-secondary div .btn-group .btn + button, .btn-group .toolbar-secondary div .glyph-link + button, .toolbar-secondary div .btn-group .glyph-link + button, .btn-group .toolbar .toolbar-secondary div button + button, .toolbar-secondary .btn-group .toolbar div button + button, .toolbar .toolbar-secondary div .btn-group button + button, .toolbar-secondary .toolbar div .btn-group button + button, .btn-group .toolbar-secondary div button + button, .toolbar-secondary div .btn-group button + button, .btn-group .carousel-toolbar .toolbar-secondary div button + button, .toolbar-secondary .btn-group .carousel-toolbar div button + button, .toolbar-secondary .toolbar-search form .btn-group div button + button, .btn-group .tag-container ul li .toolbar-secondary div button + button, .toolbar-secondary div .tag-container ul li .btn-group button + button, .btn-group .forum-container .forum-post .forum-footer .forum-expand-comments .toolbar-secondary div button + button, .btn-group .carousel-toolbar div .btn + button, .carousel-toolbar div .btn-group .btn + button, .btn-group .carousel-toolbar div .glyph-link + button, .carousel-toolbar div .btn-group .glyph-link + button, .btn-group .toolbar .carousel-toolbar div button + button, .carousel-toolbar .btn-group .toolbar div button + button, .toolbar .carousel-toolbar div .btn-group button + button, .carousel-toolbar .toolbar div .btn-group button + button, .btn-group .toolbar-secondary .carousel-toolbar div button + button, .carousel-toolbar .btn-group .toolbar-secondary div button + button, .toolbar-secondary .carousel-toolbar div .btn-group button + button, .carousel-toolbar .toolbar-secondary div .btn-group button + button, .btn-group .carousel-toolbar div button + button, .carousel-toolbar div .btn-group button + button, .btn-group .tag-container ul li .carousel-toolbar div button + button, .carousel-toolbar div .tag-container ul li .btn-group button + button, .btn-group .forum-container .forum-post .forum-footer .forum-expand-comments .carousel-toolbar div button + button, .btn-group .toolbar-secondary .toolbar-search form .btn + button, .toolbar-secondary .toolbar-search form .btn-group .btn + button, .btn-group .toolbar-secondary .toolbar-search form .glyph-link + button, .toolbar-secondary .toolbar-search form .btn-group .glyph-link + button, .btn-group .toolbar-secondary .toolbar-search form div button + button, .toolbar-secondary div .btn-group .toolbar-search form button + button, .btn-group .toolbar-secondary .toolbar-search form button + button, .toolbar-secondary .toolbar-search form .btn-group button + button, .btn-group .forum-container .forum-post .forum-footer .forum-expand-comments .toolbar-secondary .toolbar-search form button + button, .btn-group .tag-container ul li .btn + button, .tag-container ul li .btn-group .btn + button, .btn-group .tag-container ul li .glyph-link + button, .tag-container ul li .btn-group .glyph-link + button, .btn-group .toolbar div .tag-container ul li button + button, .tag-container ul li .btn-group .toolbar div button + button, .toolbar div .btn-group .tag-container ul li button + button, .tag-container ul li .toolbar div .btn-group button + button, .btn-group .toolbar-secondary div .tag-container ul li button + button, .tag-container ul li .btn-group .toolbar-secondary div button + button, .toolbar-secondary div .btn-group .tag-container ul li button + button, .tag-container ul li .toolbar-secondary div .btn-group button + button, .btn-group .carousel-toolbar div .tag-container ul li button + button, .tag-container ul li .btn-group .carousel-toolbar div button + button, .carousel-toolbar div .btn-group .tag-container ul li button + button, .tag-container ul li .carousel-toolbar div .btn-group button + button, .btn-group .toolbar-secondary .toolbar-search form .tag-container ul li button + button, .toolbar-secondary .toolbar-search form .btn-group .tag-container ul li button + button, .btn-group .tag-container ul li button + button, .tag-container ul li .btn-group button + button, .btn-group .forum-container .forum-post .forum-footer .forum-expand-comments .tag-container ul li button + button, .btn-group .forum-container .forum-post .forum-footer .forum-expand-comments .btn + button, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group .btn + button, .btn-group .forum-container .forum-post .forum-footer .forum-expand-comments .glyph-link + button, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group .glyph-link + button, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group .toolbar div button + button, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group .toolbar-secondary div button + button, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group .carousel-toolbar div button + button, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group .toolbar-secondary .toolbar-search form button + button, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group .tag-container ul li button + button, .btn-group .forum-container .forum-post .forum-footer .forum-expand-comments button + button, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group button + button,
+.btn-group .btn + .btn, .btn-group .glyph-link + .btn, .btn-group .toolbar div button + .btn, .toolbar div .btn-group button + .btn, .btn-group .toolbar-secondary div button + .btn, .toolbar-secondary div .btn-group button + .btn, .btn-group .carousel-toolbar div button + .btn, .carousel-toolbar div .btn-group button + .btn, .btn-group .toolbar-secondary .toolbar-search form button + .btn, .toolbar-secondary .toolbar-search form .btn-group button + .btn, .btn-group .tag-container ul li button + .btn, .tag-container ul li .btn-group button + .btn, .btn-group .tag-container ul li .tag-form + .btn, .tag-container ul li .btn-group .tag-form + .btn, .btn-group .forum-container .forum-post .forum-footer .forum-expand-comments button + .btn, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group button + .btn, .btn-group .btn + .glyph-link, .btn-group .glyph-link + .glyph-link, .btn-group .toolbar div button + .glyph-link, .toolbar div .btn-group button + .glyph-link, .btn-group .toolbar-secondary div button + .glyph-link, .toolbar-secondary div .btn-group button + .glyph-link, .btn-group .carousel-toolbar div button + .glyph-link, .carousel-toolbar div .btn-group button + .glyph-link, .btn-group .toolbar-secondary .toolbar-search form button + .glyph-link, .toolbar-secondary .toolbar-search form .btn-group button + .glyph-link, .btn-group .tag-container ul li button + .glyph-link, .tag-container ul li .btn-group button + .glyph-link, .btn-group .tag-container ul li .tag-form + .glyph-link, .tag-container ul li .btn-group .tag-form + .glyph-link, .btn-group .forum-container .forum-post .forum-footer .forum-expand-comments button + .glyph-link, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group button + .glyph-link, .btn-group .toolbar div .btn + button, .toolbar div .btn-group .btn + button, .btn-group .toolbar div .glyph-link + button, .toolbar div .btn-group .glyph-link + button, .btn-group .toolbar div button + button, .toolbar div .btn-group button + button, .btn-group .toolbar-secondary .toolbar div button + button, .toolbar .btn-group .toolbar-secondary div button + button, .btn-group .carousel-toolbar .toolbar div button + button, .toolbar .btn-group .carousel-toolbar div button + button, .btn-group .tag-container ul li .toolbar div button + button, .toolbar div .tag-container ul li .btn-group button + button, .btn-group .tag-container ul li .toolbar div .tag-form + button, .tag-container ul li .btn-group .toolbar div .tag-form + button, .btn-group .forum-container .forum-post .forum-footer .forum-expand-comments .toolbar div button + button, .btn-group .toolbar-secondary div .btn + button, .toolbar-secondary div .btn-group .btn + button, .btn-group .toolbar-secondary div .glyph-link + button, .toolbar-secondary div .btn-group .glyph-link + button, .btn-group .toolbar .toolbar-secondary div button + button, .toolbar-secondary .btn-group .toolbar div button + button, .toolbar .toolbar-secondary div .btn-group button + button, .toolbar-secondary .toolbar div .btn-group button + button, .btn-group .toolbar-secondary div button + button, .toolbar-secondary div .btn-group button + button, .btn-group .carousel-toolbar .toolbar-secondary div button + button, .toolbar-secondary .btn-group .carousel-toolbar div button + button, .toolbar-secondary .toolbar-search form .btn-group div button + button, .btn-group .tag-container ul li .toolbar-secondary div button + button, .toolbar-secondary div .tag-container ul li .btn-group button + button, .btn-group .tag-container ul li .toolbar-secondary div .tag-form + button, .tag-container ul li .btn-group .toolbar-secondary div .tag-form + button, .btn-group .forum-container .forum-post .forum-footer .forum-expand-comments .toolbar-secondary div button + button, .btn-group .carousel-toolbar div .btn + button, .carousel-toolbar div .btn-group .btn + button, .btn-group .carousel-toolbar div .glyph-link + button, .carousel-toolbar div .btn-group .glyph-link + button, .btn-group .toolbar .carousel-toolbar div button + button, .carousel-toolbar .btn-group .toolbar div button + button, .toolbar .carousel-toolbar div .btn-group button + button, .carousel-toolbar .toolbar div .btn-group button + button, .btn-group .toolbar-secondary .carousel-toolbar div button + button, .carousel-toolbar .btn-group .toolbar-secondary div button + button, .toolbar-secondary .carousel-toolbar div .btn-group button + button, .carousel-toolbar .toolbar-secondary div .btn-group button + button, .btn-group .carousel-toolbar div button + button, .carousel-toolbar div .btn-group button + button, .btn-group .tag-container ul li .carousel-toolbar div button + button, .carousel-toolbar div .tag-container ul li .btn-group button + button, .btn-group .tag-container ul li .carousel-toolbar div .tag-form + button, .tag-container ul li .btn-group .carousel-toolbar div .tag-form + button, .btn-group .forum-container .forum-post .forum-footer .forum-expand-comments .carousel-toolbar div button + button, .btn-group .toolbar-secondary .toolbar-search form .btn + button, .toolbar-secondary .toolbar-search form .btn-group .btn + button, .btn-group .toolbar-secondary .toolbar-search form .glyph-link + button, .toolbar-secondary .toolbar-search form .btn-group .glyph-link + button, .btn-group .toolbar-secondary .toolbar-search form div button + button, .toolbar-secondary div .btn-group .toolbar-search form button + button, .btn-group .toolbar-secondary .toolbar-search form button + button, .toolbar-secondary .toolbar-search form .btn-group button + button, .btn-group .tag-container ul li .toolbar-secondary .toolbar-search form .tag-form + button, .tag-container ul li .btn-group .toolbar-secondary .toolbar-search form .tag-form + button, .btn-group .forum-container .forum-post .forum-footer .forum-expand-comments .toolbar-secondary .toolbar-search form button + button, .btn-group .tag-container ul li .btn + button, .tag-container ul li .btn-group .btn + button, .btn-group .tag-container ul li .glyph-link + button, .tag-container ul li .btn-group .glyph-link + button, .btn-group .toolbar div .tag-container ul li button + button, .tag-container ul li .btn-group .toolbar div button + button, .toolbar div .btn-group .tag-container ul li button + button, .tag-container ul li .toolbar div .btn-group button + button, .btn-group .toolbar-secondary div .tag-container ul li button + button, .tag-container ul li .btn-group .toolbar-secondary div button + button, .toolbar-secondary div .btn-group .tag-container ul li button + button, .tag-container ul li .toolbar-secondary div .btn-group button + button, .btn-group .carousel-toolbar div .tag-container ul li button + button, .tag-container ul li .btn-group .carousel-toolbar div button + button, .carousel-toolbar div .btn-group .tag-container ul li button + button, .tag-container ul li .carousel-toolbar div .btn-group button + button, .btn-group .toolbar-secondary .toolbar-search form .tag-container ul li button + button, .toolbar-secondary .toolbar-search form .btn-group .tag-container ul li button + button, .btn-group .tag-container ul li button + button, .tag-container ul li .btn-group button + button, .btn-group .tag-container ul li .tag-form + button, .tag-container ul li .btn-group .tag-form + button, .btn-group .forum-container .forum-post .forum-footer .forum-expand-comments .tag-container ul li button + button, .btn-group .tag-container ul li .btn + .tag-form, .tag-container ul li .btn-group .btn + .tag-form, .btn-group .tag-container ul li .glyph-link + .tag-form, .tag-container ul li .btn-group .glyph-link + .tag-form, .tag-container ul li .btn-group .toolbar div button + .tag-form, .tag-container ul li .btn-group .toolbar-secondary div button + .tag-form, .tag-container ul li .btn-group .carousel-toolbar div button + .tag-form, .tag-container ul li .btn-group .toolbar-secondary .toolbar-search form button + .tag-form, .btn-group .tag-container ul li button + .tag-form, .tag-container ul li .btn-group button + .tag-form, .btn-group .tag-container ul li .tag-form + .tag-form, .tag-container ul li .btn-group .tag-form + .tag-form, .btn-group .forum-container .forum-post .forum-footer .forum-expand-comments .tag-container ul li button + .tag-form, .tag-container ul li .btn-group .forum-container .forum-post .forum-footer .forum-expand-comments button + .tag-form, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group .tag-container ul li button + .tag-form, .tag-container ul li .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group button + .tag-form, .btn-group .forum-container .forum-post .forum-footer .forum-expand-comments .btn + button, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group .btn + button, .btn-group .forum-container .forum-post .forum-footer .forum-expand-comments .glyph-link + button, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group .glyph-link + button, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group .toolbar div button + button, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group .toolbar-secondary div button + button, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group .carousel-toolbar div button + button, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group .toolbar-secondary .toolbar-search form button + button, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group .tag-container ul li button + button, .btn-group .tag-container ul li .forum-container .forum-post .forum-footer .forum-expand-comments .tag-form + button, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group .tag-container ul li .tag-form + button, .tag-container ul li .btn-group .forum-container .forum-post .forum-footer .forum-expand-comments .tag-form + button, .forum-container .forum-post .forum-footer .forum-expand-comments .tag-container ul li .btn-group .tag-form + button, .btn-group .forum-container .forum-post .forum-footer .forum-expand-comments button + button, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group button + button,
 .btn-group .btn + .btn-group,
 .btn-group .glyph-link + .btn-group,
 .btn-group .toolbar div button + .btn-group, .toolbar div
@@ -3457,6 +3528,8 @@ tbody.collapse.in {
 .btn-group button + .btn-group,
 .btn-group .tag-container ul li button + .btn-group, .tag-container ul li
 .btn-group button + .btn-group,
+.btn-group .tag-container ul li .tag-form + .btn-group, .tag-container ul li
+.btn-group .tag-form + .btn-group,
 .btn-group .forum-container .forum-post .forum-footer .forum-expand-comments button + .btn-group, .forum-container .forum-post .forum-footer .forum-expand-comments
 .btn-group button + .btn-group,
 .btn-group .btn-group + .btn,
@@ -3471,6 +3544,8 @@ tbody.collapse.in {
 .btn-group .btn-group + button,
 .btn-group .tag-container ul li .btn-group + button, .tag-container ul li
 .btn-group .btn-group + button,
+.btn-group .tag-container ul li .btn-group + .tag-form, .tag-container ul li
+.btn-group .btn-group + .tag-form,
 .btn-group .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group + button, .forum-container .forum-post .forum-footer .forum-expand-comments
 .btn-group .btn-group + button,
 .btn-group .btn-group + .btn-group {
@@ -3483,25 +3558,25 @@ tbody.collapse.in {
     display: table; }
   .btn-toolbar:after {
     clear: both; }
-  .btn-toolbar .btn, .btn-toolbar .glyph-link, .btn-toolbar .toolbar div button, .toolbar div .btn-toolbar button, .btn-toolbar .toolbar-secondary div button, .toolbar-secondary div .btn-toolbar button, .btn-toolbar .carousel-toolbar div button, .carousel-toolbar div .btn-toolbar button, .btn-toolbar .toolbar-secondary .toolbar-search form button, .toolbar-secondary .toolbar-search form .btn-toolbar button, .btn-toolbar .tag-container ul li button, .tag-container ul li .btn-toolbar button, .btn-toolbar .forum-container .forum-post .forum-footer .forum-expand-comments button, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-toolbar button,
+  .btn-toolbar .btn, .btn-toolbar .glyph-link, .btn-toolbar .toolbar div button, .toolbar div .btn-toolbar button, .btn-toolbar .toolbar-secondary div button, .toolbar-secondary div .btn-toolbar button, .btn-toolbar .carousel-toolbar div button, .carousel-toolbar div .btn-toolbar button, .btn-toolbar .toolbar-secondary .toolbar-search form button, .toolbar-secondary .toolbar-search form .btn-toolbar button, .btn-toolbar .tag-container ul li button, .tag-container ul li .btn-toolbar button, .btn-toolbar .tag-container ul li .tag-form, .tag-container ul li .btn-toolbar .tag-form, .btn-toolbar .forum-container .forum-post .forum-footer .forum-expand-comments button, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-toolbar button,
   .btn-toolbar .btn-group,
   .btn-toolbar .input-group {
     float: left; }
-  .btn-toolbar > .btn, .btn-toolbar > .glyph-link, .toolbar div .btn-toolbar > button, .toolbar-secondary div .btn-toolbar > button, .carousel-toolbar div .btn-toolbar > button, .toolbar-secondary .toolbar-search form .btn-toolbar > button, .tag-container ul li .btn-toolbar > button, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-toolbar > button,
+  .btn-toolbar > .btn, .btn-toolbar > .glyph-link, .toolbar div .btn-toolbar > button, .toolbar-secondary div .btn-toolbar > button, .carousel-toolbar div .btn-toolbar > button, .toolbar-secondary .toolbar-search form .btn-toolbar > button, .tag-container ul li .btn-toolbar > button, .tag-container ul li .btn-toolbar > .tag-form, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-toolbar > button,
   .btn-toolbar > .btn-group,
   .btn-toolbar > .input-group {
     margin-left: 5px; }
 
-.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > .glyph-link:not(:first-child):not(:last-child):not(.dropdown-toggle), .toolbar div .btn-group > button:not(:first-child):not(:last-child):not(.dropdown-toggle), .toolbar-secondary div .btn-group > button:not(:first-child):not(:last-child):not(.dropdown-toggle), .carousel-toolbar div .btn-group > button:not(:first-child):not(:last-child):not(.dropdown-toggle), .toolbar-secondary .toolbar-search form .btn-group > button:not(:first-child):not(:last-child):not(.dropdown-toggle), .tag-container ul li .btn-group > button:not(:first-child):not(:last-child):not(.dropdown-toggle), .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group > button:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > .glyph-link:not(:first-child):not(:last-child):not(.dropdown-toggle), .toolbar div .btn-group > button:not(:first-child):not(:last-child):not(.dropdown-toggle), .toolbar-secondary div .btn-group > button:not(:first-child):not(:last-child):not(.dropdown-toggle), .carousel-toolbar div .btn-group > button:not(:first-child):not(:last-child):not(.dropdown-toggle), .toolbar-secondary .toolbar-search form .btn-group > button:not(:first-child):not(:last-child):not(.dropdown-toggle), .tag-container ul li .btn-group > button:not(:first-child):not(:last-child):not(.dropdown-toggle), .tag-container ul li .btn-group > .tag-form:not(:first-child):not(:last-child):not(.dropdown-toggle), .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group > button:not(:first-child):not(:last-child):not(.dropdown-toggle) {
   border-radius: 0; }
 
-.btn-group > .btn:first-child, .btn-group > .glyph-link:first-child, .toolbar div .btn-group > button:first-child, .toolbar-secondary div .btn-group > button:first-child, .carousel-toolbar div .btn-group > button:first-child, .toolbar-secondary .toolbar-search form .btn-group > button:first-child, .tag-container ul li .btn-group > button:first-child, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group > button:first-child {
+.btn-group > .btn:first-child, .btn-group > .glyph-link:first-child, .toolbar div .btn-group > button:first-child, .toolbar-secondary div .btn-group > button:first-child, .carousel-toolbar div .btn-group > button:first-child, .toolbar-secondary .toolbar-search form .btn-group > button:first-child, .tag-container ul li .btn-group > button:first-child, .tag-container ul li .btn-group > .tag-form:first-child, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group > button:first-child {
   margin-left: 0; }
-  .btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > .glyph-link:first-child:not(:last-child):not(.dropdown-toggle), .toolbar div .btn-group > button:first-child:not(:last-child):not(.dropdown-toggle), .toolbar-secondary div .btn-group > button:first-child:not(:last-child):not(.dropdown-toggle), .carousel-toolbar div .btn-group > button:first-child:not(:last-child):not(.dropdown-toggle), .toolbar-secondary .toolbar-search form .btn-group > button:first-child:not(:last-child):not(.dropdown-toggle), .tag-container ul li .btn-group > button:first-child:not(:last-child):not(.dropdown-toggle), .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group > button:first-child:not(:last-child):not(.dropdown-toggle) {
+  .btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > .glyph-link:first-child:not(:last-child):not(.dropdown-toggle), .toolbar div .btn-group > button:first-child:not(:last-child):not(.dropdown-toggle), .toolbar-secondary div .btn-group > button:first-child:not(:last-child):not(.dropdown-toggle), .carousel-toolbar div .btn-group > button:first-child:not(:last-child):not(.dropdown-toggle), .toolbar-secondary .toolbar-search form .btn-group > button:first-child:not(:last-child):not(.dropdown-toggle), .tag-container ul li .btn-group > button:first-child:not(:last-child):not(.dropdown-toggle), .tag-container ul li .btn-group > .tag-form:first-child:not(:last-child):not(.dropdown-toggle), .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group > button:first-child:not(:last-child):not(.dropdown-toggle) {
     border-bottom-right-radius: 0;
     border-top-right-radius: 0; }
 
-.btn-group > .btn:last-child:not(:first-child), .btn-group > .glyph-link:last-child:not(:first-child), .toolbar div .btn-group > button:last-child:not(:first-child), .toolbar-secondary div .btn-group > button:last-child:not(:first-child), .carousel-toolbar div .btn-group > button:last-child:not(:first-child), .toolbar-secondary .toolbar-search form .btn-group > button:last-child:not(:first-child), .tag-container ul li .btn-group > button:last-child:not(:first-child), .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group > button:last-child:not(:first-child),
+.btn-group > .btn:last-child:not(:first-child), .btn-group > .glyph-link:last-child:not(:first-child), .toolbar div .btn-group > button:last-child:not(:first-child), .toolbar-secondary div .btn-group > button:last-child:not(:first-child), .carousel-toolbar div .btn-group > button:last-child:not(:first-child), .toolbar-secondary .toolbar-search form .btn-group > button:last-child:not(:first-child), .tag-container ul li .btn-group > button:last-child:not(:first-child), .tag-container ul li .btn-group > .tag-form:last-child:not(:first-child), .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group > button:last-child:not(:first-child),
 .btn-group > .dropdown-toggle:not(:first-child) {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0; }
@@ -3509,15 +3584,15 @@ tbody.collapse.in {
 .btn-group > .btn-group {
   float: left; }
 
-.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn, .btn-group > .btn-group:not(:first-child):not(:last-child) > .glyph-link, .toolbar div .btn-group > .btn-group:not(:first-child):not(:last-child) > button, .toolbar-secondary div .btn-group > .btn-group:not(:first-child):not(:last-child) > button, .carousel-toolbar div .btn-group > .btn-group:not(:first-child):not(:last-child) > button, .toolbar-secondary .toolbar-search form .btn-group > .btn-group:not(:first-child):not(:last-child) > button, .tag-container ul li .btn-group > .btn-group:not(:first-child):not(:last-child) > button, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group > .btn-group:not(:first-child):not(:last-child) > button {
+.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn, .btn-group > .btn-group:not(:first-child):not(:last-child) > .glyph-link, .toolbar div .btn-group > .btn-group:not(:first-child):not(:last-child) > button, .toolbar-secondary div .btn-group > .btn-group:not(:first-child):not(:last-child) > button, .carousel-toolbar div .btn-group > .btn-group:not(:first-child):not(:last-child) > button, .toolbar-secondary .toolbar-search form .btn-group > .btn-group:not(:first-child):not(:last-child) > button, .tag-container ul li .btn-group > .btn-group:not(:first-child):not(:last-child) > button, .tag-container ul li .btn-group > .btn-group:not(:first-child):not(:last-child) > .tag-form, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group > .btn-group:not(:first-child):not(:last-child) > button {
   border-radius: 0; }
 
-.btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .glyph-link:last-child, .toolbar div .btn-group > .btn-group:first-child:not(:last-child) > button:last-child, .toolbar-secondary div .btn-group > .btn-group:first-child:not(:last-child) > button:last-child, .carousel-toolbar div .btn-group > .btn-group:first-child:not(:last-child) > button:last-child, .toolbar-secondary .toolbar-search form .btn-group > .btn-group:first-child:not(:last-child) > button:last-child, .tag-container ul li .btn-group > .btn-group:first-child:not(:last-child) > button:last-child, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group > .btn-group:first-child:not(:last-child) > button:last-child,
+.btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .glyph-link:last-child, .toolbar div .btn-group > .btn-group:first-child:not(:last-child) > button:last-child, .toolbar-secondary div .btn-group > .btn-group:first-child:not(:last-child) > button:last-child, .carousel-toolbar div .btn-group > .btn-group:first-child:not(:last-child) > button:last-child, .toolbar-secondary .toolbar-search form .btn-group > .btn-group:first-child:not(:last-child) > button:last-child, .tag-container ul li .btn-group > .btn-group:first-child:not(:last-child) > button:last-child, .tag-container ul li .btn-group > .btn-group:first-child:not(:last-child) > .tag-form:last-child, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group > .btn-group:first-child:not(:last-child) > button:last-child,
 .btn-group > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0; }
 
-.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child, .btn-group > .btn-group:last-child:not(:first-child) > .glyph-link:first-child, .toolbar div .btn-group > .btn-group:last-child:not(:first-child) > button:first-child, .toolbar-secondary div .btn-group > .btn-group:last-child:not(:first-child) > button:first-child, .carousel-toolbar div .btn-group > .btn-group:last-child:not(:first-child) > button:first-child, .toolbar-secondary .toolbar-search form .btn-group > .btn-group:last-child:not(:first-child) > button:first-child, .tag-container ul li .btn-group > .btn-group:last-child:not(:first-child) > button:first-child, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group > .btn-group:last-child:not(:first-child) > button:first-child {
+.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child, .btn-group > .btn-group:last-child:not(:first-child) > .glyph-link:first-child, .toolbar div .btn-group > .btn-group:last-child:not(:first-child) > button:first-child, .toolbar-secondary div .btn-group > .btn-group:last-child:not(:first-child) > button:first-child, .carousel-toolbar div .btn-group > .btn-group:last-child:not(:first-child) > button:first-child, .toolbar-secondary .toolbar-search form .btn-group > .btn-group:last-child:not(:first-child) > button:first-child, .tag-container ul li .btn-group > .btn-group:last-child:not(:first-child) > button:first-child, .tag-container ul li .btn-group > .btn-group:last-child:not(:first-child) > .tag-form:first-child, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group > .btn-group:last-child:not(:first-child) > button:first-child {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0; }
 
@@ -3525,11 +3600,11 @@ tbody.collapse.in {
 .btn-group.open .dropdown-toggle {
   outline: 0; }
 
-.btn-group > .btn + .dropdown-toggle, .btn-group > .glyph-link + .dropdown-toggle, .toolbar div .btn-group > button + .dropdown-toggle, .toolbar-secondary div .btn-group > button + .dropdown-toggle, .carousel-toolbar div .btn-group > button + .dropdown-toggle, .toolbar-secondary .toolbar-search form .btn-group > button + .dropdown-toggle, .tag-container ul li .btn-group > button + .dropdown-toggle, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group > button + .dropdown-toggle {
+.btn-group > .btn + .dropdown-toggle, .btn-group > .glyph-link + .dropdown-toggle, .toolbar div .btn-group > button + .dropdown-toggle, .toolbar-secondary div .btn-group > button + .dropdown-toggle, .carousel-toolbar div .btn-group > button + .dropdown-toggle, .toolbar-secondary .toolbar-search form .btn-group > button + .dropdown-toggle, .tag-container ul li .btn-group > button + .dropdown-toggle, .tag-container ul li .btn-group > .tag-form + .dropdown-toggle, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group > button + .dropdown-toggle {
   padding-left: 8px;
   padding-right: 8px; }
 
-.btn-group > .btn-lg + .dropdown-toggle, .btn-group-lg.btn-group > .btn + .dropdown-toggle, .btn-group-lg.btn-group > .glyph-link + .dropdown-toggle, .toolbar div .btn-group-lg.btn-group > button + .dropdown-toggle, .toolbar-secondary div .btn-group-lg.btn-group > button + .dropdown-toggle, .carousel-toolbar div .btn-group-lg.btn-group > button + .dropdown-toggle, .toolbar-secondary .toolbar-search form .btn-group-lg.btn-group > button + .dropdown-toggle, .tag-container ul li .btn-group-lg.btn-group > button + .dropdown-toggle, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group-lg.btn-group > button + .dropdown-toggle {
+.btn-group > .btn-lg + .dropdown-toggle, .btn-group-lg.btn-group > .btn + .dropdown-toggle, .btn-group-lg.btn-group > .glyph-link + .dropdown-toggle, .toolbar div .btn-group-lg.btn-group > button + .dropdown-toggle, .toolbar-secondary div .btn-group-lg.btn-group > button + .dropdown-toggle, .carousel-toolbar div .btn-group-lg.btn-group > button + .dropdown-toggle, .toolbar-secondary .toolbar-search form .btn-group-lg.btn-group > button + .dropdown-toggle, .tag-container ul li .btn-group-lg.btn-group > button + .dropdown-toggle, .tag-container ul li .btn-group-lg.btn-group > .tag-form + .dropdown-toggle, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group-lg.btn-group > button + .dropdown-toggle {
   padding-left: 12px;
   padding-right: 12px; }
 
@@ -3538,17 +3613,17 @@ tbody.collapse.in {
   .btn-group.open .dropdown-toggle.btn-link, .btn-group.open .dropdown-toggle.glyph-link, .btn-group.open .toolbar div button.dropdown-toggle, .toolbar div .btn-group.open button.dropdown-toggle, .btn-group.open .toolbar-secondary div button.dropdown-toggle, .toolbar-secondary div .btn-group.open button.dropdown-toggle, .btn-group.open .carousel-toolbar div button.dropdown-toggle, .carousel-toolbar div .btn-group.open button.dropdown-toggle, .btn-group.open .forum-container .forum-post .forum-footer .forum-expand-comments button.dropdown-toggle, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group.open button.dropdown-toggle {
     box-shadow: none; }
 
-.btn .caret, .glyph-link .caret, .toolbar div button .caret, .toolbar-secondary div button .caret, .carousel-toolbar div button .caret, .toolbar-secondary .toolbar-search form button .caret, .tag-container ul li button .caret, .forum-container .forum-post .forum-footer .forum-expand-comments button .caret {
+.btn .caret, .glyph-link .caret, .toolbar div button .caret, .toolbar-secondary div button .caret, .carousel-toolbar div button .caret, .toolbar-secondary .toolbar-search form button .caret, .tag-container ul li button .caret, .tag-container ul li .tag-form .caret, .forum-container .forum-post .forum-footer .forum-expand-comments button .caret {
   margin-left: 0; }
 
-.btn-lg .caret, .btn-group-lg > .btn .caret, .btn-group-lg > .glyph-link .caret, .toolbar div .btn-group-lg > button .caret, .toolbar-secondary div .btn-group-lg > button .caret, .carousel-toolbar div .btn-group-lg > button .caret, .toolbar-secondary .toolbar-search form .btn-group-lg > button .caret, .tag-container ul li .btn-group-lg > button .caret, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group-lg > button .caret {
+.btn-lg .caret, .btn-group-lg > .btn .caret, .btn-group-lg > .glyph-link .caret, .toolbar div .btn-group-lg > button .caret, .toolbar-secondary div .btn-group-lg > button .caret, .carousel-toolbar div .btn-group-lg > button .caret, .toolbar-secondary .toolbar-search form .btn-group-lg > button .caret, .tag-container ul li .btn-group-lg > button .caret, .tag-container ul li .btn-group-lg > .tag-form .caret, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group-lg > button .caret {
   border-width: 5px 5px 0;
   border-bottom-width: 0; }
 
-.dropup .btn-lg .caret, .dropup .btn-group-lg > .btn .caret, .dropup .btn-group-lg > .glyph-link .caret, .dropup .toolbar div .btn-group-lg > button .caret, .toolbar div .dropup .btn-group-lg > button .caret, .dropup .toolbar-secondary div .btn-group-lg > button .caret, .toolbar-secondary div .dropup .btn-group-lg > button .caret, .dropup .carousel-toolbar div .btn-group-lg > button .caret, .carousel-toolbar div .dropup .btn-group-lg > button .caret, .dropup .toolbar-secondary .toolbar-search form .btn-group-lg > button .caret, .toolbar-secondary .toolbar-search form .dropup .btn-group-lg > button .caret, .dropup .tag-container ul li .btn-group-lg > button .caret, .tag-container ul li .dropup .btn-group-lg > button .caret, .dropup .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group-lg > button .caret, .forum-container .forum-post .forum-footer .forum-expand-comments .dropup .btn-group-lg > button .caret {
+.dropup .btn-lg .caret, .dropup .btn-group-lg > .btn .caret, .dropup .btn-group-lg > .glyph-link .caret, .dropup .toolbar div .btn-group-lg > button .caret, .toolbar div .dropup .btn-group-lg > button .caret, .dropup .toolbar-secondary div .btn-group-lg > button .caret, .toolbar-secondary div .dropup .btn-group-lg > button .caret, .dropup .carousel-toolbar div .btn-group-lg > button .caret, .carousel-toolbar div .dropup .btn-group-lg > button .caret, .dropup .toolbar-secondary .toolbar-search form .btn-group-lg > button .caret, .toolbar-secondary .toolbar-search form .dropup .btn-group-lg > button .caret, .dropup .tag-container ul li .btn-group-lg > button .caret, .tag-container ul li .dropup .btn-group-lg > button .caret, .dropup .tag-container ul li .btn-group-lg > .tag-form .caret, .tag-container ul li .dropup .btn-group-lg > .tag-form .caret, .dropup .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group-lg > button .caret, .forum-container .forum-post .forum-footer .forum-expand-comments .dropup .btn-group-lg > button .caret {
   border-width: 0 5px 5px; }
 
-.btn-group-vertical > .btn, .btn-group-vertical > .glyph-link, .toolbar div .btn-group-vertical > button, .toolbar-secondary div .btn-group-vertical > button, .carousel-toolbar div .btn-group-vertical > button, .toolbar-secondary .toolbar-search form .btn-group-vertical > button, .tag-container ul li .btn-group-vertical > button, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group-vertical > button,
+.btn-group-vertical > .btn, .btn-group-vertical > .glyph-link, .toolbar div .btn-group-vertical > button, .toolbar-secondary div .btn-group-vertical > button, .carousel-toolbar div .btn-group-vertical > button, .toolbar-secondary .toolbar-search form .btn-group-vertical > button, .tag-container ul li .btn-group-vertical > button, .tag-container ul li .btn-group-vertical > .tag-form, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group-vertical > button,
 .btn-group-vertical > .btn-group,
 .btn-group-vertical > .btn-group > .btn,
 .btn-group-vertical > .btn-group > .glyph-link, .toolbar div
@@ -3556,7 +3631,8 @@ tbody.collapse.in {
 .btn-group-vertical > .btn-group > button, .carousel-toolbar div
 .btn-group-vertical > .btn-group > button, .toolbar-secondary .toolbar-search form
 .btn-group-vertical > .btn-group > button, .tag-container ul li
-.btn-group-vertical > .btn-group > button, .forum-container .forum-post .forum-footer .forum-expand-comments
+.btn-group-vertical > .btn-group > button, .tag-container ul li
+.btn-group-vertical > .btn-group > .tag-form, .forum-container .forum-post .forum-footer .forum-expand-comments
 .btn-group-vertical > .btn-group > button {
   display: block;
   float: none;
@@ -3570,17 +3646,18 @@ tbody.collapse.in {
 .btn-group-vertical > .btn-group:after {
   clear: both; }
 
-.btn-group-vertical > .btn-group > .btn, .btn-group-vertical > .btn-group > .glyph-link, .toolbar div .btn-group-vertical > .btn-group > button, .toolbar-secondary div .btn-group-vertical > .btn-group > button, .carousel-toolbar div .btn-group-vertical > .btn-group > button, .toolbar-secondary .toolbar-search form .btn-group-vertical > .btn-group > button, .tag-container ul li .btn-group-vertical > .btn-group > button, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group-vertical > .btn-group > button {
+.btn-group-vertical > .btn-group > .btn, .btn-group-vertical > .btn-group > .glyph-link, .toolbar div .btn-group-vertical > .btn-group > button, .toolbar-secondary div .btn-group-vertical > .btn-group > button, .carousel-toolbar div .btn-group-vertical > .btn-group > button, .toolbar-secondary .toolbar-search form .btn-group-vertical > .btn-group > button, .tag-container ul li .btn-group-vertical > .btn-group > button, .tag-container ul li .btn-group-vertical > .btn-group > .tag-form, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group-vertical > .btn-group > button {
   float: none; }
 
-.btn-group-vertical > .btn + .btn, .btn-group-vertical > .glyph-link + .btn, .toolbar div .btn-group-vertical > button + .btn, .toolbar-secondary div .btn-group-vertical > button + .btn, .carousel-toolbar div .btn-group-vertical > button + .btn, .toolbar-secondary .toolbar-search form .btn-group-vertical > button + .btn, .tag-container ul li .btn-group-vertical > button + .btn, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group-vertical > button + .btn, .btn-group-vertical > .btn + .glyph-link, .btn-group-vertical > .glyph-link + .glyph-link, .toolbar div .btn-group-vertical > button + .glyph-link, .toolbar-secondary div .btn-group-vertical > button + .glyph-link, .carousel-toolbar div .btn-group-vertical > button + .glyph-link, .toolbar-secondary .toolbar-search form .btn-group-vertical > button + .glyph-link, .tag-container ul li .btn-group-vertical > button + .glyph-link, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group-vertical > button + .glyph-link, .toolbar div .btn-group-vertical > .btn + button, .toolbar div .btn-group-vertical > .glyph-link + button, .toolbar div .btn-group-vertical > button + button, .toolbar-secondary div .btn-group-vertical > .btn + button, .toolbar-secondary div .btn-group-vertical > .glyph-link + button, .toolbar .toolbar-secondary div .btn-group-vertical > button + button, .toolbar-secondary .toolbar div .btn-group-vertical > button + button, .toolbar-secondary div .btn-group-vertical > button + button, .carousel-toolbar div .btn-group-vertical > .btn + button, .carousel-toolbar div .btn-group-vertical > .glyph-link + button, .toolbar .carousel-toolbar div .btn-group-vertical > button + button, .carousel-toolbar .toolbar div .btn-group-vertical > button + button, .toolbar-secondary .carousel-toolbar div .btn-group-vertical > button + button, .carousel-toolbar .toolbar-secondary div .btn-group-vertical > button + button, .carousel-toolbar div .btn-group-vertical > button + button, .toolbar-secondary .toolbar-search form .btn-group-vertical > .btn + button, .toolbar-secondary .toolbar-search form .btn-group-vertical > .glyph-link + button, .toolbar-secondary .toolbar-search form div .btn-group-vertical > button + button, .toolbar-secondary .toolbar-search form .btn-group-vertical > button + button, .tag-container ul li .btn-group-vertical > .btn + button, .tag-container ul li .btn-group-vertical > .glyph-link + button, .toolbar div .tag-container ul li .btn-group-vertical > button + button, .tag-container ul li .toolbar div .btn-group-vertical > button + button, .toolbar-secondary div .tag-container ul li .btn-group-vertical > button + button, .tag-container ul li .toolbar-secondary div .btn-group-vertical > button + button, .carousel-toolbar div .tag-container ul li .btn-group-vertical > button + button, .tag-container ul li .carousel-toolbar div .btn-group-vertical > button + button, .toolbar-secondary .toolbar-search form .tag-container ul li .btn-group-vertical > button + button, .tag-container ul li .btn-group-vertical > button + button, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group-vertical > .btn + button, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group-vertical > .glyph-link + button, .forum-container .forum-post .forum-footer .forum-expand-comments .toolbar div .btn-group-vertical > button + button, .forum-container .forum-post .forum-footer .forum-expand-comments .toolbar-secondary div .btn-group-vertical > button + button, .forum-container .forum-post .forum-footer .forum-expand-comments .carousel-toolbar div .btn-group-vertical > button + button, .forum-container .forum-post .forum-footer .forum-expand-comments .toolbar-secondary .toolbar-search form .btn-group-vertical > button + button, .forum-container .forum-post .forum-footer .forum-expand-comments .tag-container ul li .btn-group-vertical > button + button, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group-vertical > button + button,
+.btn-group-vertical > .btn + .btn, .btn-group-vertical > .glyph-link + .btn, .toolbar div .btn-group-vertical > button + .btn, .toolbar-secondary div .btn-group-vertical > button + .btn, .carousel-toolbar div .btn-group-vertical > button + .btn, .toolbar-secondary .toolbar-search form .btn-group-vertical > button + .btn, .tag-container ul li .btn-group-vertical > button + .btn, .tag-container ul li .btn-group-vertical > .tag-form + .btn, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group-vertical > button + .btn, .btn-group-vertical > .btn + .glyph-link, .btn-group-vertical > .glyph-link + .glyph-link, .toolbar div .btn-group-vertical > button + .glyph-link, .toolbar-secondary div .btn-group-vertical > button + .glyph-link, .carousel-toolbar div .btn-group-vertical > button + .glyph-link, .toolbar-secondary .toolbar-search form .btn-group-vertical > button + .glyph-link, .tag-container ul li .btn-group-vertical > button + .glyph-link, .tag-container ul li .btn-group-vertical > .tag-form + .glyph-link, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group-vertical > button + .glyph-link, .toolbar div .btn-group-vertical > .btn + button, .toolbar div .btn-group-vertical > .glyph-link + button, .toolbar div .btn-group-vertical > button + button, .tag-container ul li .toolbar div .btn-group-vertical > .tag-form + button, .toolbar-secondary div .btn-group-vertical > .btn + button, .toolbar-secondary div .btn-group-vertical > .glyph-link + button, .toolbar .toolbar-secondary div .btn-group-vertical > button + button, .toolbar-secondary .toolbar div .btn-group-vertical > button + button, .toolbar-secondary div .btn-group-vertical > button + button, .tag-container ul li .toolbar-secondary div .btn-group-vertical > .tag-form + button, .carousel-toolbar div .btn-group-vertical > .btn + button, .carousel-toolbar div .btn-group-vertical > .glyph-link + button, .toolbar .carousel-toolbar div .btn-group-vertical > button + button, .carousel-toolbar .toolbar div .btn-group-vertical > button + button, .toolbar-secondary .carousel-toolbar div .btn-group-vertical > button + button, .carousel-toolbar .toolbar-secondary div .btn-group-vertical > button + button, .carousel-toolbar div .btn-group-vertical > button + button, .tag-container ul li .carousel-toolbar div .btn-group-vertical > .tag-form + button, .toolbar-secondary .toolbar-search form .btn-group-vertical > .btn + button, .toolbar-secondary .toolbar-search form .btn-group-vertical > .glyph-link + button, .toolbar-secondary .toolbar-search form div .btn-group-vertical > button + button, .toolbar-secondary .toolbar-search form .btn-group-vertical > button + button, .tag-container ul li .toolbar-secondary .toolbar-search form .btn-group-vertical > .tag-form + button, .tag-container ul li .btn-group-vertical > .btn + button, .tag-container ul li .btn-group-vertical > .glyph-link + button, .toolbar div .tag-container ul li .btn-group-vertical > button + button, .tag-container ul li .toolbar div .btn-group-vertical > button + button, .toolbar-secondary div .tag-container ul li .btn-group-vertical > button + button, .tag-container ul li .toolbar-secondary div .btn-group-vertical > button + button, .carousel-toolbar div .tag-container ul li .btn-group-vertical > button + button, .tag-container ul li .carousel-toolbar div .btn-group-vertical > button + button, .toolbar-secondary .toolbar-search form .tag-container ul li .btn-group-vertical > button + button, .tag-container ul li .btn-group-vertical > button + button, .tag-container ul li .btn-group-vertical > .tag-form + button, .tag-container ul li .btn-group-vertical > .btn + .tag-form, .tag-container ul li .btn-group-vertical > .glyph-link + .tag-form, .tag-container ul li .toolbar div .btn-group-vertical > button + .tag-form, .tag-container ul li .toolbar-secondary div .btn-group-vertical > button + .tag-form, .tag-container ul li .carousel-toolbar div .btn-group-vertical > button + .tag-form, .tag-container ul li .toolbar-secondary .toolbar-search form .btn-group-vertical > button + .tag-form, .tag-container ul li .btn-group-vertical > button + .tag-form, .tag-container ul li .btn-group-vertical > .tag-form + .tag-form, .forum-container .forum-post .forum-footer .forum-expand-comments .tag-container ul li .btn-group-vertical > button + .tag-form, .tag-container ul li .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group-vertical > button + .tag-form, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group-vertical > .btn + button, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group-vertical > .glyph-link + button, .forum-container .forum-post .forum-footer .forum-expand-comments .toolbar div .btn-group-vertical > button + button, .forum-container .forum-post .forum-footer .forum-expand-comments .toolbar-secondary div .btn-group-vertical > button + button, .forum-container .forum-post .forum-footer .forum-expand-comments .carousel-toolbar div .btn-group-vertical > button + button, .forum-container .forum-post .forum-footer .forum-expand-comments .toolbar-secondary .toolbar-search form .btn-group-vertical > button + button, .forum-container .forum-post .forum-footer .forum-expand-comments .tag-container ul li .btn-group-vertical > button + button, .tag-container ul li .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group-vertical > .tag-form + button, .forum-container .forum-post .forum-footer .forum-expand-comments .tag-container ul li .btn-group-vertical > .tag-form + button, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group-vertical > button + button,
 .btn-group-vertical > .btn + .btn-group,
 .btn-group-vertical > .glyph-link + .btn-group, .toolbar div
 .btn-group-vertical > button + .btn-group, .toolbar-secondary div
 .btn-group-vertical > button + .btn-group, .carousel-toolbar div
 .btn-group-vertical > button + .btn-group, .toolbar-secondary .toolbar-search form
 .btn-group-vertical > button + .btn-group, .tag-container ul li
-.btn-group-vertical > button + .btn-group, .forum-container .forum-post .forum-footer .forum-expand-comments
+.btn-group-vertical > button + .btn-group, .tag-container ul li
+.btn-group-vertical > .tag-form + .btn-group, .forum-container .forum-post .forum-footer .forum-expand-comments
 .btn-group-vertical > button + .btn-group,
 .btn-group-vertical > .btn-group + .btn,
 .btn-group-vertical > .btn-group + .glyph-link, .toolbar div
@@ -3588,36 +3665,37 @@ tbody.collapse.in {
 .btn-group-vertical > .btn-group + button, .carousel-toolbar div
 .btn-group-vertical > .btn-group + button, .toolbar-secondary .toolbar-search form
 .btn-group-vertical > .btn-group + button, .tag-container ul li
-.btn-group-vertical > .btn-group + button, .forum-container .forum-post .forum-footer .forum-expand-comments
+.btn-group-vertical > .btn-group + button, .tag-container ul li
+.btn-group-vertical > .btn-group + .tag-form, .forum-container .forum-post .forum-footer .forum-expand-comments
 .btn-group-vertical > .btn-group + button,
 .btn-group-vertical > .btn-group + .btn-group {
   margin-top: -1px;
   margin-left: 0; }
 
-.btn-group-vertical > .btn:not(:first-child):not(:last-child), .btn-group-vertical > .glyph-link:not(:first-child):not(:last-child), .toolbar div .btn-group-vertical > button:not(:first-child):not(:last-child), .toolbar-secondary div .btn-group-vertical > button:not(:first-child):not(:last-child), .carousel-toolbar div .btn-group-vertical > button:not(:first-child):not(:last-child), .toolbar-secondary .toolbar-search form .btn-group-vertical > button:not(:first-child):not(:last-child), .tag-container ul li .btn-group-vertical > button:not(:first-child):not(:last-child), .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group-vertical > button:not(:first-child):not(:last-child) {
+.btn-group-vertical > .btn:not(:first-child):not(:last-child), .btn-group-vertical > .glyph-link:not(:first-child):not(:last-child), .toolbar div .btn-group-vertical > button:not(:first-child):not(:last-child), .toolbar-secondary div .btn-group-vertical > button:not(:first-child):not(:last-child), .carousel-toolbar div .btn-group-vertical > button:not(:first-child):not(:last-child), .toolbar-secondary .toolbar-search form .btn-group-vertical > button:not(:first-child):not(:last-child), .tag-container ul li .btn-group-vertical > button:not(:first-child):not(:last-child), .tag-container ul li .btn-group-vertical > .tag-form:not(:first-child):not(:last-child), .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group-vertical > button:not(:first-child):not(:last-child) {
   border-radius: 0; }
 
-.btn-group-vertical > .btn:first-child:not(:last-child), .btn-group-vertical > .glyph-link:first-child:not(:last-child), .toolbar div .btn-group-vertical > button:first-child:not(:last-child), .toolbar-secondary div .btn-group-vertical > button:first-child:not(:last-child), .carousel-toolbar div .btn-group-vertical > button:first-child:not(:last-child), .toolbar-secondary .toolbar-search form .btn-group-vertical > button:first-child:not(:last-child), .tag-container ul li .btn-group-vertical > button:first-child:not(:last-child), .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group-vertical > button:first-child:not(:last-child) {
+.btn-group-vertical > .btn:first-child:not(:last-child), .btn-group-vertical > .glyph-link:first-child:not(:last-child), .toolbar div .btn-group-vertical > button:first-child:not(:last-child), .toolbar-secondary div .btn-group-vertical > button:first-child:not(:last-child), .carousel-toolbar div .btn-group-vertical > button:first-child:not(:last-child), .toolbar-secondary .toolbar-search form .btn-group-vertical > button:first-child:not(:last-child), .tag-container ul li .btn-group-vertical > button:first-child:not(:last-child), .tag-container ul li .btn-group-vertical > .tag-form:first-child:not(:last-child), .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group-vertical > button:first-child:not(:last-child) {
   border-top-right-radius: 4px;
   border-top-left-radius: 4px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0; }
 
-.btn-group-vertical > .btn:last-child:not(:first-child), .btn-group-vertical > .glyph-link:last-child:not(:first-child), .toolbar div .btn-group-vertical > button:last-child:not(:first-child), .toolbar-secondary div .btn-group-vertical > button:last-child:not(:first-child), .carousel-toolbar div .btn-group-vertical > button:last-child:not(:first-child), .toolbar-secondary .toolbar-search form .btn-group-vertical > button:last-child:not(:first-child), .tag-container ul li .btn-group-vertical > button:last-child:not(:first-child), .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group-vertical > button:last-child:not(:first-child) {
+.btn-group-vertical > .btn:last-child:not(:first-child), .btn-group-vertical > .glyph-link:last-child:not(:first-child), .toolbar div .btn-group-vertical > button:last-child:not(:first-child), .toolbar-secondary div .btn-group-vertical > button:last-child:not(:first-child), .carousel-toolbar div .btn-group-vertical > button:last-child:not(:first-child), .toolbar-secondary .toolbar-search form .btn-group-vertical > button:last-child:not(:first-child), .tag-container ul li .btn-group-vertical > button:last-child:not(:first-child), .tag-container ul li .btn-group-vertical > .tag-form:last-child:not(:first-child), .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group-vertical > button:last-child:not(:first-child) {
   border-top-right-radius: 0;
   border-top-left-radius: 0;
   border-bottom-right-radius: 4px;
   border-bottom-left-radius: 4px; }
 
-.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .glyph-link, .toolbar div .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > button, .toolbar-secondary div .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > button, .carousel-toolbar div .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > button, .toolbar-secondary .toolbar-search form .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > button, .tag-container ul li .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > button, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > button {
+.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .glyph-link, .toolbar div .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > button, .toolbar-secondary div .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > button, .carousel-toolbar div .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > button, .toolbar-secondary .toolbar-search form .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > button, .tag-container ul li .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > button, .tag-container ul li .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .tag-form, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > button {
   border-radius: 0; }
 
-.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .glyph-link:last-child, .toolbar div .btn-group-vertical > .btn-group:first-child:not(:last-child) > button:last-child, .toolbar-secondary div .btn-group-vertical > .btn-group:first-child:not(:last-child) > button:last-child, .carousel-toolbar div .btn-group-vertical > .btn-group:first-child:not(:last-child) > button:last-child, .toolbar-secondary .toolbar-search form .btn-group-vertical > .btn-group:first-child:not(:last-child) > button:last-child, .tag-container ul li .btn-group-vertical > .btn-group:first-child:not(:last-child) > button:last-child, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group-vertical > .btn-group:first-child:not(:last-child) > button:last-child,
+.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .glyph-link:last-child, .toolbar div .btn-group-vertical > .btn-group:first-child:not(:last-child) > button:last-child, .toolbar-secondary div .btn-group-vertical > .btn-group:first-child:not(:last-child) > button:last-child, .carousel-toolbar div .btn-group-vertical > .btn-group:first-child:not(:last-child) > button:last-child, .toolbar-secondary .toolbar-search form .btn-group-vertical > .btn-group:first-child:not(:last-child) > button:last-child, .tag-container ul li .btn-group-vertical > .btn-group:first-child:not(:last-child) > button:last-child, .tag-container ul li .btn-group-vertical > .btn-group:first-child:not(:last-child) > .tag-form:last-child, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group-vertical > .btn-group:first-child:not(:last-child) > button:last-child,
 .btn-group-vertical > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0; }
 
-.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > .glyph-link:first-child, .toolbar div .btn-group-vertical > .btn-group:last-child:not(:first-child) > button:first-child, .toolbar-secondary div .btn-group-vertical > .btn-group:last-child:not(:first-child) > button:first-child, .carousel-toolbar div .btn-group-vertical > .btn-group:last-child:not(:first-child) > button:first-child, .toolbar-secondary .toolbar-search form .btn-group-vertical > .btn-group:last-child:not(:first-child) > button:first-child, .tag-container ul li .btn-group-vertical > .btn-group:last-child:not(:first-child) > button:first-child, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group-vertical > .btn-group:last-child:not(:first-child) > button:first-child {
+.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > .glyph-link:first-child, .toolbar div .btn-group-vertical > .btn-group:last-child:not(:first-child) > button:first-child, .toolbar-secondary div .btn-group-vertical > .btn-group:last-child:not(:first-child) > button:first-child, .carousel-toolbar div .btn-group-vertical > .btn-group:last-child:not(:first-child) > button:first-child, .toolbar-secondary .toolbar-search form .btn-group-vertical > .btn-group:last-child:not(:first-child) > button:first-child, .tag-container ul li .btn-group-vertical > .btn-group:last-child:not(:first-child) > button:first-child, .tag-container ul li .btn-group-vertical > .btn-group:last-child:not(:first-child) > .tag-form:first-child, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group-vertical > .btn-group:last-child:not(:first-child) > button:first-child {
   border-top-right-radius: 0;
   border-top-left-radius: 0; }
 
@@ -3626,24 +3704,25 @@ tbody.collapse.in {
   width: 100%;
   table-layout: fixed;
   border-collapse: separate; }
-  .btn-group-justified > .btn, .btn-group-justified > .glyph-link, .toolbar div .btn-group-justified > button, .toolbar-secondary div .btn-group-justified > button, .carousel-toolbar div .btn-group-justified > button, .toolbar-secondary .toolbar-search form .btn-group-justified > button, .tag-container ul li .btn-group-justified > button, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group-justified > button,
+  .btn-group-justified > .btn, .btn-group-justified > .glyph-link, .toolbar div .btn-group-justified > button, .toolbar-secondary div .btn-group-justified > button, .carousel-toolbar div .btn-group-justified > button, .toolbar-secondary .toolbar-search form .btn-group-justified > button, .tag-container ul li .btn-group-justified > button, .tag-container ul li .btn-group-justified > .tag-form, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group-justified > button,
   .btn-group-justified > .btn-group {
     float: none;
     display: table-cell;
     width: 1%; }
-  .btn-group-justified > .btn-group .btn, .btn-group-justified > .btn-group .glyph-link, .btn-group-justified > .btn-group .toolbar div button, .toolbar div .btn-group-justified > .btn-group button, .btn-group-justified > .btn-group .toolbar-secondary div button, .toolbar-secondary div .btn-group-justified > .btn-group button, .btn-group-justified > .btn-group .carousel-toolbar div button, .carousel-toolbar div .btn-group-justified > .btn-group button, .btn-group-justified > .btn-group .toolbar-secondary .toolbar-search form button, .toolbar-secondary .toolbar-search form .btn-group-justified > .btn-group button, .btn-group-justified > .btn-group .tag-container ul li button, .tag-container ul li .btn-group-justified > .btn-group button, .btn-group-justified > .btn-group .forum-container .forum-post .forum-footer .forum-expand-comments button, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group-justified > .btn-group button {
+  .btn-group-justified > .btn-group .btn, .btn-group-justified > .btn-group .glyph-link, .btn-group-justified > .btn-group .toolbar div button, .toolbar div .btn-group-justified > .btn-group button, .btn-group-justified > .btn-group .toolbar-secondary div button, .toolbar-secondary div .btn-group-justified > .btn-group button, .btn-group-justified > .btn-group .carousel-toolbar div button, .carousel-toolbar div .btn-group-justified > .btn-group button, .btn-group-justified > .btn-group .toolbar-secondary .toolbar-search form button, .toolbar-secondary .toolbar-search form .btn-group-justified > .btn-group button, .btn-group-justified > .btn-group .tag-container ul li button, .tag-container ul li .btn-group-justified > .btn-group button, .btn-group-justified > .btn-group .tag-container ul li .tag-form, .tag-container ul li .btn-group-justified > .btn-group .tag-form, .btn-group-justified > .btn-group .forum-container .forum-post .forum-footer .forum-expand-comments button, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group-justified > .btn-group button {
     width: 100%; }
   .btn-group-justified > .btn-group .dropdown-menu {
     left: auto; }
 
-[data-toggle="buttons"] > .btn input[type="radio"], [data-toggle="buttons"] > .glyph-link input[type="radio"], .toolbar div [data-toggle="buttons"] > button input[type="radio"], .toolbar-secondary div [data-toggle="buttons"] > button input[type="radio"], .carousel-toolbar div [data-toggle="buttons"] > button input[type="radio"], .toolbar-secondary .toolbar-search form [data-toggle="buttons"] > button input[type="radio"], .tag-container ul li [data-toggle="buttons"] > button input[type="radio"], .forum-container .forum-post .forum-footer .forum-expand-comments [data-toggle="buttons"] > button input[type="radio"],
+[data-toggle="buttons"] > .btn input[type="radio"], [data-toggle="buttons"] > .glyph-link input[type="radio"], .toolbar div [data-toggle="buttons"] > button input[type="radio"], .toolbar-secondary div [data-toggle="buttons"] > button input[type="radio"], .carousel-toolbar div [data-toggle="buttons"] > button input[type="radio"], .toolbar-secondary .toolbar-search form [data-toggle="buttons"] > button input[type="radio"], .tag-container ul li [data-toggle="buttons"] > button input[type="radio"], .tag-container ul li [data-toggle="buttons"] > .tag-form input[type="radio"], .forum-container .forum-post .forum-footer .forum-expand-comments [data-toggle="buttons"] > button input[type="radio"],
 [data-toggle="buttons"] > .btn input[type="checkbox"],
 [data-toggle="buttons"] > .glyph-link input[type="checkbox"], .toolbar div
 [data-toggle="buttons"] > button input[type="checkbox"], .toolbar-secondary div
 [data-toggle="buttons"] > button input[type="checkbox"], .carousel-toolbar div
 [data-toggle="buttons"] > button input[type="checkbox"], .toolbar-secondary .toolbar-search form
 [data-toggle="buttons"] > button input[type="checkbox"], .tag-container ul li
-[data-toggle="buttons"] > button input[type="checkbox"], .forum-container .forum-post .forum-footer .forum-expand-comments
+[data-toggle="buttons"] > button input[type="checkbox"], .tag-container ul li
+[data-toggle="buttons"] > .tag-form input[type="checkbox"], .forum-container .forum-post .forum-footer .forum-expand-comments
 [data-toggle="buttons"] > button input[type="checkbox"],
 [data-toggle="buttons"] > .btn-group > .btn input[type="radio"],
 [data-toggle="buttons"] > .btn-group > .glyph-link input[type="radio"], .toolbar div
@@ -3651,7 +3730,8 @@ tbody.collapse.in {
 [data-toggle="buttons"] > .btn-group > button input[type="radio"], .carousel-toolbar div
 [data-toggle="buttons"] > .btn-group > button input[type="radio"], .toolbar-secondary .toolbar-search form
 [data-toggle="buttons"] > .btn-group > button input[type="radio"], .tag-container ul li
-[data-toggle="buttons"] > .btn-group > button input[type="radio"], .forum-container .forum-post .forum-footer .forum-expand-comments
+[data-toggle="buttons"] > .btn-group > button input[type="radio"], .tag-container ul li
+[data-toggle="buttons"] > .btn-group > .tag-form input[type="radio"], .forum-container .forum-post .forum-footer .forum-expand-comments
 [data-toggle="buttons"] > .btn-group > button input[type="radio"],
 [data-toggle="buttons"] > .btn-group > .btn input[type="checkbox"],
 [data-toggle="buttons"] > .btn-group > .glyph-link input[type="checkbox"], .toolbar div
@@ -3659,7 +3739,8 @@ tbody.collapse.in {
 [data-toggle="buttons"] > .btn-group > button input[type="checkbox"], .carousel-toolbar div
 [data-toggle="buttons"] > .btn-group > button input[type="checkbox"], .toolbar-secondary .toolbar-search form
 [data-toggle="buttons"] > .btn-group > button input[type="checkbox"], .tag-container ul li
-[data-toggle="buttons"] > .btn-group > button input[type="checkbox"], .forum-container .forum-post .forum-footer .forum-expand-comments
+[data-toggle="buttons"] > .btn-group > button input[type="checkbox"], .tag-container ul li
+[data-toggle="buttons"] > .btn-group > .tag-form input[type="checkbox"], .forum-container .forum-post .forum-footer .forum-expand-comments
 [data-toggle="buttons"] > .btn-group > button input[type="checkbox"] {
   position: absolute;
   clip: rect(0, 0, 0, 0);
@@ -3719,7 +3800,8 @@ tbody.collapse.in {
   .input-group-sm > .input-group-btn > button.input-group-addon, .carousel-toolbar div
   .input-group-sm > .input-group-btn > button.input-group-addon, .toolbar-secondary .toolbar-search form
   .input-group-sm > .input-group-btn > button.input-group-addon, .tag-container ul li
-  .input-group-sm > .input-group-btn > button.input-group-addon, .forum-container .forum-post .forum-footer .forum-expand-comments
+  .input-group-sm > .input-group-btn > button.input-group-addon, .tag-container ul li
+  .input-group-sm > .input-group-btn > .input-group-addon.tag-form, .forum-container .forum-post .forum-footer .forum-expand-comments
   .input-group-sm > .input-group-btn > button.input-group-addon {
     padding: 5px 10px;
     font-size: 12px;
@@ -3732,7 +3814,8 @@ tbody.collapse.in {
   .input-group-lg > .input-group-btn > button.input-group-addon, .carousel-toolbar div
   .input-group-lg > .input-group-btn > button.input-group-addon, .toolbar-secondary .toolbar-search form
   .input-group-lg > .input-group-btn > button.input-group-addon, .tag-container ul li
-  .input-group-lg > .input-group-btn > button.input-group-addon, .forum-container .forum-post .forum-footer .forum-expand-comments
+  .input-group-lg > .input-group-btn > button.input-group-addon, .tag-container ul li
+  .input-group-lg > .input-group-btn > .input-group-addon.tag-form, .forum-container .forum-post .forum-footer .forum-expand-comments
   .input-group-lg > .input-group-btn > button.input-group-addon {
     padding: 10px 16px;
     font-size: 18px;
@@ -3749,7 +3832,8 @@ tbody.collapse.in {
 .input-group-btn:first-child > button, .carousel-toolbar div
 .input-group-btn:first-child > button, .toolbar-secondary .toolbar-search form
 .input-group-btn:first-child > button, .tag-container ul li
-.input-group-btn:first-child > button, .forum-container .forum-post .forum-footer .forum-expand-comments
+.input-group-btn:first-child > button, .tag-container ul li
+.input-group-btn:first-child > .tag-form, .forum-container .forum-post .forum-footer .forum-expand-comments
 .input-group-btn:first-child > button,
 .input-group-btn:first-child > .btn-group > .btn,
 .input-group-btn:first-child > .btn-group > .glyph-link, .toolbar div
@@ -3757,7 +3841,8 @@ tbody.collapse.in {
 .input-group-btn:first-child > .btn-group > button, .carousel-toolbar div
 .input-group-btn:first-child > .btn-group > button, .toolbar-secondary .toolbar-search form
 .input-group-btn:first-child > .btn-group > button, .tag-container ul li
-.input-group-btn:first-child > .btn-group > button, .forum-container .forum-post .forum-footer .forum-expand-comments
+.input-group-btn:first-child > .btn-group > button, .tag-container ul li
+.input-group-btn:first-child > .btn-group > .tag-form, .forum-container .forum-post .forum-footer .forum-expand-comments
 .input-group-btn:first-child > .btn-group > button,
 .input-group-btn:first-child > .dropdown-toggle,
 .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle),
@@ -3766,7 +3851,8 @@ tbody.collapse.in {
 .input-group-btn:last-child > button:not(:last-child):not(.dropdown-toggle), .carousel-toolbar div
 .input-group-btn:last-child > button:not(:last-child):not(.dropdown-toggle), .toolbar-secondary .toolbar-search form
 .input-group-btn:last-child > button:not(:last-child):not(.dropdown-toggle), .tag-container ul li
-.input-group-btn:last-child > button:not(:last-child):not(.dropdown-toggle), .forum-container .forum-post .forum-footer .forum-expand-comments
+.input-group-btn:last-child > button:not(:last-child):not(.dropdown-toggle), .tag-container ul li
+.input-group-btn:last-child > .tag-form:not(:last-child):not(.dropdown-toggle), .forum-container .forum-post .forum-footer .forum-expand-comments
 .input-group-btn:last-child > button:not(:last-child):not(.dropdown-toggle),
 .input-group-btn:last-child > .btn-group:not(:last-child) > .btn,
 .input-group-btn:last-child > .btn-group:not(:last-child) > .glyph-link, .toolbar div
@@ -3774,7 +3860,8 @@ tbody.collapse.in {
 .input-group-btn:last-child > .btn-group:not(:last-child) > button, .carousel-toolbar div
 .input-group-btn:last-child > .btn-group:not(:last-child) > button, .toolbar-secondary .toolbar-search form
 .input-group-btn:last-child > .btn-group:not(:last-child) > button, .tag-container ul li
-.input-group-btn:last-child > .btn-group:not(:last-child) > button, .forum-container .forum-post .forum-footer .forum-expand-comments
+.input-group-btn:last-child > .btn-group:not(:last-child) > button, .tag-container ul li
+.input-group-btn:last-child > .btn-group:not(:last-child) > .tag-form, .forum-container .forum-post .forum-footer .forum-expand-comments
 .input-group-btn:last-child > .btn-group:not(:last-child) > button {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0; }
@@ -3790,7 +3877,8 @@ tbody.collapse.in {
 .input-group-btn:last-child > button, .carousel-toolbar div
 .input-group-btn:last-child > button, .toolbar-secondary .toolbar-search form
 .input-group-btn:last-child > button, .tag-container ul li
-.input-group-btn:last-child > button, .forum-container .forum-post .forum-footer .forum-expand-comments
+.input-group-btn:last-child > button, .tag-container ul li
+.input-group-btn:last-child > .tag-form, .forum-container .forum-post .forum-footer .forum-expand-comments
 .input-group-btn:last-child > button,
 .input-group-btn:last-child > .btn-group > .btn,
 .input-group-btn:last-child > .btn-group > .glyph-link, .toolbar div
@@ -3798,7 +3886,8 @@ tbody.collapse.in {
 .input-group-btn:last-child > .btn-group > button, .carousel-toolbar div
 .input-group-btn:last-child > .btn-group > button, .toolbar-secondary .toolbar-search form
 .input-group-btn:last-child > .btn-group > button, .tag-container ul li
-.input-group-btn:last-child > .btn-group > button, .forum-container .forum-post .forum-footer .forum-expand-comments
+.input-group-btn:last-child > .btn-group > button, .tag-container ul li
+.input-group-btn:last-child > .btn-group > .tag-form, .forum-container .forum-post .forum-footer .forum-expand-comments
 .input-group-btn:last-child > .btn-group > button,
 .input-group-btn:last-child > .dropdown-toggle,
 .input-group-btn:first-child > .btn:not(:first-child),
@@ -3807,7 +3896,8 @@ tbody.collapse.in {
 .input-group-btn:first-child > button:not(:first-child), .carousel-toolbar div
 .input-group-btn:first-child > button:not(:first-child), .toolbar-secondary .toolbar-search form
 .input-group-btn:first-child > button:not(:first-child), .tag-container ul li
-.input-group-btn:first-child > button:not(:first-child), .forum-container .forum-post .forum-footer .forum-expand-comments
+.input-group-btn:first-child > button:not(:first-child), .tag-container ul li
+.input-group-btn:first-child > .tag-form:not(:first-child), .forum-container .forum-post .forum-footer .forum-expand-comments
 .input-group-btn:first-child > button:not(:first-child),
 .input-group-btn:first-child > .btn-group:not(:first-child) > .btn,
 .input-group-btn:first-child > .btn-group:not(:first-child) > .glyph-link, .toolbar div
@@ -3815,7 +3905,8 @@ tbody.collapse.in {
 .input-group-btn:first-child > .btn-group:not(:first-child) > button, .carousel-toolbar div
 .input-group-btn:first-child > .btn-group:not(:first-child) > button, .toolbar-secondary .toolbar-search form
 .input-group-btn:first-child > .btn-group:not(:first-child) > button, .tag-container ul li
-.input-group-btn:first-child > .btn-group:not(:first-child) > button, .forum-container .forum-post .forum-footer .forum-expand-comments
+.input-group-btn:first-child > .btn-group:not(:first-child) > button, .tag-container ul li
+.input-group-btn:first-child > .btn-group:not(:first-child) > .tag-form, .forum-container .forum-post .forum-footer .forum-expand-comments
 .input-group-btn:first-child > .btn-group:not(:first-child) > button {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0; }
@@ -3827,16 +3918,16 @@ tbody.collapse.in {
   position: relative;
   font-size: 0;
   white-space: nowrap; }
-  .input-group-btn > .btn, .input-group-btn > .glyph-link, .toolbar div .input-group-btn > button, .toolbar-secondary div .input-group-btn > button, .carousel-toolbar div .input-group-btn > button, .toolbar-secondary .toolbar-search form .input-group-btn > button, .tag-container ul li .input-group-btn > button, .forum-container .forum-post .forum-footer .forum-expand-comments .input-group-btn > button {
+  .input-group-btn > .btn, .input-group-btn > .glyph-link, .toolbar div .input-group-btn > button, .toolbar-secondary div .input-group-btn > button, .carousel-toolbar div .input-group-btn > button, .toolbar-secondary .toolbar-search form .input-group-btn > button, .tag-container ul li .input-group-btn > button, .tag-container ul li .input-group-btn > .tag-form, .forum-container .forum-post .forum-footer .forum-expand-comments .input-group-btn > button {
     position: relative; }
-    .input-group-btn > .btn + .btn, .input-group-btn > .glyph-link + .btn, .toolbar div .input-group-btn > button + .btn, .toolbar-secondary div .input-group-btn > button + .btn, .carousel-toolbar div .input-group-btn > button + .btn, .toolbar-secondary .toolbar-search form .input-group-btn > button + .btn, .tag-container ul li .input-group-btn > button + .btn, .forum-container .forum-post .forum-footer .forum-expand-comments .input-group-btn > button + .btn, .input-group-btn > .btn + .glyph-link, .input-group-btn > .glyph-link + .glyph-link, .toolbar div .input-group-btn > button + .glyph-link, .toolbar-secondary div .input-group-btn > button + .glyph-link, .carousel-toolbar div .input-group-btn > button + .glyph-link, .toolbar-secondary .toolbar-search form .input-group-btn > button + .glyph-link, .tag-container ul li .input-group-btn > button + .glyph-link, .forum-container .forum-post .forum-footer .forum-expand-comments .input-group-btn > button + .glyph-link, .toolbar div .input-group-btn > .btn + button, .toolbar div .input-group-btn > .glyph-link + button, .toolbar div .input-group-btn > button + button, .toolbar-secondary div .input-group-btn > .btn + button, .toolbar-secondary div .input-group-btn > .glyph-link + button, .toolbar .toolbar-secondary div .input-group-btn > button + button, .toolbar-secondary .toolbar div .input-group-btn > button + button, .toolbar-secondary div .input-group-btn > button + button, .carousel-toolbar div .input-group-btn > .btn + button, .carousel-toolbar div .input-group-btn > .glyph-link + button, .toolbar .carousel-toolbar div .input-group-btn > button + button, .carousel-toolbar .toolbar div .input-group-btn > button + button, .toolbar-secondary .carousel-toolbar div .input-group-btn > button + button, .carousel-toolbar .toolbar-secondary div .input-group-btn > button + button, .carousel-toolbar div .input-group-btn > button + button, .toolbar-secondary .toolbar-search form .input-group-btn > .btn + button, .toolbar-secondary .toolbar-search form .input-group-btn > .glyph-link + button, .toolbar-secondary .toolbar-search form div .input-group-btn > button + button, .toolbar-secondary .toolbar-search form .input-group-btn > button + button, .tag-container ul li .input-group-btn > .btn + button, .tag-container ul li .input-group-btn > .glyph-link + button, .toolbar div .tag-container ul li .input-group-btn > button + button, .tag-container ul li .toolbar div .input-group-btn > button + button, .toolbar-secondary div .tag-container ul li .input-group-btn > button + button, .tag-container ul li .toolbar-secondary div .input-group-btn > button + button, .carousel-toolbar div .tag-container ul li .input-group-btn > button + button, .tag-container ul li .carousel-toolbar div .input-group-btn > button + button, .toolbar-secondary .toolbar-search form .tag-container ul li .input-group-btn > button + button, .tag-container ul li .input-group-btn > button + button, .forum-container .forum-post .forum-footer .forum-expand-comments .input-group-btn > .btn + button, .forum-container .forum-post .forum-footer .forum-expand-comments .input-group-btn > .glyph-link + button, .forum-container .forum-post .forum-footer .forum-expand-comments .toolbar div .input-group-btn > button + button, .forum-container .forum-post .forum-footer .forum-expand-comments .toolbar-secondary div .input-group-btn > button + button, .forum-container .forum-post .forum-footer .forum-expand-comments .carousel-toolbar div .input-group-btn > button + button, .forum-container .forum-post .forum-footer .forum-expand-comments .toolbar-secondary .toolbar-search form .input-group-btn > button + button, .forum-container .forum-post .forum-footer .forum-expand-comments .tag-container ul li .input-group-btn > button + button, .forum-container .forum-post .forum-footer .forum-expand-comments .input-group-btn > button + button {
+    .input-group-btn > .btn + .btn, .input-group-btn > .glyph-link + .btn, .toolbar div .input-group-btn > button + .btn, .toolbar-secondary div .input-group-btn > button + .btn, .carousel-toolbar div .input-group-btn > button + .btn, .toolbar-secondary .toolbar-search form .input-group-btn > button + .btn, .tag-container ul li .input-group-btn > button + .btn, .tag-container ul li .input-group-btn > .tag-form + .btn, .forum-container .forum-post .forum-footer .forum-expand-comments .input-group-btn > button + .btn, .input-group-btn > .btn + .glyph-link, .input-group-btn > .glyph-link + .glyph-link, .toolbar div .input-group-btn > button + .glyph-link, .toolbar-secondary div .input-group-btn > button + .glyph-link, .carousel-toolbar div .input-group-btn > button + .glyph-link, .toolbar-secondary .toolbar-search form .input-group-btn > button + .glyph-link, .tag-container ul li .input-group-btn > button + .glyph-link, .tag-container ul li .input-group-btn > .tag-form + .glyph-link, .forum-container .forum-post .forum-footer .forum-expand-comments .input-group-btn > button + .glyph-link, .toolbar div .input-group-btn > .btn + button, .toolbar div .input-group-btn > .glyph-link + button, .toolbar div .input-group-btn > button + button, .tag-container ul li .toolbar div .input-group-btn > .tag-form + button, .toolbar-secondary div .input-group-btn > .btn + button, .toolbar-secondary div .input-group-btn > .glyph-link + button, .toolbar .toolbar-secondary div .input-group-btn > button + button, .toolbar-secondary .toolbar div .input-group-btn > button + button, .toolbar-secondary div .input-group-btn > button + button, .tag-container ul li .toolbar-secondary div .input-group-btn > .tag-form + button, .carousel-toolbar div .input-group-btn > .btn + button, .carousel-toolbar div .input-group-btn > .glyph-link + button, .toolbar .carousel-toolbar div .input-group-btn > button + button, .carousel-toolbar .toolbar div .input-group-btn > button + button, .toolbar-secondary .carousel-toolbar div .input-group-btn > button + button, .carousel-toolbar .toolbar-secondary div .input-group-btn > button + button, .carousel-toolbar div .input-group-btn > button + button, .tag-container ul li .carousel-toolbar div .input-group-btn > .tag-form + button, .toolbar-secondary .toolbar-search form .input-group-btn > .btn + button, .toolbar-secondary .toolbar-search form .input-group-btn > .glyph-link + button, .toolbar-secondary .toolbar-search form div .input-group-btn > button + button, .toolbar-secondary .toolbar-search form .input-group-btn > button + button, .tag-container ul li .toolbar-secondary .toolbar-search form .input-group-btn > .tag-form + button, .tag-container ul li .input-group-btn > .btn + button, .tag-container ul li .input-group-btn > .glyph-link + button, .toolbar div .tag-container ul li .input-group-btn > button + button, .tag-container ul li .toolbar div .input-group-btn > button + button, .toolbar-secondary div .tag-container ul li .input-group-btn > button + button, .tag-container ul li .toolbar-secondary div .input-group-btn > button + button, .carousel-toolbar div .tag-container ul li .input-group-btn > button + button, .tag-container ul li .carousel-toolbar div .input-group-btn > button + button, .toolbar-secondary .toolbar-search form .tag-container ul li .input-group-btn > button + button, .tag-container ul li .input-group-btn > button + button, .tag-container ul li .input-group-btn > .tag-form + button, .tag-container ul li .input-group-btn > .btn + .tag-form, .tag-container ul li .input-group-btn > .glyph-link + .tag-form, .tag-container ul li .toolbar div .input-group-btn > button + .tag-form, .tag-container ul li .toolbar-secondary div .input-group-btn > button + .tag-form, .tag-container ul li .carousel-toolbar div .input-group-btn > button + .tag-form, .tag-container ul li .toolbar-secondary .toolbar-search form .input-group-btn > button + .tag-form, .tag-container ul li .input-group-btn > button + .tag-form, .tag-container ul li .input-group-btn > .tag-form + .tag-form, .forum-container .forum-post .forum-footer .forum-expand-comments .tag-container ul li .input-group-btn > button + .tag-form, .tag-container ul li .forum-container .forum-post .forum-footer .forum-expand-comments .input-group-btn > button + .tag-form, .forum-container .forum-post .forum-footer .forum-expand-comments .input-group-btn > .btn + button, .forum-container .forum-post .forum-footer .forum-expand-comments .input-group-btn > .glyph-link + button, .forum-container .forum-post .forum-footer .forum-expand-comments .toolbar div .input-group-btn > button + button, .forum-container .forum-post .forum-footer .forum-expand-comments .toolbar-secondary div .input-group-btn > button + button, .forum-container .forum-post .forum-footer .forum-expand-comments .carousel-toolbar div .input-group-btn > button + button, .forum-container .forum-post .forum-footer .forum-expand-comments .toolbar-secondary .toolbar-search form .input-group-btn > button + button, .forum-container .forum-post .forum-footer .forum-expand-comments .tag-container ul li .input-group-btn > button + button, .tag-container ul li .forum-container .forum-post .forum-footer .forum-expand-comments .input-group-btn > .tag-form + button, .forum-container .forum-post .forum-footer .forum-expand-comments .tag-container ul li .input-group-btn > .tag-form + button, .forum-container .forum-post .forum-footer .forum-expand-comments .input-group-btn > button + button {
       margin-left: -1px; }
-    .input-group-btn > .btn:hover, .input-group-btn > .glyph-link:hover, .toolbar div .input-group-btn > button:hover, .toolbar-secondary div .input-group-btn > button:hover, .carousel-toolbar div .input-group-btn > button:hover, .toolbar-secondary .toolbar-search form .input-group-btn > button:hover, .tag-container ul li .input-group-btn > button:hover, .forum-container .forum-post .forum-footer .forum-expand-comments .input-group-btn > button:hover, .input-group-btn > .btn:focus, .input-group-btn > .glyph-link:focus, .toolbar div .input-group-btn > button:focus, .toolbar-secondary div .input-group-btn > button:focus, .carousel-toolbar div .input-group-btn > button:focus, .toolbar-secondary .toolbar-search form .input-group-btn > button:focus, .tag-container ul li .input-group-btn > button:focus, .forum-container .forum-post .forum-footer .forum-expand-comments .input-group-btn > button:focus, .input-group-btn > .btn:active, .input-group-btn > .glyph-link:active, .toolbar div .input-group-btn > button:active, .toolbar-secondary div .input-group-btn > button:active, .carousel-toolbar div .input-group-btn > button:active, .toolbar-secondary .toolbar-search form .input-group-btn > button:active, .tag-container ul li .input-group-btn > button:active, .forum-container .forum-post .forum-footer .forum-expand-comments .input-group-btn > button:active {
+    .input-group-btn > .btn:hover, .input-group-btn > .glyph-link:hover, .toolbar div .input-group-btn > button:hover, .toolbar-secondary div .input-group-btn > button:hover, .carousel-toolbar div .input-group-btn > button:hover, .toolbar-secondary .toolbar-search form .input-group-btn > button:hover, .tag-container ul li .input-group-btn > button:hover, .tag-container ul li .input-group-btn > .tag-form:hover, .forum-container .forum-post .forum-footer .forum-expand-comments .input-group-btn > button:hover, .input-group-btn > .btn:focus, .input-group-btn > .glyph-link:focus, .toolbar div .input-group-btn > button:focus, .toolbar-secondary div .input-group-btn > button:focus, .carousel-toolbar div .input-group-btn > button:focus, .toolbar-secondary .toolbar-search form .input-group-btn > button:focus, .tag-container ul li .input-group-btn > button:focus, .tag-container ul li .input-group-btn > .tag-form:focus, .forum-container .forum-post .forum-footer .forum-expand-comments .input-group-btn > button:focus, .input-group-btn > .btn:active, .input-group-btn > .glyph-link:active, .toolbar div .input-group-btn > button:active, .toolbar-secondary div .input-group-btn > button:active, .carousel-toolbar div .input-group-btn > button:active, .toolbar-secondary .toolbar-search form .input-group-btn > button:active, .tag-container ul li .input-group-btn > button:active, .tag-container ul li .input-group-btn > .tag-form:active, .forum-container .forum-post .forum-footer .forum-expand-comments .input-group-btn > button:active {
       z-index: 2; }
-  .input-group-btn:first-child > .btn, .input-group-btn:first-child > .glyph-link, .toolbar div .input-group-btn:first-child > button, .toolbar-secondary div .input-group-btn:first-child > button, .carousel-toolbar div .input-group-btn:first-child > button, .toolbar-secondary .toolbar-search form .input-group-btn:first-child > button, .tag-container ul li .input-group-btn:first-child > button, .forum-container .forum-post .forum-footer .forum-expand-comments .input-group-btn:first-child > button,
+  .input-group-btn:first-child > .btn, .input-group-btn:first-child > .glyph-link, .toolbar div .input-group-btn:first-child > button, .toolbar-secondary div .input-group-btn:first-child > button, .carousel-toolbar div .input-group-btn:first-child > button, .toolbar-secondary .toolbar-search form .input-group-btn:first-child > button, .tag-container ul li .input-group-btn:first-child > button, .tag-container ul li .input-group-btn:first-child > .tag-form, .forum-container .forum-post .forum-footer .forum-expand-comments .input-group-btn:first-child > button,
   .input-group-btn:first-child > .btn-group {
     margin-right: -1px; }
-  .input-group-btn:last-child > .btn, .input-group-btn:last-child > .glyph-link, .toolbar div .input-group-btn:last-child > button, .toolbar-secondary div .input-group-btn:last-child > button, .carousel-toolbar div .input-group-btn:last-child > button, .toolbar-secondary .toolbar-search form .input-group-btn:last-child > button, .tag-container ul li .input-group-btn:last-child > button, .forum-container .forum-post .forum-footer .forum-expand-comments .input-group-btn:last-child > button,
+  .input-group-btn:last-child > .btn, .input-group-btn:last-child > .glyph-link, .toolbar div .input-group-btn:last-child > button, .toolbar-secondary div .input-group-btn:last-child > button, .carousel-toolbar div .input-group-btn:last-child > button, .toolbar-secondary .toolbar-search form .input-group-btn:last-child > button, .tag-container ul li .input-group-btn:last-child > button, .tag-container ul li .input-group-btn:last-child > .tag-form, .forum-container .forum-post .forum-footer .forum-expand-comments .input-group-btn:last-child > button,
   .input-group-btn:last-child > .btn-group {
     z-index: 2;
     margin-left: -1px; }
@@ -4215,10 +4306,10 @@ tbody.collapse.in {
 .navbar-btn {
   margin-top: 8px;
   margin-bottom: 8px; }
-  .navbar-btn.btn-sm, .btn-group-sm > .navbar-btn.btn, .btn-group-sm > .navbar-btn.glyph-link, .toolbar div .btn-group-sm > button.navbar-btn, .toolbar-secondary div .btn-group-sm > button.navbar-btn, .carousel-toolbar div .btn-group-sm > button.navbar-btn, .toolbar-secondary .toolbar-search form .btn-group-sm > button.navbar-btn, .tag-container ul li .btn-group-sm > button.navbar-btn, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group-sm > button.navbar-btn {
+  .navbar-btn.btn-sm, .btn-group-sm > .navbar-btn.btn, .btn-group-sm > .navbar-btn.glyph-link, .toolbar div .btn-group-sm > button.navbar-btn, .toolbar-secondary div .btn-group-sm > button.navbar-btn, .carousel-toolbar div .btn-group-sm > button.navbar-btn, .toolbar-secondary .toolbar-search form .btn-group-sm > button.navbar-btn, .tag-container ul li .btn-group-sm > button.navbar-btn, .tag-container ul li .btn-group-sm > .navbar-btn.tag-form, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group-sm > button.navbar-btn {
     margin-top: 10px;
     margin-bottom: 10px; }
-  .navbar-btn.btn-xs, .btn-group-xs > .navbar-btn.btn, .btn-group-xs > .navbar-btn.glyph-link, .toolbar div .btn-group-xs > button.navbar-btn, .toolbar-secondary div .btn-group-xs > button.navbar-btn, .carousel-toolbar div .btn-group-xs > button.navbar-btn, .toolbar-secondary .toolbar-search form .btn-group-xs > button.navbar-btn, .tag-container ul li .btn-group-xs > button.navbar-btn, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group-xs > button.navbar-btn {
+  .navbar-btn.btn-xs, .btn-group-xs > .navbar-btn.btn, .btn-group-xs > .navbar-btn.glyph-link, .toolbar div .btn-group-xs > button.navbar-btn, .toolbar-secondary div .btn-group-xs > button.navbar-btn, .carousel-toolbar div .btn-group-xs > button.navbar-btn, .toolbar-secondary .toolbar-search form .btn-group-xs > button.navbar-btn, .tag-container ul li .btn-group-xs > button.navbar-btn, .tag-container ul li .btn-group-xs > .navbar-btn.tag-form, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group-xs > button.navbar-btn {
     margin-top: 14px;
     margin-bottom: 14px; }
 
@@ -4547,7 +4638,7 @@ tbody.collapse.in {
   border-radius: .25em; }
   .label:empty {
     display: none; }
-  .btn .label, .glyph-link .label, .toolbar div button .label, .toolbar-secondary div button .label, .carousel-toolbar div button .label, .toolbar-secondary .toolbar-search form button .label, .tag-container ul li button .label, .forum-container .forum-post .forum-footer .forum-expand-comments button .label {
+  .btn .label, .glyph-link .label, .toolbar div button .label, .toolbar-secondary div button .label, .carousel-toolbar div button .label, .toolbar-secondary .toolbar-search form button .label, .tag-container ul li button .label, .tag-container ul li .tag-form .label, .forum-container .forum-post .forum-footer .forum-expand-comments button .label {
     position: relative;
     top: -1px; }
 
@@ -4601,17 +4692,18 @@ a.label:hover, a.label:focus {
   border-radius: 10px; }
   .badge:empty {
     display: none; }
-  .btn .badge, .glyph-link .badge, .toolbar div button .badge, .toolbar-secondary div button .badge, .carousel-toolbar div button .badge, .toolbar-secondary .toolbar-search form button .badge, .tag-container ul li button .badge, .forum-container .forum-post .forum-footer .forum-expand-comments button .badge {
+  .btn .badge, .glyph-link .badge, .toolbar div button .badge, .toolbar-secondary div button .badge, .carousel-toolbar div button .badge, .toolbar-secondary .toolbar-search form button .badge, .tag-container ul li button .badge, .tag-container ul li .tag-form .badge, .forum-container .forum-post .forum-footer .forum-expand-comments button .badge {
     position: relative;
     top: -1px; }
-  .btn-xs .badge, .btn-group-xs > .btn .badge, .btn-group-xs > .glyph-link .badge, .toolbar div .btn-group-xs > button .badge, .toolbar-secondary div .btn-group-xs > button .badge, .carousel-toolbar div .btn-group-xs > button .badge, .toolbar-secondary .toolbar-search form .btn-group-xs > button .badge, .tag-container ul li .btn-group-xs > button .badge, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group-xs > button .badge,
+  .btn-xs .badge, .btn-group-xs > .btn .badge, .btn-group-xs > .glyph-link .badge, .toolbar div .btn-group-xs > button .badge, .toolbar-secondary div .btn-group-xs > button .badge, .carousel-toolbar div .btn-group-xs > button .badge, .toolbar-secondary .toolbar-search form .btn-group-xs > button .badge, .tag-container ul li .btn-group-xs > button .badge, .tag-container ul li .btn-group-xs > .tag-form .badge, .forum-container .forum-post .forum-footer .forum-expand-comments .btn-group-xs > button .badge,
   .btn-group-xs > .btn .badge,
   .btn-group-xs > .glyph-link .badge, .toolbar div
   .btn-group-xs > button .badge, .toolbar-secondary div
   .btn-group-xs > button .badge, .carousel-toolbar div
   .btn-group-xs > button .badge, .toolbar-secondary .toolbar-search form
   .btn-group-xs > button .badge, .tag-container ul li
-  .btn-group-xs > button .badge, .forum-container .forum-post .forum-footer .forum-expand-comments
+  .btn-group-xs > button .badge, .tag-container ul li
+  .btn-group-xs > .tag-form .badge, .forum-container .forum-post .forum-footer .forum-expand-comments
   .btn-group-xs > button .badge {
     top: 0;
     padding: 1px 5px; }
@@ -5488,10 +5580,10 @@ button.close {
     display: table; }
   .modal-footer:after {
     clear: both; }
-  .modal-footer .btn + .btn, .modal-footer .glyph-link + .btn, .modal-footer .toolbar div button + .btn, .toolbar div .modal-footer button + .btn, .modal-footer .toolbar-secondary div button + .btn, .toolbar-secondary div .modal-footer button + .btn, .modal-footer .carousel-toolbar div button + .btn, .carousel-toolbar div .modal-footer button + .btn, .modal-footer .toolbar-secondary .toolbar-search form button + .btn, .toolbar-secondary .toolbar-search form .modal-footer button + .btn, .modal-footer .tag-container ul li button + .btn, .tag-container ul li .modal-footer button + .btn, .modal-footer .forum-container .forum-post .forum-footer .forum-expand-comments button + .btn, .forum-container .forum-post .forum-footer .forum-expand-comments .modal-footer button + .btn, .modal-footer .btn + .glyph-link, .modal-footer .glyph-link + .glyph-link, .modal-footer .toolbar div button + .glyph-link, .toolbar div .modal-footer button + .glyph-link, .modal-footer .toolbar-secondary div button + .glyph-link, .toolbar-secondary div .modal-footer button + .glyph-link, .modal-footer .carousel-toolbar div button + .glyph-link, .carousel-toolbar div .modal-footer button + .glyph-link, .modal-footer .toolbar-secondary .toolbar-search form button + .glyph-link, .toolbar-secondary .toolbar-search form .modal-footer button + .glyph-link, .modal-footer .tag-container ul li button + .glyph-link, .tag-container ul li .modal-footer button + .glyph-link, .modal-footer .forum-container .forum-post .forum-footer .forum-expand-comments button + .glyph-link, .forum-container .forum-post .forum-footer .forum-expand-comments .modal-footer button + .glyph-link, .modal-footer .toolbar div .btn + button, .toolbar div .modal-footer .btn + button, .modal-footer .toolbar div .glyph-link + button, .toolbar div .modal-footer .glyph-link + button, .modal-footer .toolbar div button + button, .toolbar div .modal-footer button + button, .modal-footer .toolbar-secondary .toolbar div button + button, .toolbar .modal-footer .toolbar-secondary div button + button, .modal-footer .carousel-toolbar .toolbar div button + button, .toolbar .modal-footer .carousel-toolbar div button + button, .modal-footer .tag-container ul li .toolbar div button + button, .toolbar div .tag-container ul li .modal-footer button + button, .modal-footer .forum-container .forum-post .forum-footer .forum-expand-comments .toolbar div button + button, .modal-footer .toolbar-secondary div .btn + button, .toolbar-secondary div .modal-footer .btn + button, .modal-footer .toolbar-secondary div .glyph-link + button, .toolbar-secondary div .modal-footer .glyph-link + button, .modal-footer .toolbar .toolbar-secondary div button + button, .toolbar-secondary .modal-footer .toolbar div button + button, .toolbar .toolbar-secondary div .modal-footer button + button, .toolbar-secondary .toolbar div .modal-footer button + button, .modal-footer .toolbar-secondary div button + button, .toolbar-secondary div .modal-footer button + button, .modal-footer .carousel-toolbar .toolbar-secondary div button + button, .toolbar-secondary .modal-footer .carousel-toolbar div button + button, .toolbar-secondary .toolbar-search form .modal-footer div button + button, .modal-footer .tag-container ul li .toolbar-secondary div button + button, .toolbar-secondary div .tag-container ul li .modal-footer button + button, .modal-footer .forum-container .forum-post .forum-footer .forum-expand-comments .toolbar-secondary div button + button, .modal-footer .carousel-toolbar div .btn + button, .carousel-toolbar div .modal-footer .btn + button, .modal-footer .carousel-toolbar div .glyph-link + button, .carousel-toolbar div .modal-footer .glyph-link + button, .modal-footer .toolbar .carousel-toolbar div button + button, .carousel-toolbar .modal-footer .toolbar div button + button, .toolbar .carousel-toolbar div .modal-footer button + button, .carousel-toolbar .toolbar div .modal-footer button + button, .modal-footer .toolbar-secondary .carousel-toolbar div button + button, .carousel-toolbar .modal-footer .toolbar-secondary div button + button, .toolbar-secondary .carousel-toolbar div .modal-footer button + button, .carousel-toolbar .toolbar-secondary div .modal-footer button + button, .modal-footer .carousel-toolbar div button + button, .carousel-toolbar div .modal-footer button + button, .modal-footer .tag-container ul li .carousel-toolbar div button + button, .carousel-toolbar div .tag-container ul li .modal-footer button + button, .modal-footer .forum-container .forum-post .forum-footer .forum-expand-comments .carousel-toolbar div button + button, .modal-footer .toolbar-secondary .toolbar-search form .btn + button, .toolbar-secondary .toolbar-search form .modal-footer .btn + button, .modal-footer .toolbar-secondary .toolbar-search form .glyph-link + button, .toolbar-secondary .toolbar-search form .modal-footer .glyph-link + button, .modal-footer .toolbar-secondary .toolbar-search form div button + button, .toolbar-secondary div .modal-footer .toolbar-search form button + button, .modal-footer .toolbar-secondary .toolbar-search form button + button, .toolbar-secondary .toolbar-search form .modal-footer button + button, .modal-footer .forum-container .forum-post .forum-footer .forum-expand-comments .toolbar-secondary .toolbar-search form button + button, .modal-footer .tag-container ul li .btn + button, .tag-container ul li .modal-footer .btn + button, .modal-footer .tag-container ul li .glyph-link + button, .tag-container ul li .modal-footer .glyph-link + button, .modal-footer .toolbar div .tag-container ul li button + button, .tag-container ul li .modal-footer .toolbar div button + button, .toolbar div .modal-footer .tag-container ul li button + button, .tag-container ul li .toolbar div .modal-footer button + button, .modal-footer .toolbar-secondary div .tag-container ul li button + button, .tag-container ul li .modal-footer .toolbar-secondary div button + button, .toolbar-secondary div .modal-footer .tag-container ul li button + button, .tag-container ul li .toolbar-secondary div .modal-footer button + button, .modal-footer .carousel-toolbar div .tag-container ul li button + button, .tag-container ul li .modal-footer .carousel-toolbar div button + button, .carousel-toolbar div .modal-footer .tag-container ul li button + button, .tag-container ul li .carousel-toolbar div .modal-footer button + button, .modal-footer .toolbar-secondary .toolbar-search form .tag-container ul li button + button, .toolbar-secondary .toolbar-search form .modal-footer .tag-container ul li button + button, .modal-footer .tag-container ul li button + button, .tag-container ul li .modal-footer button + button, .modal-footer .forum-container .forum-post .forum-footer .forum-expand-comments .tag-container ul li button + button, .modal-footer .forum-container .forum-post .forum-footer .forum-expand-comments .btn + button, .forum-container .forum-post .forum-footer .forum-expand-comments .modal-footer .btn + button, .modal-footer .forum-container .forum-post .forum-footer .forum-expand-comments .glyph-link + button, .forum-container .forum-post .forum-footer .forum-expand-comments .modal-footer .glyph-link + button, .forum-container .forum-post .forum-footer .forum-expand-comments .modal-footer .toolbar div button + button, .forum-container .forum-post .forum-footer .forum-expand-comments .modal-footer .toolbar-secondary div button + button, .forum-container .forum-post .forum-footer .forum-expand-comments .modal-footer .carousel-toolbar div button + button, .forum-container .forum-post .forum-footer .forum-expand-comments .modal-footer .toolbar-secondary .toolbar-search form button + button, .forum-container .forum-post .forum-footer .forum-expand-comments .modal-footer .tag-container ul li button + button, .modal-footer .forum-container .forum-post .forum-footer .forum-expand-comments button + button, .forum-container .forum-post .forum-footer .forum-expand-comments .modal-footer button + button {
+  .modal-footer .btn + .btn, .modal-footer .glyph-link + .btn, .modal-footer .toolbar div button + .btn, .toolbar div .modal-footer button + .btn, .modal-footer .toolbar-secondary div button + .btn, .toolbar-secondary div .modal-footer button + .btn, .modal-footer .carousel-toolbar div button + .btn, .carousel-toolbar div .modal-footer button + .btn, .modal-footer .toolbar-secondary .toolbar-search form button + .btn, .toolbar-secondary .toolbar-search form .modal-footer button + .btn, .modal-footer .tag-container ul li button + .btn, .tag-container ul li .modal-footer button + .btn, .modal-footer .tag-container ul li .tag-form + .btn, .tag-container ul li .modal-footer .tag-form + .btn, .modal-footer .forum-container .forum-post .forum-footer .forum-expand-comments button + .btn, .forum-container .forum-post .forum-footer .forum-expand-comments .modal-footer button + .btn, .modal-footer .btn + .glyph-link, .modal-footer .glyph-link + .glyph-link, .modal-footer .toolbar div button + .glyph-link, .toolbar div .modal-footer button + .glyph-link, .modal-footer .toolbar-secondary div button + .glyph-link, .toolbar-secondary div .modal-footer button + .glyph-link, .modal-footer .carousel-toolbar div button + .glyph-link, .carousel-toolbar div .modal-footer button + .glyph-link, .modal-footer .toolbar-secondary .toolbar-search form button + .glyph-link, .toolbar-secondary .toolbar-search form .modal-footer button + .glyph-link, .modal-footer .tag-container ul li button + .glyph-link, .tag-container ul li .modal-footer button + .glyph-link, .modal-footer .tag-container ul li .tag-form + .glyph-link, .tag-container ul li .modal-footer .tag-form + .glyph-link, .modal-footer .forum-container .forum-post .forum-footer .forum-expand-comments button + .glyph-link, .forum-container .forum-post .forum-footer .forum-expand-comments .modal-footer button + .glyph-link, .modal-footer .toolbar div .btn + button, .toolbar div .modal-footer .btn + button, .modal-footer .toolbar div .glyph-link + button, .toolbar div .modal-footer .glyph-link + button, .modal-footer .toolbar div button + button, .toolbar div .modal-footer button + button, .modal-footer .toolbar-secondary .toolbar div button + button, .toolbar .modal-footer .toolbar-secondary div button + button, .modal-footer .carousel-toolbar .toolbar div button + button, .toolbar .modal-footer .carousel-toolbar div button + button, .modal-footer .tag-container ul li .toolbar div button + button, .toolbar div .tag-container ul li .modal-footer button + button, .modal-footer .tag-container ul li .toolbar div .tag-form + button, .tag-container ul li .modal-footer .toolbar div .tag-form + button, .modal-footer .forum-container .forum-post .forum-footer .forum-expand-comments .toolbar div button + button, .modal-footer .toolbar-secondary div .btn + button, .toolbar-secondary div .modal-footer .btn + button, .modal-footer .toolbar-secondary div .glyph-link + button, .toolbar-secondary div .modal-footer .glyph-link + button, .modal-footer .toolbar .toolbar-secondary div button + button, .toolbar-secondary .modal-footer .toolbar div button + button, .toolbar .toolbar-secondary div .modal-footer button + button, .toolbar-secondary .toolbar div .modal-footer button + button, .modal-footer .toolbar-secondary div button + button, .toolbar-secondary div .modal-footer button + button, .modal-footer .carousel-toolbar .toolbar-secondary div button + button, .toolbar-secondary .modal-footer .carousel-toolbar div button + button, .toolbar-secondary .toolbar-search form .modal-footer div button + button, .modal-footer .tag-container ul li .toolbar-secondary div button + button, .toolbar-secondary div .tag-container ul li .modal-footer button + button, .modal-footer .tag-container ul li .toolbar-secondary div .tag-form + button, .tag-container ul li .modal-footer .toolbar-secondary div .tag-form + button, .modal-footer .forum-container .forum-post .forum-footer .forum-expand-comments .toolbar-secondary div button + button, .modal-footer .carousel-toolbar div .btn + button, .carousel-toolbar div .modal-footer .btn + button, .modal-footer .carousel-toolbar div .glyph-link + button, .carousel-toolbar div .modal-footer .glyph-link + button, .modal-footer .toolbar .carousel-toolbar div button + button, .carousel-toolbar .modal-footer .toolbar div button + button, .toolbar .carousel-toolbar div .modal-footer button + button, .carousel-toolbar .toolbar div .modal-footer button + button, .modal-footer .toolbar-secondary .carousel-toolbar div button + button, .carousel-toolbar .modal-footer .toolbar-secondary div button + button, .toolbar-secondary .carousel-toolbar div .modal-footer button + button, .carousel-toolbar .toolbar-secondary div .modal-footer button + button, .modal-footer .carousel-toolbar div button + button, .carousel-toolbar div .modal-footer button + button, .modal-footer .tag-container ul li .carousel-toolbar div button + button, .carousel-toolbar div .tag-container ul li .modal-footer button + button, .modal-footer .tag-container ul li .carousel-toolbar div .tag-form + button, .tag-container ul li .modal-footer .carousel-toolbar div .tag-form + button, .modal-footer .forum-container .forum-post .forum-footer .forum-expand-comments .carousel-toolbar div button + button, .modal-footer .toolbar-secondary .toolbar-search form .btn + button, .toolbar-secondary .toolbar-search form .modal-footer .btn + button, .modal-footer .toolbar-secondary .toolbar-search form .glyph-link + button, .toolbar-secondary .toolbar-search form .modal-footer .glyph-link + button, .modal-footer .toolbar-secondary .toolbar-search form div button + button, .toolbar-secondary div .modal-footer .toolbar-search form button + button, .modal-footer .toolbar-secondary .toolbar-search form button + button, .toolbar-secondary .toolbar-search form .modal-footer button + button, .modal-footer .tag-container ul li .toolbar-secondary .toolbar-search form .tag-form + button, .tag-container ul li .modal-footer .toolbar-secondary .toolbar-search form .tag-form + button, .modal-footer .forum-container .forum-post .forum-footer .forum-expand-comments .toolbar-secondary .toolbar-search form button + button, .modal-footer .tag-container ul li .btn + button, .tag-container ul li .modal-footer .btn + button, .modal-footer .tag-container ul li .glyph-link + button, .tag-container ul li .modal-footer .glyph-link + button, .modal-footer .toolbar div .tag-container ul li button + button, .tag-container ul li .modal-footer .toolbar div button + button, .toolbar div .modal-footer .tag-container ul li button + button, .tag-container ul li .toolbar div .modal-footer button + button, .modal-footer .toolbar-secondary div .tag-container ul li button + button, .tag-container ul li .modal-footer .toolbar-secondary div button + button, .toolbar-secondary div .modal-footer .tag-container ul li button + button, .tag-container ul li .toolbar-secondary div .modal-footer button + button, .modal-footer .carousel-toolbar div .tag-container ul li button + button, .tag-container ul li .modal-footer .carousel-toolbar div button + button, .carousel-toolbar div .modal-footer .tag-container ul li button + button, .tag-container ul li .carousel-toolbar div .modal-footer button + button, .modal-footer .toolbar-secondary .toolbar-search form .tag-container ul li button + button, .toolbar-secondary .toolbar-search form .modal-footer .tag-container ul li button + button, .modal-footer .tag-container ul li button + button, .tag-container ul li .modal-footer button + button, .modal-footer .tag-container ul li .tag-form + button, .tag-container ul li .modal-footer .tag-form + button, .modal-footer .forum-container .forum-post .forum-footer .forum-expand-comments .tag-container ul li button + button, .modal-footer .tag-container ul li .btn + .tag-form, .tag-container ul li .modal-footer .btn + .tag-form, .modal-footer .tag-container ul li .glyph-link + .tag-form, .tag-container ul li .modal-footer .glyph-link + .tag-form, .tag-container ul li .modal-footer .toolbar div button + .tag-form, .tag-container ul li .modal-footer .toolbar-secondary div button + .tag-form, .tag-container ul li .modal-footer .carousel-toolbar div button + .tag-form, .tag-container ul li .modal-footer .toolbar-secondary .toolbar-search form button + .tag-form, .modal-footer .tag-container ul li button + .tag-form, .tag-container ul li .modal-footer button + .tag-form, .modal-footer .tag-container ul li .tag-form + .tag-form, .tag-container ul li .modal-footer .tag-form + .tag-form, .modal-footer .forum-container .forum-post .forum-footer .forum-expand-comments .tag-container ul li button + .tag-form, .tag-container ul li .modal-footer .forum-container .forum-post .forum-footer .forum-expand-comments button + .tag-form, .forum-container .forum-post .forum-footer .forum-expand-comments .modal-footer .tag-container ul li button + .tag-form, .tag-container ul li .forum-container .forum-post .forum-footer .forum-expand-comments .modal-footer button + .tag-form, .modal-footer .forum-container .forum-post .forum-footer .forum-expand-comments .btn + button, .forum-container .forum-post .forum-footer .forum-expand-comments .modal-footer .btn + button, .modal-footer .forum-container .forum-post .forum-footer .forum-expand-comments .glyph-link + button, .forum-container .forum-post .forum-footer .forum-expand-comments .modal-footer .glyph-link + button, .forum-container .forum-post .forum-footer .forum-expand-comments .modal-footer .toolbar div button + button, .forum-container .forum-post .forum-footer .forum-expand-comments .modal-footer .toolbar-secondary div button + button, .forum-container .forum-post .forum-footer .forum-expand-comments .modal-footer .carousel-toolbar div button + button, .forum-container .forum-post .forum-footer .forum-expand-comments .modal-footer .toolbar-secondary .toolbar-search form button + button, .forum-container .forum-post .forum-footer .forum-expand-comments .modal-footer .tag-container ul li button + button, .modal-footer .tag-container ul li .forum-container .forum-post .forum-footer .forum-expand-comments .tag-form + button, .forum-container .forum-post .forum-footer .forum-expand-comments .modal-footer .tag-container ul li .tag-form + button, .tag-container ul li .modal-footer .forum-container .forum-post .forum-footer .forum-expand-comments .tag-form + button, .forum-container .forum-post .forum-footer .forum-expand-comments .tag-container ul li .modal-footer .tag-form + button, .modal-footer .forum-container .forum-post .forum-footer .forum-expand-comments button + button, .forum-container .forum-post .forum-footer .forum-expand-comments .modal-footer button + button {
     margin-left: 5px;
     margin-bottom: 0; }
-  .modal-footer .btn-group .btn + .btn, .modal-footer .btn-group .glyph-link + .btn, .modal-footer .btn-group .toolbar div button + .btn, .toolbar div .modal-footer .btn-group button + .btn, .modal-footer .btn-group .toolbar-secondary div button + .btn, .toolbar-secondary div .modal-footer .btn-group button + .btn, .modal-footer .btn-group .carousel-toolbar div button + .btn, .carousel-toolbar div .modal-footer .btn-group button + .btn, .modal-footer .btn-group .toolbar-secondary .toolbar-search form button + .btn, .toolbar-secondary .toolbar-search form .modal-footer .btn-group button + .btn, .modal-footer .btn-group .tag-container ul li button + .btn, .tag-container ul li .modal-footer .btn-group button + .btn, .modal-footer .btn-group .forum-container .forum-post .forum-footer .forum-expand-comments button + .btn, .forum-container .forum-post .forum-footer .forum-expand-comments .modal-footer .btn-group button + .btn, .modal-footer .btn-group .btn + .glyph-link, .modal-footer .btn-group .glyph-link + .glyph-link, .modal-footer .btn-group .toolbar div button + .glyph-link, .toolbar div .modal-footer .btn-group button + .glyph-link, .modal-footer .btn-group .toolbar-secondary div button + .glyph-link, .toolbar-secondary div .modal-footer .btn-group button + .glyph-link, .modal-footer .btn-group .carousel-toolbar div button + .glyph-link, .carousel-toolbar div .modal-footer .btn-group button + .glyph-link, .modal-footer .btn-group .toolbar-secondary .toolbar-search form button + .glyph-link, .toolbar-secondary .toolbar-search form .modal-footer .btn-group button + .glyph-link, .modal-footer .btn-group .tag-container ul li button + .glyph-link, .tag-container ul li .modal-footer .btn-group button + .glyph-link, .modal-footer .btn-group .forum-container .forum-post .forum-footer .forum-expand-comments button + .glyph-link, .forum-container .forum-post .forum-footer .forum-expand-comments .modal-footer .btn-group button + .glyph-link, .modal-footer .btn-group .toolbar div .btn + button, .toolbar div .modal-footer .btn-group .btn + button, .modal-footer .btn-group .toolbar div .glyph-link + button, .toolbar div .modal-footer .btn-group .glyph-link + button, .modal-footer .btn-group .toolbar div button + button, .toolbar div .modal-footer .btn-group button + button, .modal-footer .btn-group .toolbar-secondary .toolbar div button + button, .toolbar .modal-footer .btn-group .toolbar-secondary div button + button, .modal-footer .btn-group .carousel-toolbar .toolbar div button + button, .toolbar .modal-footer .btn-group .carousel-toolbar div button + button, .modal-footer .btn-group .tag-container ul li .toolbar div button + button, .toolbar div .tag-container ul li .modal-footer .btn-group button + button, .modal-footer .btn-group .forum-container .forum-post .forum-footer .forum-expand-comments .toolbar div button + button, .modal-footer .btn-group .toolbar-secondary div .btn + button, .toolbar-secondary div .modal-footer .btn-group .btn + button, .modal-footer .btn-group .toolbar-secondary div .glyph-link + button, .toolbar-secondary div .modal-footer .btn-group .glyph-link + button, .modal-footer .btn-group .toolbar .toolbar-secondary div button + button, .toolbar-secondary .modal-footer .btn-group .toolbar div button + button, .toolbar .toolbar-secondary div .modal-footer .btn-group button + button, .toolbar-secondary .toolbar div .modal-footer .btn-group button + button, .modal-footer .btn-group .toolbar-secondary div button + button, .toolbar-secondary div .modal-footer .btn-group button + button, .modal-footer .btn-group .carousel-toolbar .toolbar-secondary div button + button, .toolbar-secondary .modal-footer .btn-group .carousel-toolbar div button + button, .toolbar-secondary .toolbar-search form .modal-footer .btn-group div button + button, .modal-footer .btn-group .tag-container ul li .toolbar-secondary div button + button, .toolbar-secondary div .tag-container ul li .modal-footer .btn-group button + button, .modal-footer .btn-group .forum-container .forum-post .forum-footer .forum-expand-comments .toolbar-secondary div button + button, .modal-footer .btn-group .carousel-toolbar div .btn + button, .carousel-toolbar div .modal-footer .btn-group .btn + button, .modal-footer .btn-group .carousel-toolbar div .glyph-link + button, .carousel-toolbar div .modal-footer .btn-group .glyph-link + button, .modal-footer .btn-group .toolbar .carousel-toolbar div button + button, .carousel-toolbar .modal-footer .btn-group .toolbar div button + button, .toolbar .carousel-toolbar div .modal-footer .btn-group button + button, .carousel-toolbar .toolbar div .modal-footer .btn-group button + button, .modal-footer .btn-group .toolbar-secondary .carousel-toolbar div button + button, .carousel-toolbar .modal-footer .btn-group .toolbar-secondary div button + button, .toolbar-secondary .carousel-toolbar div .modal-footer .btn-group button + button, .carousel-toolbar .toolbar-secondary div .modal-footer .btn-group button + button, .modal-footer .btn-group .carousel-toolbar div button + button, .carousel-toolbar div .modal-footer .btn-group button + button, .modal-footer .btn-group .tag-container ul li .carousel-toolbar div button + button, .carousel-toolbar div .tag-container ul li .modal-footer .btn-group button + button, .modal-footer .btn-group .forum-container .forum-post .forum-footer .forum-expand-comments .carousel-toolbar div button + button, .modal-footer .btn-group .toolbar-secondary .toolbar-search form .btn + button, .toolbar-secondary .toolbar-search form .modal-footer .btn-group .btn + button, .modal-footer .btn-group .toolbar-secondary .toolbar-search form .glyph-link + button, .toolbar-secondary .toolbar-search form .modal-footer .btn-group .glyph-link + button, .modal-footer .btn-group .toolbar-secondary .toolbar-search form div button + button, .toolbar-secondary div .modal-footer .btn-group .toolbar-search form button + button, .modal-footer .btn-group .toolbar-secondary .toolbar-search form button + button, .toolbar-secondary .toolbar-search form .modal-footer .btn-group button + button, .modal-footer .btn-group .tag-container ul li .btn + button, .tag-container ul li .modal-footer .btn-group .btn + button, .modal-footer .btn-group .tag-container ul li .glyph-link + button, .tag-container ul li .modal-footer .btn-group .glyph-link + button, .modal-footer .btn-group .toolbar div .tag-container ul li button + button, .tag-container ul li .modal-footer .btn-group .toolbar div button + button, .toolbar div .modal-footer .btn-group .tag-container ul li button + button, .tag-container ul li .toolbar div .modal-footer .btn-group button + button, .modal-footer .btn-group .toolbar-secondary div .tag-container ul li button + button, .tag-container ul li .modal-footer .btn-group .toolbar-secondary div button + button, .toolbar-secondary div .modal-footer .btn-group .tag-container ul li button + button, .tag-container ul li .toolbar-secondary div .modal-footer .btn-group button + button, .modal-footer .btn-group .carousel-toolbar div .tag-container ul li button + button, .tag-container ul li .modal-footer .btn-group .carousel-toolbar div button + button, .carousel-toolbar div .modal-footer .btn-group .tag-container ul li button + button, .tag-container ul li .carousel-toolbar div .modal-footer .btn-group button + button, .modal-footer .btn-group .toolbar-secondary .toolbar-search form .tag-container ul li button + button, .toolbar-secondary .toolbar-search form .modal-footer .btn-group .tag-container ul li button + button, .modal-footer .btn-group .tag-container ul li button + button, .tag-container ul li .modal-footer .btn-group button + button, .modal-footer .btn-group .forum-container .forum-post .forum-footer .forum-expand-comments .tag-container ul li button + button, .modal-footer .btn-group .forum-container .forum-post .forum-footer .forum-expand-comments .btn + button, .forum-container .forum-post .forum-footer .forum-expand-comments .modal-footer .btn-group .btn + button, .modal-footer .btn-group .forum-container .forum-post .forum-footer .forum-expand-comments .glyph-link + button, .forum-container .forum-post .forum-footer .forum-expand-comments .modal-footer .btn-group .glyph-link + button, .forum-container .forum-post .forum-footer .forum-expand-comments .modal-footer .btn-group .toolbar div button + button, .forum-container .forum-post .forum-footer .forum-expand-comments .modal-footer .btn-group .toolbar-secondary div button + button, .forum-container .forum-post .forum-footer .forum-expand-comments .modal-footer .btn-group .carousel-toolbar div button + button, .forum-container .forum-post .forum-footer .forum-expand-comments .modal-footer .btn-group .tag-container ul li button + button, .modal-footer .btn-group .forum-container .forum-post .forum-footer .forum-expand-comments button + button, .forum-container .forum-post .forum-footer .forum-expand-comments .modal-footer .btn-group button + button {
+  .modal-footer .btn-group .btn + .btn, .modal-footer .btn-group .glyph-link + .btn, .modal-footer .btn-group .toolbar div button + .btn, .toolbar div .modal-footer .btn-group button + .btn, .modal-footer .btn-group .toolbar-secondary div button + .btn, .toolbar-secondary div .modal-footer .btn-group button + .btn, .modal-footer .btn-group .carousel-toolbar div button + .btn, .carousel-toolbar div .modal-footer .btn-group button + .btn, .modal-footer .btn-group .toolbar-secondary .toolbar-search form button + .btn, .toolbar-secondary .toolbar-search form .modal-footer .btn-group button + .btn, .modal-footer .btn-group .tag-container ul li button + .btn, .tag-container ul li .modal-footer .btn-group button + .btn, .modal-footer .btn-group .tag-container ul li .tag-form + .btn, .tag-container ul li .modal-footer .btn-group .tag-form + .btn, .modal-footer .btn-group .forum-container .forum-post .forum-footer .forum-expand-comments button + .btn, .forum-container .forum-post .forum-footer .forum-expand-comments .modal-footer .btn-group button + .btn, .modal-footer .btn-group .btn + .glyph-link, .modal-footer .btn-group .glyph-link + .glyph-link, .modal-footer .btn-group .toolbar div button + .glyph-link, .toolbar div .modal-footer .btn-group button + .glyph-link, .modal-footer .btn-group .toolbar-secondary div button + .glyph-link, .toolbar-secondary div .modal-footer .btn-group button + .glyph-link, .modal-footer .btn-group .carousel-toolbar div button + .glyph-link, .carousel-toolbar div .modal-footer .btn-group button + .glyph-link, .modal-footer .btn-group .toolbar-secondary .toolbar-search form button + .glyph-link, .toolbar-secondary .toolbar-search form .modal-footer .btn-group button + .glyph-link, .modal-footer .btn-group .tag-container ul li button + .glyph-link, .tag-container ul li .modal-footer .btn-group button + .glyph-link, .modal-footer .btn-group .tag-container ul li .tag-form + .glyph-link, .tag-container ul li .modal-footer .btn-group .tag-form + .glyph-link, .modal-footer .btn-group .forum-container .forum-post .forum-footer .forum-expand-comments button + .glyph-link, .forum-container .forum-post .forum-footer .forum-expand-comments .modal-footer .btn-group button + .glyph-link, .modal-footer .btn-group .toolbar div .btn + button, .toolbar div .modal-footer .btn-group .btn + button, .modal-footer .btn-group .toolbar div .glyph-link + button, .toolbar div .modal-footer .btn-group .glyph-link + button, .modal-footer .btn-group .toolbar div button + button, .toolbar div .modal-footer .btn-group button + button, .modal-footer .btn-group .toolbar-secondary .toolbar div button + button, .toolbar .modal-footer .btn-group .toolbar-secondary div button + button, .modal-footer .btn-group .carousel-toolbar .toolbar div button + button, .toolbar .modal-footer .btn-group .carousel-toolbar div button + button, .modal-footer .btn-group .tag-container ul li .toolbar div button + button, .toolbar div .tag-container ul li .modal-footer .btn-group button + button, .modal-footer .btn-group .tag-container ul li .toolbar div .tag-form + button, .tag-container ul li .modal-footer .btn-group .toolbar div .tag-form + button, .modal-footer .btn-group .forum-container .forum-post .forum-footer .forum-expand-comments .toolbar div button + button, .modal-footer .btn-group .toolbar-secondary div .btn + button, .toolbar-secondary div .modal-footer .btn-group .btn + button, .modal-footer .btn-group .toolbar-secondary div .glyph-link + button, .toolbar-secondary div .modal-footer .btn-group .glyph-link + button, .modal-footer .btn-group .toolbar .toolbar-secondary div button + button, .toolbar-secondary .modal-footer .btn-group .toolbar div button + button, .toolbar .toolbar-secondary div .modal-footer .btn-group button + button, .toolbar-secondary .toolbar div .modal-footer .btn-group button + button, .modal-footer .btn-group .toolbar-secondary div button + button, .toolbar-secondary div .modal-footer .btn-group button + button, .modal-footer .btn-group .carousel-toolbar .toolbar-secondary div button + button, .toolbar-secondary .modal-footer .btn-group .carousel-toolbar div button + button, .toolbar-secondary .toolbar-search form .modal-footer .btn-group div button + button, .modal-footer .btn-group .tag-container ul li .toolbar-secondary div button + button, .toolbar-secondary div .tag-container ul li .modal-footer .btn-group button + button, .modal-footer .btn-group .tag-container ul li .toolbar-secondary div .tag-form + button, .tag-container ul li .modal-footer .btn-group .toolbar-secondary div .tag-form + button, .modal-footer .btn-group .forum-container .forum-post .forum-footer .forum-expand-comments .toolbar-secondary div button + button, .modal-footer .btn-group .carousel-toolbar div .btn + button, .carousel-toolbar div .modal-footer .btn-group .btn + button, .modal-footer .btn-group .carousel-toolbar div .glyph-link + button, .carousel-toolbar div .modal-footer .btn-group .glyph-link + button, .modal-footer .btn-group .toolbar .carousel-toolbar div button + button, .carousel-toolbar .modal-footer .btn-group .toolbar div button + button, .toolbar .carousel-toolbar div .modal-footer .btn-group button + button, .carousel-toolbar .toolbar div .modal-footer .btn-group button + button, .modal-footer .btn-group .toolbar-secondary .carousel-toolbar div button + button, .carousel-toolbar .modal-footer .btn-group .toolbar-secondary div button + button, .toolbar-secondary .carousel-toolbar div .modal-footer .btn-group button + button, .carousel-toolbar .toolbar-secondary div .modal-footer .btn-group button + button, .modal-footer .btn-group .carousel-toolbar div button + button, .carousel-toolbar div .modal-footer .btn-group button + button, .modal-footer .btn-group .tag-container ul li .carousel-toolbar div button + button, .carousel-toolbar div .tag-container ul li .modal-footer .btn-group button + button, .modal-footer .btn-group .tag-container ul li .carousel-toolbar div .tag-form + button, .tag-container ul li .modal-footer .btn-group .carousel-toolbar div .tag-form + button, .modal-footer .btn-group .forum-container .forum-post .forum-footer .forum-expand-comments .carousel-toolbar div button + button, .modal-footer .btn-group .toolbar-secondary .toolbar-search form .btn + button, .toolbar-secondary .toolbar-search form .modal-footer .btn-group .btn + button, .modal-footer .btn-group .toolbar-secondary .toolbar-search form .glyph-link + button, .toolbar-secondary .toolbar-search form .modal-footer .btn-group .glyph-link + button, .modal-footer .btn-group .toolbar-secondary .toolbar-search form div button + button, .toolbar-secondary div .modal-footer .btn-group .toolbar-search form button + button, .modal-footer .btn-group .toolbar-secondary .toolbar-search form button + button, .toolbar-secondary .toolbar-search form .modal-footer .btn-group button + button, .modal-footer .btn-group .tag-container ul li .toolbar-secondary .toolbar-search form .tag-form + button, .tag-container ul li .modal-footer .btn-group .toolbar-secondary .toolbar-search form .tag-form + button, .modal-footer .btn-group .tag-container ul li .btn + button, .tag-container ul li .modal-footer .btn-group .btn + button, .modal-footer .btn-group .tag-container ul li .glyph-link + button, .tag-container ul li .modal-footer .btn-group .glyph-link + button, .modal-footer .btn-group .toolbar div .tag-container ul li button + button, .tag-container ul li .modal-footer .btn-group .toolbar div button + button, .toolbar div .modal-footer .btn-group .tag-container ul li button + button, .tag-container ul li .toolbar div .modal-footer .btn-group button + button, .modal-footer .btn-group .toolbar-secondary div .tag-container ul li button + button, .tag-container ul li .modal-footer .btn-group .toolbar-secondary div button + button, .toolbar-secondary div .modal-footer .btn-group .tag-container ul li button + button, .tag-container ul li .toolbar-secondary div .modal-footer .btn-group button + button, .modal-footer .btn-group .carousel-toolbar div .tag-container ul li button + button, .tag-container ul li .modal-footer .btn-group .carousel-toolbar div button + button, .carousel-toolbar div .modal-footer .btn-group .tag-container ul li button + button, .tag-container ul li .carousel-toolbar div .modal-footer .btn-group button + button, .modal-footer .btn-group .toolbar-secondary .toolbar-search form .tag-container ul li button + button, .toolbar-secondary .toolbar-search form .modal-footer .btn-group .tag-container ul li button + button, .modal-footer .btn-group .tag-container ul li button + button, .tag-container ul li .modal-footer .btn-group button + button, .modal-footer .btn-group .tag-container ul li .tag-form + button, .tag-container ul li .modal-footer .btn-group .tag-form + button, .modal-footer .btn-group .forum-container .forum-post .forum-footer .forum-expand-comments .tag-container ul li button + button, .modal-footer .btn-group .tag-container ul li .btn + .tag-form, .tag-container ul li .modal-footer .btn-group .btn + .tag-form, .modal-footer .btn-group .tag-container ul li .glyph-link + .tag-form, .tag-container ul li .modal-footer .btn-group .glyph-link + .tag-form, .tag-container ul li .modal-footer .btn-group .toolbar div button + .tag-form, .tag-container ul li .modal-footer .btn-group .toolbar-secondary div button + .tag-form, .tag-container ul li .modal-footer .btn-group .carousel-toolbar div button + .tag-form, .tag-container ul li .modal-footer .btn-group .toolbar-secondary .toolbar-search form button + .tag-form, .modal-footer .btn-group .tag-container ul li button + .tag-form, .tag-container ul li .modal-footer .btn-group button + .tag-form, .modal-footer .btn-group .tag-container ul li .tag-form + .tag-form, .tag-container ul li .modal-footer .btn-group .tag-form + .tag-form, .tag-container ul li .modal-footer .btn-group .forum-container .forum-post .forum-footer .forum-expand-comments button + .tag-form, .modal-footer .btn-group .forum-container .forum-post .forum-footer .forum-expand-comments .btn + button, .forum-container .forum-post .forum-footer .forum-expand-comments .modal-footer .btn-group .btn + button, .modal-footer .btn-group .forum-container .forum-post .forum-footer .forum-expand-comments .glyph-link + button, .forum-container .forum-post .forum-footer .forum-expand-comments .modal-footer .btn-group .glyph-link + button, .forum-container .forum-post .forum-footer .forum-expand-comments .modal-footer .btn-group .toolbar div button + button, .forum-container .forum-post .forum-footer .forum-expand-comments .modal-footer .btn-group .toolbar-secondary div button + button, .forum-container .forum-post .forum-footer .forum-expand-comments .modal-footer .btn-group .carousel-toolbar div button + button, .forum-container .forum-post .forum-footer .forum-expand-comments .modal-footer .btn-group .tag-container ul li button + button, .modal-footer .btn-group .tag-container ul li .forum-container .forum-post .forum-footer .forum-expand-comments .tag-form + button, .tag-container ul li .modal-footer .btn-group .forum-container .forum-post .forum-footer .forum-expand-comments .tag-form + button, .modal-footer .btn-group .forum-container .forum-post .forum-footer .forum-expand-comments button + button, .forum-container .forum-post .forum-footer .forum-expand-comments .modal-footer .btn-group button + button {
     margin-left: -1px; }
   .modal-footer .btn-block + .btn-block {
     margin-left: 0; }
@@ -5895,7 +5987,7 @@ button.close {
   color: #fff;
   text-align: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6); }
-  .carousel-caption .btn, .carousel-caption .glyph-link, .carousel-caption .toolbar div button, .toolbar div .carousel-caption button, .carousel-caption .toolbar-secondary div button, .toolbar-secondary div .carousel-caption button, .carousel-caption .carousel-toolbar div button, .carousel-toolbar div .carousel-caption button, .carousel-caption .toolbar-secondary .toolbar-search form button, .toolbar-secondary .toolbar-search form .carousel-caption button, .carousel-caption .tag-container ul li button, .tag-container ul li .carousel-caption button, .carousel-caption .forum-container .forum-post .forum-footer .forum-expand-comments button, .forum-container .forum-post .forum-footer .forum-expand-comments .carousel-caption button {
+  .carousel-caption .btn, .carousel-caption .glyph-link, .carousel-caption .toolbar div button, .toolbar div .carousel-caption button, .carousel-caption .toolbar-secondary div button, .toolbar-secondary div .carousel-caption button, .carousel-caption .carousel-toolbar div button, .carousel-toolbar div .carousel-caption button, .carousel-caption .toolbar-secondary .toolbar-search form button, .toolbar-secondary .toolbar-search form .carousel-caption button, .carousel-caption .tag-container ul li button, .tag-container ul li .carousel-caption button, .carousel-caption .tag-container ul li .tag-form, .tag-container ul li .carousel-caption .tag-form, .carousel-caption .forum-container .forum-post .forum-footer .forum-expand-comments button, .forum-container .forum-post .forum-footer .forum-expand-comments .carousel-caption button {
     text-shadow: none; }
 
 @media screen and (min-width: 768px) {
@@ -6168,6 +6260,11 @@ a:hover {
 .availableCheck {
   margin-right: 14px; }
 
+.vertical-center {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%); }
+
 .toolbar, .toolbar-secondary, .carousel-toolbar {
   background-color: #333333;
   color: white;
@@ -6200,15 +6297,40 @@ a:hover {
 
 .toolbar-secondary {
   background-color: #ebebeb;
-  color: black; }
+  color: black;
+  z-index: 10; }
   .toolbar-secondary div {
     float: left; }
     .toolbar-secondary div h3 {
+      text-align: left;
       margin: 0px;
       font-weight: 300;
       position: relative;
       top: 50%;
       transform: translateY(-50%); }
+  .toolbar-secondary .search-dropdown ul {
+    display: none;
+    position: relative;
+    top: 20px;
+    padding-left: 80px; }
+    .toolbar-secondary .search-dropdown ul li {
+      background-color: #ebebeb;
+      padding: none;
+      text-align: left;
+      font-size: 1.5em;
+      font-weight: 300;
+      list-style: none;
+      z-index: inherit; }
+      .toolbar-secondary .search-dropdown ul li a {
+        color: black;
+        padding: 10px;
+        display: block; }
+        .toolbar-secondary .search-dropdown ul li a:hover {
+          background-color: gray; }
+  .toolbar-secondary button.dropdown-select:hover {
+    background-color: #ebebeb; }
+  .toolbar-secondary button.close-search:hover {
+    background-color: #e0eaff; }
   .toolbar-secondary .toolbar-search {
     display: block;
     width: 390px;
@@ -6222,6 +6344,9 @@ a:hover {
       color: black !important;
       float: left;
       margin: 8px 0px 0px 5px; }
+
+.search-result {
+  background-color: #e0eaff; }
 
 .toolbar-glyph {
   margin-right: 8px; }
@@ -6267,13 +6392,30 @@ a:hover {
     .tag-container ul li {
       float: left;
       list-style: none;
-      margin: 0px 5px 0px 0px; }
+      margin: 0px 5px 5px 0px; }
       .tag-container ul li button {
         padding: 2px 12px !important;
         font-size: 0.8em; }
         .tag-container ul li button span {
           position: relative;
           right: 7px; }
+      .tag-container ul li .tag-form {
+        border: none; }
+        .tag-container ul li .tag-form input {
+          color: white;
+          padding: 0px 5px !important;
+          margin-bottom: 2px;
+          border: none;
+          font-size: 0.8em;
+          height: 100%; }
+          .tag-container ul li .tag-form input:hover {
+            background-color: inherit; }
+          .tag-container ul li .tag-form input:-moz-placeholder {
+            color: white; }
+          .tag-container ul li .tag-form input::-webkit-input-placeholder {
+            color: white; }
+          .tag-container ul li .tag-form input::-moz-placeholder {
+            color: white; }
 
 .carousel-container .carousel .carousel-inner {
   background-color: #000000; }
@@ -6359,7 +6501,8 @@ a:hover {
   position: static;
   padding: 0 !important;
   color: white;
-  border: none; }
+  border: none;
+  z-index: -1; }
   .index .index-item .index-name {
     margin-top: 0 !important; }
     .index .index-item .index-name .item-name {
@@ -6378,11 +6521,15 @@ a:hover {
       height: inherit; }
   .index .index-item .index-description {
     height: inherit; }
-  .index .index-item .index-list h3 {
-    margin: 0;
-    margin-bottom: 10px; }
-  .index .index-item .index-list ul li a:hover {
-    text-decoration: none; }
+  .index .index-item .index-list {
+    max-height: 150px; }
+    .index .index-item .index-list h3 {
+      margin: 0;
+      margin-bottom: 10px; }
+    .index .index-item .index-list ul li a {
+      color: white; }
+      .index .index-item .index-list ul li a:hover {
+        text-decoration: none; }
 
 .content {
   margin: 15px 0; }

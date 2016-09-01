@@ -12,20 +12,9 @@
 
 @section('content-container')
 	@yield('toolbar')
-	@yield('index')
+	@yield('photos')
 @stop
 
 @section('scripts')
-	<script type="text/javascript" src="{{ asset('js/index.js') }}"></script>
+
 @stop
-
-
-
-
-
-
-
-
-
-
-		

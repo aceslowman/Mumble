@@ -21,6 +21,7 @@
 		padding:0 !important;
 		color:white;
 		border:none;
+		z-index:-1;
 
 		.index-name {
 			@extend .panel-body, .pull-left, .col-md-6;
@@ -52,14 +53,18 @@
 		}	
 		.index-list{
 			@extend .panel-body, .pull-left, .col-md-4;
+			max-height:150px;
 			h3{
 				margin:0;
 				margin-bottom:10px;
 			}
 			ul{
 				li{
-					a:hover{
-						text-decoration: none;
+					a{
+						color:white;
+						&:hover{						
+							text-decoration: none;
+						}
 					}
 				}
 			}

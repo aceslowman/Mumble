@@ -22,6 +22,8 @@
 	<script type="text/javascript">
 		$(document).ready(function(){
 
+			var base_url = 'http://localhost:8000';
+
 // Below is the csrf fix for laravel, avoiding the tokenMismatch error
 // Might want to move this to a better location and include it on all pages?
 
@@ -47,9 +49,12 @@
 
 // End of csrf fix
 
-			var base_url = 'http://localhost:8000';
 
-			$('.remove-tag').click(function(){
+			function addTagForm() {
+			    $('.add-tag').replaceWith('<div class="tag-form"><form class="add-tag-form" name="add-tag"><input name="tag-data" placeholder="Enter new tag" type="text"><input type="submit" value="Add"></form></div>');
+			}
+
+			function removeTag() {
 				$.ajax({
 					context: this,
 					url: base_url+"/detach/tag",
@@ -64,25 +69,31 @@
 				    success: function() {
 						$(this).closest('li').remove();
 					}
-				});
-			});
+				});				
+			}
 
-			$('.add-tag').click(function(){
+			function addTag(){
 				$.ajax({
+					context: this,
 					url: base_url+"/attach/tag",
 					data:{
 						//how can I get the id in a way that's agnostic of type?
 						profile_type: 'user',
 						profile_id: <?php echo $user->id; ?>,
-						tag_info: 'tag' //string representing new tag...
+						tag_data: $('input[name=tag-data]').val()
 					},
 					type: "POST",
-					dataType: "text", 
-				    success: function() {
-						//$(this).closest('button').remove();
+					dataType: "JSON", 
+				    success: function(response) {			
+				    	$('.current-tags').append('<li><button class="edit-tag" data-id="'+response['id']+'"><span class="remove-tag">x</span>'+response['name']+'</button></li>');
 					}
 				});
-			});			
+				return false;
+			}
+
+			$('.remove-tag').click(removeTag);
+			$('.add-tag').click(addTagForm);			
+			$('.tag-container .new-tag li').on("submit",'div form',addTag);
 		});
 
 	</script>

@@ -44,3 +44,9 @@ a:hover {
 .availableCheck {
 	margin-right:14px;
 }
+
+.vertical-center {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}

@@ -9,13 +9,13 @@
 @section('toolbar')
     <div class="toolbar">
         <div>
-            <button data-toggle="modal" data-target="#editCarousel_modal">
+            <a href="/people/{{$user->nick}}/photos">
                 <h4>
                     <span class="toolbar-glyph glyphicon-picture"></span><span>Edit Carousel</span>
                 </h4>
-            </button>
+            </a>
             <button data-toggle="modal" data-target="#editTags_modal">
-                <h4>
+<!--                 <h4>
                     <span class="toolbar-glyph glyphicon-star"></span><span>Edit Tags</span>
                 </h4>
             </button>
@@ -23,7 +23,7 @@
                 <h4>
                     <span class="toolbar-glyph glyphicon-ok-circle"></span><span>Edit Availability</span>
                 </h4>
-            </button>
+            </button> -->
         </div>
     </div>
     <div class="clear"></div>
@@ -79,12 +79,14 @@
                 <!-- if this is the profile of the active user... -->
 
                 <div class="tag-container">
-                    <ul>
+                    <ul class="current-tags">
                     @foreach($user->tags as $tag)
                         <li>    
                             <button class="edit-tag" data-id="{{ $tag->id }}"><span class="remove-tag">x</span>{{$tag->name}}</button>
                         </li>
                     @endforeach
+                    </ul>
+                    <ul class="new-tag">
                         <li>    
                             <button class="add-tag"><span>+</span>Add tag</button>
                         </li>

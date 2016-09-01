@@ -6,9 +6,9 @@
 		li{
 			float:left;
 			list-style:none;
-			margin:0px 5px 0px 0px;
+			margin:0px 5px 5px 0px;
 			button{
-				@extend .btn;
+				@extend .btn, .btn-primary;
 				padding: 2px 12px !important;
 				font-size:0.8em;
 				span{
@@ -21,6 +21,31 @@
 			}
 			.add-tag{
 				@extend .btn-success;
+			}
+			.tag-form{
+				@extend .btn, .btn-success;
+				border:none;
+				input{
+					@extend .btn-success;
+					color:white;
+					padding:0px 5px !important;			
+					margin-bottom:2px;
+					border:none;
+					font-size:0.8em;
+					height:100%;
+					&:hover{
+						background-color:inherit;
+					}
+					&:-moz-placeholder{
+						color:white;
+					}
+					&::-webkit-input-placeholder{
+						color:white;
+					}
+					&::-moz-placeholder{
+						color:white;
+					}
+				}
 			}
 		}
 	}

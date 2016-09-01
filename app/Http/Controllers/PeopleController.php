@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\User;
+use App\Tag;
 use App\Profile;
 use App\Carousel;
 
@@ -13,6 +14,7 @@ use Auth;
 use Validate;
 use Schema;
 use Image;
+use Log;
 
 class PeopleController extends Controller
 {
@@ -22,6 +24,7 @@ class PeopleController extends Controller
 
 	public function showIndex(){
 		$data['users'] = User::with('tags')->get();	
+		$data['tags']  = Tag::all();
 		$data['title'] = 'People Index';
 		$data['navTitle'] = 'People Index';
 
@@ -107,18 +110,5 @@ class PeopleController extends Controller
 		}else{
 			return back()->with('error','Something went wrong.');
 		}
-	}
-
-	public function updateCarousel(Request $request, $user_id){
-
-		$user = User::find($user_id);
-		$user->update($request->all());
-
-		/*
-			for each of the images added to the carousel, use intervention
-				original size
-				profile/forum (large) 900(Max) x height
-				index (gaussian blurred) 900 x 300
-		*/
 	}
 }

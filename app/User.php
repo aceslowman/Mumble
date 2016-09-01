@@ -28,11 +28,15 @@ class User extends Authenticatable
         return $this->morphOne('App\Profile', 'profileable');
     }
 
+    public function photos(){
+        return $this->morphtoMany('App\Photo', 'imageable');
+    }
+
     public function tags(){
         return $this->morphtoMany('App\Tag', 'taggable');
     }
 
     public function posts(){
-        return $this->hasMany('App\Post');
+        return $this->morph('App\Post');
     }
 }
