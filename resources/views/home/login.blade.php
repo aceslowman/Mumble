@@ -1,6 +1,14 @@
 @extends('home.layout')
 
 @section('content')
+	@if(App::environment('staging')||App::environment('development'))
+	    <div class="helptip">
+	        <div class="panel-body text-center">
+	            The site is up for some early review! There are still some features necessary before account creation can begin, but you can log in to the test system below. <em>Many</em> things still don't work.
+	        </div>
+	    </div>
+	@endif
+
 	@if(count($errors)>0)
 		<div class="alert alert-danger">
 			@foreach($errors->all() as $error)
@@ -38,9 +46,11 @@
 			</label>
 		</div>
 		<button type="submit" class="btn btn-default">Log In</button>
+		@if(App::environment('development'))
 		<div class="pull-right">
 			<button type="button" class="btn btn-warning">Forgot Password</button>
 			<button type="button" class="btn btn-success">Sign Up</button>
 		</div>
+		@endif
 	</form>	
 @stop

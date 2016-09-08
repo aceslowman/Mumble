@@ -30,6 +30,6 @@ class AuthController extends Controller
 	public function logout(){
 		Auth::logout();
 
-		return redirect()->intended('welcome')->with('status','You have been succesfully logged out. You are a stranger.');
+		return redirect()->route('show_login')->with('status','You have been succesfully logged out. You are a stranger.');
 	}
 }

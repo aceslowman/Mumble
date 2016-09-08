@@ -6,6 +6,13 @@
 @stop
 
 @section('content')
+	@if(App::environment('staging')||App::environment('development'))
+	    <div class="helptip">
+	        <div class="panel-body text-center">
+	        	Here you can change your basic account settings, go straight to your profile, or soon open up a list of the projects you're working on.
+	        </div>
+	    </div>
+	@endif
 	@if(count($errors)>0)
 		<div class="alert alert-danger">
 			@foreach($errors->all() as $error)
@@ -34,9 +41,11 @@
 			<button class="btn btn-default btn-block" data-toggle="modal" data-target="#editAccount_modal">
 			    Edit Account Information
 			</button>
+			@if(App::environment('development'))
 			<button class="btn btn-default btn-block" data-toggle="modal" data-target="#manageProjects_modal">
 			    Manage Projects
 			</button>	
+			@endif
 			<a href="logout" class="btn btn-default">Logout</a>
 		</div>
 	</div>

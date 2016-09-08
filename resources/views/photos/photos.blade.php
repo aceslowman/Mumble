@@ -13,11 +13,13 @@
 @stop
 
 @section('photos')
-<div class="helptip">
-    <div class="panel-body text-center">
-        Upload files in the box below. After they are uploaded, click on your photos to add them to the carousel. This will soon be a lot easier.
+@if(App::environment('staging')||App::environment('development'))
+    <div class="helptip">
+        <div class="panel-body text-center">
+            Upload files in the box below. After they are uploaded, click on your photos to add them to the carousel. This will soon be a lot easier.
+        </div>
     </div>
-</div>
+@endif
 <div class="dropzone-wrapper">
     <form method="POST" class="dropzone" action="/photos/create" enctype="multipart/form-data">{{ csrf_field() }}</form>
 </div>
