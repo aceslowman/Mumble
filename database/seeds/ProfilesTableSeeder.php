@@ -30,14 +30,10 @@ class ProfilesTableSeeder extends Seeder
 		$carousel = Carousel::where('profile_id',1)->first();
 		
 		$carousel->photos()->saveMany([
-			new App\Photo(['filename' => 'img/rock.jpg']),
-			new App\Photo(['filename' => 'img/wooden.jpg']),
-			new App\Photo(['filename' => 'img/massive.jpg']),
+			new App\Photo(['filename' => '994899ce6c045eb7c2d9c53462fa2a7d.jpg']),
+			new App\Photo(['filename' => '9104dcb95bf2ed1a055835e09124efff.jpg']),
+			new App\Photo(['filename' => '8b1b43a92c1c6a8f4a4196b9ab3d13b3.jpg']),
 		]);
-
-		
-
-
 
 		Profile::create([
 			'profileable_id' => 2,

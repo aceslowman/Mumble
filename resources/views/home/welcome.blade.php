@@ -25,22 +25,22 @@
 			{{session('error')}}
 		</div>
 	@endif
-<div class="col-md-12 panel panel-default">
-	<div class="panel-body text-center">
-		<h2>Welcome Back, <em>{{ $user->name }}</em></h2>
-		<a class="btn btn-default btn-block" href="/people/{{ $user->nick }}">
-		    Edit Profile
-		</a>
-		<button class="btn btn-default btn-block" data-toggle="modal" data-target="#editAccount_modal">
-		    Edit Account Information
-		</button>
-		<button class="btn btn-default btn-block" data-toggle="modal" data-target="#manageProjects_modal">
-		    Manage Projects
-		</button>	
-		<a href="logout" class="btn btn-default">Logout</a>
+	<div class="col-md-12 panel panel-default">
+		<div class="panel-body text-center">
+			<h2>Welcome Back, <em>{{ $user->name }}</em></h2>
+			<a class="btn btn-default btn-block" href="/people/{{ $user->nick }}">
+			    Edit Profile
+			</a>
+			<button class="btn btn-default btn-block" data-toggle="modal" data-target="#editAccount_modal">
+			    Edit Account Information
+			</button>
+			<button class="btn btn-default btn-block" data-toggle="modal" data-target="#manageProjects_modal">
+			    Manage Projects
+			</button>	
+			<a href="logout" class="btn btn-default">Logout</a>
+		</div>
 	</div>
-</div>
-<div class="clear"></div>
+	<div class="clear"></div>
 @stop
 
 @section('scripts')

@@ -16,6 +16,7 @@
     <div class="content-container">
         @yield('content-container')
     </div>
+    
 @include('master._partials.footer')
 </div>
 

@@ -1,17 +1,12 @@
-.content {
-	margin:15px 0;
-}
-
-div.infoRight h1:first-of-type, .h1:first-of-type, h2:first-of-type, .h2:first-of-type {
-	margin-top:0 !important;
-}
-
 .status {
 	@extend .row, .center-block, .panel, .panel-default;
 	margin-bottom:0px;
 	div{
 		@extend .panel-body;
 		padding:0px !important;
+		h2 {
+			margin-top:0px;
+		}
 		.status-left{
 			padding:15px !important;
 			@extend .col-md-6, .col-sm-6;

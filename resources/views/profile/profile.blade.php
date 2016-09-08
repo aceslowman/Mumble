@@ -1,9 +1,7 @@
 @extends('profile.layout')
 
 @section('modalWindows')
-    @include('people.modals.editCarousel')
-    @include('people.modals.editTags')
-    @include('people.modals.editAvailable')
+
 @stop
 
 @section('toolbar')
@@ -14,8 +12,8 @@
                     <span class="toolbar-glyph glyphicon-picture"></span><span>Edit Carousel</span>
                 </h4>
             </a>
-            <button data-toggle="modal" data-target="#editTags_modal">
-<!--                 <h4>
+<!--        <button data-toggle="modal" data-target="#editTags_modal">
+               <h4>
                     <span class="toolbar-glyph glyphicon-star"></span><span>Edit Tags</span>
                 </h4>
             </button>
@@ -36,14 +34,14 @@
             @foreach($carousel->photos as $key=>$photo)
                 @if($key==0)
                 <div class="item active">
-                    <a href="{{ asset($photo->filename) }}">
-                        <img src="{{ asset($photo->filename) }}" alt="" />
+                    <a href="{{ asset('/img/user_photos/'.$photo->filename) }}">
+                        <img src="{{ asset('/img/user_photos/large_'.$photo->filename) }}" alt="" />
                     </a>
                 </div>
                 @else
                 <div class="item">
-                    <a href="{{ asset($photo->filename) }}">
-                        <img src="{{ asset($photo->filename) }}" alt="" />
+                    <a href="{{ asset('/img/user_photos/'.$photo->filename) }}">
+                        <img src="{{ asset('/img/user_photos/large_'.$photo->filename) }}" alt="" />
                     </a>
                 </div>
                 @endif
@@ -54,70 +52,49 @@
         </div>
     </div>
     <div class="carousel-toolbar">
-
         <div>
             <p><em>Massive</em>, 2015</p>    
         </div>
-
     </div>
     <div class="clear"></div>
 @stop
-
+ 
 @section('status')
     <div class="status">
         <div>        
-
             <div class="status-left">
-                <div class="pull-left"><h2>What I do</h2></div> 
-                <div class="pull-right" style="margin-top:7px; margin-left:30px;">
-                    <button class="glyph-link" data-toggle="modal" data-target="#editTags_modal">
-                        <span class="glyphicon glyphicon-pencil"></span>
-                    </button>
-                </div>
-                <div class="clear"></div>
-                
-                <!-- if this is the profile of the active user... -->
-
-                <div class="tag-container">
-                    <ul class="current-tags">
-                    @foreach($user->tags as $tag)
-                        <li>    
-                            <button class="edit-tag" data-id="{{ $tag->id }}"><span class="remove-tag">x</span>{{$tag->name}}</button>
-                        </li>
-                    @endforeach
-                    </ul>
-                    <ul class="new-tag">
-                        <li>    
-                            <button class="add-tag"><span>+</span>Add tag</button>
-                        </li>
-                    </ul>
-                </div>
-                
-                <!-- else -->
-
-<!--                 <div class="tag-container">
-                    <ul>
-                    @foreach($user->tags as $tag)
-                        <li>    
-                            <button>{{$tag->name}}</button>
-                        </li>
-                    @endforeach
-                    </ul>
-                </div> -->
-
+                <h2>What I do</h2>
+                @if(Auth::user()->id == $user->id)
+                    <div class="tag-container">
+                        <ul class="current-tags">
+                        @foreach($user->tags as $tag)
+                            <li>    
+                                <button class="edit-tag" data-id="{{ $tag->id }}"><span class="remove-tag">x</span>{{$tag->name}}</button>
+                            </li>
+                        @endforeach
+                        </ul>
+                        <ul class="new-tag">
+                            <li>    
+                                <button class="add-tag"><span>+</span>Add tag</button>
+                            </li>
+                        </ul>
+                    </div>
+                @else
+                    <div class="tag-container">
+                        <ul>
+                        @foreach($user->tags as $tag)
+                            <li>    
+                                <button>{{$tag->name}}</button>
+                            </li>
+                        @endforeach
+                        </ul>
+                    </div>
+                @endif
                 <div class="clear"></div>
             </div>
 
             <div class="status-right">
-            
-                <div class="pull-left"><h2>Availability</h2></div>
-                <div class="pull-right" style="margin-top:7px; margin-left:30px;">
-                    <button class="glyph-link" data-toggle="modal" data-target="#editAvailable_modal">
-                        <span class="glyphicon glyphicon-pencil"></span>
-                    </button>
-                </div>
-            
-                <div class="clear"></div>
+                <h2>Availability</h2>
                 <h4>
                 @if($user->available)
                     <span class="glyphicon glyphicon-ok"></span>
@@ -127,8 +104,6 @@
                     {{$user->status}}            
                 </h4>
             </div>
-
-
         </div>
     </div>
 @stop

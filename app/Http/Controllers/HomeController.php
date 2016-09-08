@@ -14,10 +14,14 @@ class HomeController extends Controller
 		$data['title']     = "Mumble";
 		$data['navTitle']  = "Mumble";
 
-		$user = Auth::user();
-		$data['user'] = $user;
-		
-		return view('home.welcome',$data);
+		if(Auth::check()){
+			$user = Auth::user();
+			$data['user'] = $user;
+			
+			return view('home.welcome',$data);
+		}else{
+			return redirect()->route('login');
+		}
 	}
 
    public function login(){

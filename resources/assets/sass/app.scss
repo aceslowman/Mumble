@@ -7,11 +7,15 @@
 	$secondary_toolbar_color: #ebebeb;
 //----------------
 
+@import "mixins";
 @import "global";
+@import "dropzone";
+
+@import "glyph";
 @import "toolbar";
 @import "navigation";
 @import "tags";
-@import "carousel";
+@import "photos";
 @import "forum";
 @import "index";
 @import "profile";

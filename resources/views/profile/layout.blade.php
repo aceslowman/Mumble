@@ -9,13 +9,14 @@
 @stop
 
 @section('scripts')
+	<!--<script type="text/javascript" src="{{ asset('js/profile.js') }}"></script>-->
 	<script type="text/javascript">
 		$(document).ready(function(){
 
 			var base_url = 'http://localhost:8000';
 
-// Below is the csrf fix for laravel, avoiding the tokenMismatch error
-// Might want to move this to a better location and include it on all pages?
+		// Below is the csrf fix for laravel, avoiding the tokenMismatch error
+		// Might want to move this to a better location and include it on all pages?
 
 			var getXsrfToken = function() {
 			    var cookies = document.cookie.split(';');
@@ -32,12 +33,12 @@
 			}
 
 			jQuery.ajaxSetup({
-    			headers: {
-        			'X-XSRF-TOKEN': getXsrfToken()
-    			}
+				headers: {
+					'X-XSRF-TOKEN': getXsrfToken()
+				}
 			});
 
-// End of csrf fix
+		// End of csrf fix
 
 
 			function addTagForm() {
@@ -49,7 +50,6 @@
 					context: this,
 					url: base_url+"/detach/tag",
 					data:{
-						//how can I get the id in a way that's agnostic of type?
 						profile_type: 'user',
 						profile_id: <?php echo $user->id; ?>,
 						tag_id: $(this).closest('button').data("id")
@@ -67,7 +67,6 @@
 					context: this,
 					url: base_url+"/attach/tag",
 					data:{
-						//how can I get the id in a way that's agnostic of type?
 						profile_type: 'user',
 						profile_id: <?php echo $user->id; ?>,
 						tag_data: $('input[name=tag-data]').val()
@@ -81,8 +80,8 @@
 				return false;
 			}
 
-			$('.remove-tag').click(removeTag);
-			$('.add-tag').click(addTagForm);			
+			$('.current-tags').on("click",'.remove-tag',removeTag);
+			$('.new-tag').on("click",'.add-tag',addTagForm);
 			$('.tag-container .new-tag li').on("submit",'div form',addTag);
 		});
 

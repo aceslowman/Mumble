@@ -1,0 +1,27 @@
+.dropzone-wrapper {
+	display:block;
+	padding:20px;
+	form {
+		border:1px dashed black;
+		height:inherit;
+		div {
+			@extend .vertical-center;
+			font-style:italic;
+			text-align:center;
+		}
+	}
+}
+
+form.dropzone.dz-clickable {
+	height:150px;
+}
+
+.dz-preview {
+	float:left;
+}
+
+.dropzone-carousel {
+	form.dropzone-carousel.dz-clickable {
+		height:100px !important;
+	}
+}

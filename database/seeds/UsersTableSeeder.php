@@ -14,7 +14,7 @@ class UsersTableSeeder extends Seeder
     {
 		 User::create([
 			 'name' => 'Austin Slominski',
-			 'avatar_filename' => 'img/avatars/slominski_avatar.jpg',
+			 'avatar_filename' => 'd6569622db2d79726253ed75d6316282.jpg',
              'email' => 'aceslowman@gmail.com',
              'nick' => 'aceslowman',
              'status' => 'Available for film work',

@@ -3,50 +3,31 @@ html, body {
 	width:100%;
 }
 
-a:hover {
-	color:$hover_color !important;
-}
+@include links(black,$hover_color);
 
 .container {
-	height:100%;
-}
+	height:inherit;
 
-.clear{
-	clear:both;
+	.content-container {
+		width:100%;
+	}	
 }
 
 .panel .panel-body a{
 	margin-top:15px;
 }
 
-.content-container{
-	width:100%;
-}
-
-.glyph-link{
-	@extend .btn, .btn-link;
-	color:black;
-	margin-top:-5px;
-	&:hover{
-		color:$hover_color;
-	}
-}
-
-.glyph-align {
-	margin-top:2px;
-	margin-right:5px;
-}
-
-.glyphicon-ok {
-	color:green;
-}
-
-.availableCheck {
-	margin-right:14px;
-}
-
 .vertical-center {
 	position: relative;
 	top: 50%;
 	transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+}
+
+.clear{ clear:both; }
+
+.helptip {
+	@extend .panel, .panel-default;
+	margin-top:15px;
 }

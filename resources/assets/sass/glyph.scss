@@ -1,0 +1,21 @@
+.glyph-link{
+	@extend .btn, .btn-link;
+	color:black;
+	margin-top:-5px;
+	&:hover{
+		color:$hover_color;
+	}
+}
+
+.glyph-align {
+	margin-top:2px;
+	margin-right:5px;
+}
+
+.glyphicon-ok {
+	color:green;
+}
+
+.availableCheck {
+	margin-right:14px;
+}

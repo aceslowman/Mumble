@@ -29,7 +29,7 @@ class User extends Authenticatable
     }
 
     public function photos(){
-        return $this->morphtoMany('App\Photo', 'imageable');
+        return $this->morphToMany('App\Photo', 'imageable');
     }
 
     public function tags(){
