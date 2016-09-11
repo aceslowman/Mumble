@@ -96,8 +96,8 @@ class PeopleController extends Controller
 			$filename = md5($avatar).".".$extension;
 
 			Image::make($avatar)->fit(50)->save(public_path('img/avatars/thumb_'.$filename));
-			Image::make($avatar)->fit(50)->save(public_path('img/avatars/small_'.$filename));
-			Image::make($avatar)->fit(50)->save(public_path('img/avatars/medium_'.$filename));
+			Image::make($avatar)->fit(150)->save(public_path('img/avatars/small_'.$filename));
+			Image::make($avatar)->fit(400)->save(public_path('img/avatars/medium_'.$filename));
 
 			$avatar->move('img/avatars/',$filename);
 			$user->avatar_filename = $filename;
