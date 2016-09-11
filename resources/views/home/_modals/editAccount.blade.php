@@ -10,7 +10,7 @@
         <form id="update-user" class="" method="POST" action="update/user/{{ $user->id }}" enctype="multipart/form-data">
           {{ csrf_field() }}
           <div class="col-md-6">
-            <img class="img-responsive" src="img/avatars/{{ $user->avatar_filename }}" alt="Profile Picture">
+            <img class="img-responsive" src="img/avatars/small_{{ $user->avatar_filename }}" alt="Profile Picture">
             <input type="file" name="user_avatar" class="user_avatar">
           </div>
           <div class="col-md-6">
