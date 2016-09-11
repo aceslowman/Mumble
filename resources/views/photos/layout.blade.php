@@ -21,7 +21,13 @@
 	<script type="text/javascript">
 		$(document).ready(function(){
 
+
+		@if(App::environment('development'))
 			var base_url = 'http://localhost:8000';
+		@elseif(App::environment('staging'))
+			var base_url = 'http://mumble.austinslominski.com'
+		@endif
+
 
 		// Below is the csrf fix for laravel, avoiding the tokenMismatch error
 		// Might want to move this to a better location and include it on all pages?

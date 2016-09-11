@@ -9,7 +9,12 @@
 	<!-- <script type="text/javascript" src="{{ asset('js/index.js') }}"></script> -->
 	<script type="text/javascript">
 		$(document).ready(function(){
+
+		@if(App::environment('development'))
 			var base_url = 'http://localhost:8000';
+		@elseif(App::environment('staging'))
+			var base_url = 'http://mumble.austinslominski.com'
+		@endif
 
 			var getXsrfToken = function() {
 			    var cookies = document.cookie.split(';');

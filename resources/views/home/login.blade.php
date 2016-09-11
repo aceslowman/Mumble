@@ -4,7 +4,7 @@
 	@if(App::environment('staging')||App::environment('development'))
 	    <div class="helptip">
 	        <div class="panel-body text-center">
-	            The site is up for some early review! There are still some features necessary before account creation can begin, but you can log in to the test system below. <em>Many</em> things still don't work.
+	            The site is up for some early review! There are still some features necessary before account creation can begin, but you can log in to the test system below. <em>Many</em> things still don't work, including responsive design, project management, and forum use. Coming ASAP.
 	        </div>
 	    </div>
 	@endif
