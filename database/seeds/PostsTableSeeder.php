@@ -15,20 +15,23 @@ class PostsTableSeeder extends Seeder
 		Post::create([
 			'user_id' => 1,
 			'post_type' => 2,
-			'title' => 'The first forum post',
+			'title' => 'First forum post',
 			'body' => "                            <a href=''>
-                                <img class='img-responsive' src='img/landscape_fullSize_2.jpg'>
+                                <img class='img-responsive' src='img/user_photos/large_34fffb9dbbc48959ccd124576e0e99c0.jpg'>
                             </a>
-                                <h2>This is a title</h2>                
-                                <p>Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that's what you see at a toy store. And you must think you're in a toy store, because you're here shopping for an infant named Jeb. </p>",
+                                <h2>Skill tagging</h2>                
+                                <p>This forum should be a place where anyone in a group can post an update to their projects, ask for feedback or critique, or find help. Soon, if a skill is tagged in the post, anyone that claims that tag on their own profile will be notified. For example, if someone says \"Hey, I need some help with #film for an upcoming event.\", a notification will go out to anyone in their local group that claims a film tag.</p>",
 		]);
+
         Post::create([
             'user_id' => 2,
             'post_type' => 2,
-            'title' => 'The second forum post',
-            'body' => "
-                                <h2>Some other title</h2>                
-                                <p>Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that's what you see at a toy store. And you must think you're in a toy store, because you're here shopping for an infant named Jeb. </p>",
+            'title' => 'Lorem ipsum dolor sit amet',
+            'body' => "                            <a href=''>
+                                <img class='img-responsive' src='img/user_photos/large_2c813f3eb1aa3b06db612a9d8e4b7cb3.jpg'>
+                            </a>
+                                <h2>Lorem ipsum dolor sit amet</h2>                
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
         ]);
     }
 }

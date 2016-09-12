@@ -10,6 +10,7 @@ use App\Photo;
 use App\User;
 use App\Tag;
 use Auth;
+use Imagick;
 
 use Image;
 use Log;
@@ -63,6 +64,16 @@ class PhotoController extends Controller
                     $constraint->aspectRatio();
                     $constraint->upsize();
                 })->save(public_path('img/user_photos/large_'.$filename));
+
+                // Creates gaussian blurred index images
+                // -------------------------------------
+                Image::make($file)->fit(2400,614)->save(public_path('img/user_photos/index_'.$filename));        
+
+                $imagick = new Imagick();
+                $imagick->readImage(public_path('img/user_photos/index_'.$filename));
+                $imagick->blurImage(40,40);    
+                $imagick->writeImage('img/user_photos/index_'.$filename);
+                // -------------------------------------
 
                 $file->move('img/user_photos/',$filename);                             
                 $user->photos()->attach($photo->id);

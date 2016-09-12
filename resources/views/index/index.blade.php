@@ -34,9 +34,10 @@
 
     <div class="index-item-wrapper">
         @foreach ($users as $user)
-    	<div class="index-item">
+
+    	<div class="index-item" style="background-image:url('{{ '../img/user_photos/index_'.$user->profile['carousel']['photos'][0]['filename'] }}')">
     		<div class="index-avatar"> 
-               <img src="/img/avatars/{{'small_'.$user->avatar_filename}}">
+                <img src="/img/avatars/{{'small_'.$user->avatar_filename}}">
     		</div>	
         	<div class="index-name"> 
     			<h2 class="item-name"><a href="people/{{ $user->nick }}">{{$user->name}}</a></h2>

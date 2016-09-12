@@ -6537,17 +6537,6 @@ form.dropzone.dz-clickable {
     .forum-container .forum-post .forum-footer .forum-edit-links {
       margin-top: 5px; }
 
-/***** ONLY USED AS PLACEHOLDER ******/
-.panel_1, .index .index-item {
-  background-image: url("../img/panel_1.jpg"); }
-
-.panel_2 {
-  background-image: url("../img/panel_2.jpg"); }
-
-.panel_3 {
-  background-image: url("../img/panel_3.jpg"); }
-
-/***************** *******************/
 .index .index-item {
   margin: 0px 0;
   height: 150px;

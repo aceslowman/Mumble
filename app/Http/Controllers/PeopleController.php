@@ -23,7 +23,9 @@ class PeopleController extends Controller
 	}
 
 	public function showIndex(){
-		$data['users'] = User::with('tags')->get();	
+
+		// $data['users'] = User::with(['profile.carousel.photos' => function($query) { $query->limit(1); }])->get();	
+		$data['users'] = User::with('profile.carousel.photos')->get();	
 		$data['tags']  = Tag::all();
 		$data['title'] = 'People Index';
 		$data['navTitle'] = 'People Index';
