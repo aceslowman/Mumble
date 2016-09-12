@@ -53,7 +53,7 @@
     </div>
     <div class="carousel-toolbar">
         <div>
-            <p><em>Massive</em>, 2015</p>    
+            <p><em>Photo Caption</em>, 2016</p>    
         </div>
     </div>
     <div class="clear"></div>
